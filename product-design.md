@@ -506,7 +506,7 @@ A system-initiated investigation may be:
 - **request-scoped:** PostCode determines that additional investigation not separately requested is needed to satisfy an explicit parent request;
 - **autonomous:** PostCode undertakes the investigation without a parent request.
 
-Selecting a subject, lens, lens parameter values, presentation, or presentation parameter values left unspecified within an expressed information need is part of interpreting and satisfying the explicit request; it is not by itself system-initiated investigation. Request-scoped system-initiated investigation is additional inquiry that PostCode initiates because it is needed to satisfy that request.
+Selecting a subject, lens, lens parameter values, presentation, or presentation parameter values left unspecified within an expressed information need is part of interpreting and satisfying the explicit request; it is not by itself system-initiated investigation.
 
 Both forms use the same analysis, provenance, and qualification mechanisms as explicitly requested work, but need not create a visible view. Subject to the applicable constraints, the timing and trigger of system-initiated work are implementation decisions.
 

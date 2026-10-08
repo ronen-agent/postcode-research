@@ -118,7 +118,7 @@ PostCode's design offers [summary as a suggested initial view and a basis for re
 
 Formative use should deliberately begin suitable investigations with the suggested summary view often enough to evaluate its usefulness across subjects and contexts, while allowing a more specific information need to bypass it.
 
-Each use of a summary as an initial view provides an opportunity to observe the user's subsequent behavior, both to evaluate the hypothesis and to refine how PostCode constructs summary views. Analysis should distinguish whether the summary was explicitly requested, automatically selected to answer a broader expressed information need, suggested and accepted, or autonomously constructed when no information need was expressed. The recurring information need can be expressed as:
+Each use of a summary as an initial view provides an opportunity to observe the user's subsequent behavior, both to evaluate the hypothesis and to refine how PostCode constructs summary views. Analysis should distinguish whether the summary was explicitly requested, automatically selected to answer a broader expressed information need, suggested by PostCode and constructed after the human accepted the suggestion, or autonomously constructed when no information need was expressed. The recurring information need can be expressed as:
 
 > **Summarize the subject.**
 
