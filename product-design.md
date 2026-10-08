@@ -503,12 +503,14 @@ PostCode may initiate investigations that a human or external agent did not sepa
 
 A system-initiated investigation may be:
 
-- **request-scoped:** PostCode determines that investigation not separately requested is needed to satisfy an explicit parent request;
+- **request-scoped:** PostCode determines that additional investigation not separately requested is needed to satisfy an explicit parent request;
 - **autonomous:** PostCode undertakes the investigation without a parent request.
+
+Selecting a subject, lens, lens parameter values, presentation, or presentation parameter values left unspecified within an expressed information need is part of interpreting and satisfying the explicit request; it is not by itself system-initiated investigation. Request-scoped system-initiated investigation is additional inquiry that PostCode initiates because it is needed to satisfy that request.
 
 Both forms use the same analysis, provenance, and qualification mechanisms as explicitly requested work, but need not create a visible view. Subject to the applicable constraints, the timing and trigger of system-initiated work are implementation decisions.
 
-Request-scoped system-initiated investigation is part of its parent request for attribution and resource governance, whether it supplies prerequisite information or directly produces part or all of the response. It is governed by that request's constraints and the choices described in [Resource-Bounded Analysis](#2151-resource-bounded-analysis). The fact that a human or external agent authorized the parent request does not make the investigation human- or agent-initiated.
+Request-scoped system-initiated investigation is part of its parent request for attribution and resource governance. It is governed by that request's constraints and the choices described in [Resource-Bounded Analysis](#2151-resource-bounded-analysis). The fact that a human or external agent authorized the parent request does not make the investigation human- or agent-initiated.
 
 Work remains request-scoped only while it is attributable to satisfying the parent request. Work beyond that purpose, or work that continues after the parent request is satisfied or cancelled, is autonomous and must meet the authorization requirements for autonomous work.
 
@@ -522,7 +524,7 @@ When the human has not expressed a more specific information need, PostCode may 
 
 > **Summarize the subject.**
 
-When PostCode constructs such a suggested view without a separate explicit request for the summary, it is one application of system-initiated investigation. It may be request-scoped within a broader parent request or autonomous when no such request exists.
+Constructing a suggested summary when the human has expressed no information need is autonomous system-initiated investigation. Selecting a summary to answer a broader expressed information need is instead part of interpreting that request.
 
 PostCode constructs an appropriate summary view by selecting one or more projections and a presentation. For an unfamiliar subject, the view can provide an overview of its structure, behavior, and role; for a familiar subject, it can provide efficient access to details relevant to the current investigation. It may satisfy the human's current purpose or help them select a further lens or reach a further subject of investigation.
 
