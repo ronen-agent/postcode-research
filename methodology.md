@@ -232,7 +232,7 @@ Relevant recorded context and events include:
 - the current operational task and information need, where formalized;
 - prompts and prose requests submitted to PostCode;
 - prompts sent to coding agents, when available, and references to external tasks or conversations;
-- whether an investigation was initiated by a human, an external agent, or PostCode, and the triggering context of system-initiated work;
+- whether an investigation was directly initiated by a human, an external agent, or PostCode; for PostCode-initiated investigation, whether it was request-scoped or autonomous and its parent request or autonomous trigger;
 - explicit and automatically selected lenses, lens parameter values, projections and their composition within views, presentations, presentation parameter values, and resulting views;
 - entities and relationships discovered or opened;
 - projections produced;

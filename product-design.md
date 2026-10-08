@@ -499,11 +499,18 @@ Resolving a request may depend on qualified information that PostCode has not ye
 
 #### 3.1.1 System-Initiated Investigation
 
-Analysis that PostCode initiates to satisfy an explicit request from a human or external agent—including prerequisite work not separately requested—is part of that request and is governed by its resource constraints and the choices described in [Resource-Bounded Analysis](#2151-resource-bounded-analysis). System-initiated investigation is work that PostCode undertakes without such an initiating request.
+PostCode may initiate investigations that a human or external agent did not separately request when doing so facilitates orientation, a suggested initial view, query planning, subject resolution, navigation, or later interaction. For example, it might request qualified analysis that establishes a population of modules either while resolving a designation or in anticipation of later lookup.
 
-PostCode may initiate investigations when doing so facilitates orientation, a suggested initial view, navigation, or anticipated later interaction. For example, it might request qualified analysis that establishes a population of modules whose names can subsequently be used to resolve a designation. System-initiated investigation uses the same analysis, provenance, and qualification mechanisms as explicitly requested work, but need not create a visible view.
+A system-initiated investigation may be:
 
-System-initiated investigation may proceed only within resource policies the human has authorized for such work. Work that would exceed those limits or materially delay an explicit request remains deferred unless the human authorizes it. Subject to those constraints, whether the work is performed eagerly, lazily, during navigation, or in response to a later need is an implementation decision.
+- **request-scoped:** PostCode determines that prerequisite investigation is needed to satisfy an explicit parent request;
+- **autonomous:** PostCode undertakes the investigation without a parent request.
+
+Both forms use the same analysis, provenance, and qualification mechanisms as explicitly requested work, but need not create a visible view.
+
+Request-scoped system-initiated investigation is part of its parent request for attribution and resource governance. It is governed by that request's constraints and the choices described in [Resource-Bounded Analysis](#2151-resource-bounded-analysis). The fact that a human or external agent authorized the parent request does not make the prerequisite investigation human- or agent-initiated.
+
+Autonomous system-initiated investigation may proceed only within resource policies the human has authorized for such work. Work that would exceed those limits or materially delay an explicit request remains deferred unless the human authorizes it. Subject to the applicable constraints, the timing and trigger of system-initiated work are implementation decisions.
 
 When system-initiated work influences what PostCode shows, selects, suggests, or reports, its trigger, captured basis, relevant result, and qualifications must be inspectable from that outcome. Reusing an earlier result does not make it current merely because its input has a following binding.
 
@@ -782,7 +789,7 @@ This does not preclude separate operational telemetry, diagnostics, or product a
 
 #### 3.8.1 Automatic Event Capture
 
-PostCode should automatically record relevant interaction events, including prompts and prose requests submitted to PostCode; prompts sent to coding agents, when available; system-initiated investigations and their triggering context; selected lenses, lens parameter values, projections and their composition within views, presentations, presentation parameter values, and resulting views; navigation; source escape-hatch use; unavailable, refused, or failed projection requests; analysis applicability and availability, execution state, and result materialization; resource estimates, budgets or thresholds, user choices, and actual resource use where available; workspace changes; and interactions with coding-agent context.
+PostCode should automatically record relevant interaction events, including prompts and prose requests submitted to PostCode; prompts sent to coding agents, when available; system-initiated investigations, whether they are request-scoped or autonomous, and their parent request or autonomous trigger; selected lenses, lens parameter values, projections and their composition within views, presentations, presentation parameter values, and resulting views; navigation; source escape-hatch use; unavailable, refused, or failed projection requests; analysis applicability and availability, execution state, and result materialization; resource estimates, budgets or thresholds, user choices, and actual resource use where available; workspace changes; and interactions with coding-agent context.
 
 #### 3.8.2 Contemporaneous Subjective Observations
 
@@ -798,7 +805,7 @@ Each recorded event should include provenance and context metadata sufficient to
 - the version of PostCode that produced it;
 - the repository state or states relevant to the event, including their Git commits and any relevant working-tree changes, and their association with the projections involved;
 - a session identifier, where applicable, allowing related events to be grouped without assuming that a session corresponds to a single investigation or task;
-- whether the work was initiated by a human, an external agent, or PostCode, including the trigger for system-initiated work;
+- whether the investigation was directly initiated by a human, an external agent, or PostCode; for PostCode-initiated investigation, whether it was request-scoped or autonomous and its parent request or autonomous trigger;
 - the current operational task and relevant contextual information, where available;
 - whether the event arose from genuine use of PostCode for software investigation or development or from testing or debugging PostCode itself.
 
