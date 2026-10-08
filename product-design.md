@@ -495,7 +495,7 @@ The important rule is:
 
 Text is a first-class presentation. A view need not be graphical, and its underlying projections need not be mechanically derived, provided the provenance and epistemological status of their claims remain visible.
 
-Resolving a request may depend on qualified information that PostCode has not yet established. Query planning may request and consume that information, but must not itself derive the population used for subject resolution or other program claims. The information and its qualifications must remain attributable to the resulting selection, ambiguity, or inability to resolve the request. Failure to resolve a subject must not conceal established candidates, incomplete coverage, unavailable analysis, or other consequential outcomes.
+Resolving a request may depend on qualified information that PostCode has not yet established. Query planning may request and consume that information, but must not itself derive the population used for subject resolution or other program claims. When PostCode initiates prerequisite investigation for this purpose, it is [request-scoped system-initiated investigation](#311-system-initiated-investigation). The information and its qualifications must remain attributable to the resulting selection, ambiguity, or inability to resolve the request. Failure to resolve a subject must not conceal established candidates, incomplete coverage, unavailable analysis, or other consequential outcomes.
 
 #### 3.1.1 System-Initiated Investigation
 
@@ -506,11 +506,13 @@ A system-initiated investigation may be:
 - **request-scoped:** PostCode determines that prerequisite investigation is needed to satisfy an explicit parent request;
 - **autonomous:** PostCode undertakes the investigation without a parent request.
 
-Both forms use the same analysis, provenance, and qualification mechanisms as explicitly requested work, but need not create a visible view.
+Both forms use the same analysis, provenance, and qualification mechanisms as explicitly requested work, but need not create a visible view. Subject to the applicable constraints, the timing and trigger of system-initiated work are implementation decisions.
 
 Request-scoped system-initiated investigation is part of its parent request for attribution and resource governance. It is governed by that request's constraints and the choices described in [Resource-Bounded Analysis](#2151-resource-bounded-analysis). The fact that a human or external agent authorized the parent request does not make the prerequisite investigation human- or agent-initiated.
 
-Autonomous system-initiated investigation may proceed only within resource policies the human has authorized for such work. Work that would exceed those limits or materially delay an explicit request remains deferred unless the human authorizes it. Subject to the applicable constraints, the timing and trigger of system-initiated work are implementation decisions.
+Work remains request-scoped only while it is attributable to satisfying the parent request. Work beyond that purpose, or work that continues after the parent request is satisfied or cancelled, is autonomous and must meet the authorization requirements for autonomous work.
+
+Autonomous system-initiated investigation may proceed only within resource policies the human has authorized for such work. Work that would exceed those limits or materially delay an explicit request remains deferred unless the human authorizes it.
 
 When system-initiated work influences what PostCode shows, selects, suggests, or reports, its trigger, captured basis, relevant result, and qualifications must be inspectable from that outcome. Reusing an earlier result does not make it current merely because its input has a following binding.
 
@@ -520,7 +522,7 @@ When the human has not expressed a more specific information need, PostCode may 
 
 > **Summarize the subject.**
 
-When PostCode constructs such a suggested view without an explicit request, it is one application of system-initiated investigation.
+When PostCode constructs such a suggested view without a separate explicit request for the summary, it is one application of system-initiated investigation. It may be request-scoped by a broader parent request or autonomous when no such request exists.
 
 PostCode constructs an appropriate summary view by selecting one or more projections and a presentation. For an unfamiliar subject, the view can provide an overview of its structure, behavior, and role; for a familiar subject, it can provide efficient access to details relevant to the current investigation. It may satisfy the human's current purpose or help them select a further lens or reach a further subject of investigation.
 
