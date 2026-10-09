@@ -2,9 +2,9 @@
 
 This document describes the current development plan for PostCode and records plausible later directions without treating them as commitments.
 
-It identifies which research-enabling capabilities and contexts may be pursued and why; detailed application behavior belongs in the application repository's governing specification.
+It identifies which research-enabling capabilities and contexts may be pursued and why; it does not define detailed application behavior.
 
-The research questions are described in [`research.md`](research.md), the current design in [`product-design.md`](product-design.md), and the process by which development produces research evidence in [`methodology.md`](methodology.md).
+The research questions are described in [`research.md`](research.md), the conceptual product design in [`product-design.md`](product-design.md), and the process by which development produces research evidence in [`methodology.md`](methodology.md).
 
 ## 1. Roadmap Stance
 
@@ -41,13 +41,13 @@ It should support:
 - analysis of the PostCode repository in one programming language;
 - a small initial set of mechanically derived lenses;
 - one or more basic interpretive lenses whose claims remain explicitly qualified;
-- useful summary and orientation views;
+- a usable set of views through which the developer can conduct a genuine investigation;
 - views that preserve provenance, epistemological status, guarantees, and limitations;
 - a practical way to request and inspect those views;
 - enough navigation and source access to sustain an investigation;
 - enough formative observation support to record use, friction, and immediate reactions.
 
-Including both summary views and an interpretive lens from the beginning puts representation selection and the epistemological contract under pressure: PostCode must assemble useful orientation from qualified projections while keeping interpretation distinguishable from precise analysis.
+Including both mechanically derived and interpretive information from the beginning puts the epistemological contract under pressure: PostCode must keep interpretation distinguishable from precise analysis while making both useful during investigation.
 
 PostCode should be used on its own development as soon as any implemented capability can contribute usefully. That use will broaden as further subjects, lenses, views, and observation support become available.
 
@@ -67,7 +67,7 @@ Allow prose information needs to produce useful qualified views without requirin
 
 ### 3.3 Shared coding-agent context
 
-Provide the shared machine-readable context described in [`product-design.md`](product-design.md#371-shared-machine-readable-context), allowing prompts to refer directly to focused views, projected relationships, and the current investigation. Agent-supplied context can later complete the exchange.
+Provide the shared machine-readable context described in [`product-design.md`](product-design.md#shared-machine-readable-context), allowing instructions to coding agents to refer directly to focused views, projected relationships, and the current investigation. Agent-supplied context can later complete the exchange.
 
 Its timing should depend on when repeatedly translating PostCode concepts back into source-level terms becomes a material obstacle to formative use.
 
@@ -77,11 +77,11 @@ Support comparison of qualified information across repository states so the huma
 
 Stable projection behavior is a prerequisite: changes in PostCode must not masquerade as changes in the program.
 
-### 3.5 Lens and presentation growth
+### 3.5 Capability growth
 
 Add or revise capabilities in response to recurring investigative needs. A failed investigation does not by itself imply that a new lens is required; the problem may instead concern available information, representation, selection, interaction, evidence, or the underlying projection approach.
 
-Illustrative lens families are described in [`product-design.md`](product-design.md#41-illustrative-lens-families). The capabilities pursued next should be shaped by use rather than by treating those examples as a backlog.
+Illustrative lens families are described in [`product-design.md`](product-design.md#illustrative-lens-families). The capabilities pursued next should be shaped by use rather than by treating those examples as a backlog.
 
 ### 3.6 Usability and sustained interaction
 

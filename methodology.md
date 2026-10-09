@@ -2,7 +2,7 @@
 
 This document describes how building and using PostCode can produce trustworthy research evidence.
 
-The research questions are described in [`research.md`](research.md). The system through which the research is conducted is described in [`product-design.md`](product-design.md).
+The research questions are described in [`research.md`](research.md). The conceptual product design through which the research is conducted is described in [`product-design.md`](product-design.md).
 
 ## 1. Methodological Stance
 
@@ -58,7 +58,7 @@ It is especially useful for discovering:
 
 - missing lenses and projection capabilities;
 - unsuitable presentation choices;
-- awkward navigation and workspace behavior;
+- awkward navigation and investigation-context behavior;
 - failures in agent-context exchange;
 - distinctions the current design vocabulary does not capture;
 - ways in which PostCode and the software developed through it co-adapt.
@@ -110,41 +110,24 @@ They can test whether PostCode can:
 
 OSS use should involve genuine questions or development tasks where possible. Artificial tours of repositories may reveal projection defects, but they provide weaker evidence about sustained usefulness.
 
-## 3. Evaluating and Refining Summary as an Initial View
+## 3. Evaluating Projection Capabilities
 
-PostCode's design offers [summary as a suggested initial view and a basis for recursive navigation](product-design.md#32-summary-as-initial-view-and-recursive-navigation). We treat whether summary deserves that role as a hypothesis:
+Every lens, projection capability, recurring view construction, or representation-selection rule introduced into PostCode embodies a provisional claim that it will help satisfy some human information need. Formative use should evaluate that claim rather than assume usefulness from the apparent reasonableness of the design.
 
-> **A summary can satisfy the user's current information need or usefully support the next step in their investigation.**
+Not every small capability needs a separately formalized hypothesis. When a capability has a consequential or recurring role, however, its intended information need and expected contribution should be clear enough to compare with what happens in use.
 
-Formative use should deliberately begin suitable investigations with the suggested summary view often enough to evaluate its usefulness across subjects and contexts, while allowing a more specific information need to bypass it.
+Relevant observations include:
 
-Each use of a summary as an initial view provides an opportunity to observe the user's subsequent behavior, both to evaluate the hypothesis and to refine how PostCode constructs summary views. Analysis should distinguish whether the summary was explicitly requested, automatically selected to answer a broader expressed information need, suggested by PostCode and constructed after the human accepted the suggestion, or autonomously constructed when no information need was expressed. The recurring information need can be expressed as:
+- the information need the capability was intended to serve;
+- how it entered the investigation: explicitly requested, automatically selected, suggested and accepted, or produced by request-scoped or autonomous system-initiated investigation;
+- whether it satisfied the information need or supported a useful next step;
+- which further views, lenses, or subjects the human pursued;
+- when the human instead used the source escape hatch, sought another representation, or abandoned the investigation;
+- which information was useful, missing, misleading, or unnecessarily prominent;
+- whether the qualifications and limitations were understood and trusted;
+- how the result varied across subjects, tasks, projects, architectures, domains, and programming languages.
 
-> **Summarize the subject.**
-
-This provides a repeatable starting point across development contexts without treating the resulting summary views as standardized measurements.
-
-Analysis should distinguish summary views built from a synthesized summary projection, coordinated independent projections, or a mixture of both. These constructions may serve the same information need while having different trust properties and failure modes.
-
-Observations relevant to evaluating the hypothesis include:
-
-- whether the summary satisfies the user's current information need;
-- whether it supports a useful next step in the investigation;
-- whether it provides a coherent sense of the program or only a list of facts;
-- which suggested next lenses are actually followed;
-- when the user stops after the summary, and whether that reflects sufficient understanding, an unhelpful result, or abandonment.
-
-Observations relevant to refining summary-view construction include:
-
-- which information is consistently useful for orientation;
-- which information is omitted but immediately wanted;
-- which claims are difficult to qualify;
-- which summaries merely restate obvious repository structure;
-- which interpretations genuinely help navigation;
-- which projections, lens parameter values, presentations, and presentation parameter values are selected explicitly or inferred from the request, and how those choices vary by task and context;
-- what stable or navigational structure should accompany the summary.
-
-These observations should combine interaction logs with contemporaneous annotations or other direct user reports, as described in [Formative Logging](#6-formative-logging).
+These observations should combine interaction logs with contemporaneous annotations or other direct user reports, as described in [Formative Logging](#6-formative-logging). Findings may support retaining, revising, replacing, or removing a capability and may motivate changes to the application, roadmap, research questions, or conceptual design.
 
 ## 4. Interpreting Formative Use
 
@@ -166,7 +149,7 @@ Possible interpretations include:
 - source is intrinsically clearer or more efficient for this question;
 - the projection-based approach is poorly suited to the activity.
 
-Formative use should also help determine which textual results belong in transient conversation, which should become retained views, and which should contribute to longer-lived workspace context.
+Formative use should also help determine which textual results belong in transient conversation, which should become retained views, and which should contribute to longer-lived investigation context.
 
 ### 4.1 Reported Limitations as Development Feedback
 
@@ -221,7 +204,7 @@ Independent evaluation can later ask a different question:
 
 ## 6. Formative Logging
 
-Formative evidence should combine automatically recorded interaction events with contemporaneous subjective observations. PostCode's support for capturing this evidence is described in [Research Observation Support](product-design.md#38-research-observation-support).
+Formative evidence should combine automatically recorded interaction events with contemporaneous subjective observations. The conceptual requirement for this support is stated in [Research Observation Support](product-design.md#research-observation-support); the relevant recorded context and events are listed below.
 
 Formative investigation should maintain an explicit evidence boundary. Observation records, subsequent analysis, and withheld reference material remain outside the repository under investigation and outside the evidence available to PostCode and its coding agents.
 
@@ -236,8 +219,8 @@ Relevant recorded context and events include:
 - explicit and automatically selected lenses, lens parameter values, projections and their composition within views, presentations, presentation parameter values, and resulting views;
 - entities and relationships discovered or opened;
 - projections produced;
-- views and linked workspaces opened, closed, or revisited;
-- relationships among views, including derivation, placement, live dependencies, and changes in investigation roots;
+- views and investigation contexts opened, closed, or revisited;
+- relationships among views, including derivation, navigation lineage, and changes in captured basis;
 - test projections inspected;
 - revisions and branches inspected;
 - projection comparisons;
@@ -246,7 +229,7 @@ Relevant recorded context and events include:
 - unavailable, refused, or failed projection requests;
 - analysis applicability and availability, execution state, and result materialization;
 - analysis-cost estimates, resource budgets or thresholds, user choices, and actual resource use where available;
-- changes in workspace state;
+- changes in investigation context;
 - interactions with coding-agent context.
 
 Subjective observations may record that the user:
@@ -268,7 +251,7 @@ The log is primarily a **design instrument**, not an unbiased behavioral dataset
 
 Individual events do not automatically constitute findings.
 
-A source excursion, failed projection, awkward view, or other event should retain enough context to support later interpretation. This includes the development task and information need; the PostCode version; the repository states involved, including their Git commits or relevant working-tree states and their association with the projections; the subjects, lenses, lens parameter values, and projections involved; their composition within the presentation and view; presentation parameter values, workspace context, and relevant navigation lineage; the action taken next; and any contemporaneous subjective explanation.
+A source excursion, failed projection, awkward view, or other event should retain enough context to support later interpretation. This includes the development task and information need; the PostCode version; the repository states involved, including their Git commits or relevant working-tree states and their association with the projections; the subjects, lenses, lens parameter values, and projections involved; their composition within the presentation and view; presentation parameter values, investigation context, and relevant navigation lineage; the action taken next; and any contemporaneous subjective explanation.
 
 Recurring patterns can motivate design changes or research hypotheses. Interpretation should also preserve contrary instances and contextual boundaries rather than retaining only evidence that supports the current design.
 

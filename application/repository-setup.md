@@ -15,7 +15,7 @@ PostCode presents task-appropriate views of program structure, behavior, history
 
 As an initial simplification, PostCode's projections and views are read-only. Humans continue to direct program changes by instructing coding agents in prose.
 
-See [`foundation/product-design.md`](foundation/product-design.md) for the full conceptual design.
+See [`foundation/product-design.md`](foundation/product-design.md) for the conceptual product design.
 
 ## Observability
 
@@ -49,7 +49,7 @@ The documents in this directory are adopted foundation material for developing P
 
 ## Governing Documents
 
-- [product-design.md](product-design.md) defines the adopted product design hypothesis: what PostCode is intended to become and the principles its implementation must preserve. It is aspirational about implementation status but governing for product direction. Plans and decisions must conform to it unless the human explicitly authorizes a foundation revision.
+- [product-design.md](product-design.md) is the adopted governing conceptual description of PostCode. It defines the product hypothesis and the principles the application must preserve. It is aspirational about implementation status; application plans and decisions must conform to it unless the human explicitly authorizes a foundation revision.
 - [task-protocol.md](task-protocol.md) governs how authorized implementation tasks are opened, recorded, followed up, verified, and concluded.
 - [baseline-conventions.md](baseline-conventions.md) contains baseline development conventions adopted across the application.
 ```

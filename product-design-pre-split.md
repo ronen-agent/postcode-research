@@ -1,8 +1,6 @@
 # PostCode: Expanded Product Design Before the Conceptual Split
 
-> **Non-governing extraction source.** This document preserves the expanded product design as it existed before the conceptual product design was separated from the application specification. It mixes conceptual design, detailed application behavior, research instrumentation, examples, and implementation-facing qualifications. It is retained so that the application project can extract a living specification in light of its existing architecture; it should not be adopted wholesale or maintained as a second product design.
-
-This document describes the current design hypothesis for PostCode: what the system is and how its concepts fit together.
+> **Frozen, non-governing interim reference.** This document preserves the expanded product design at revision `87f74eb`, immediately before the conceptual design split. It mixes conceptual design, detailed application behavior, research instrumentation, examples, and implementation-facing qualifications. It is retained temporarily for humans and agents to consult when considering detailed application behavior. It will not track subsequent changes to the governing conceptual design and should not be adopted wholesale or maintained as a second product design.
 
 ## 1. Design Premise
 
