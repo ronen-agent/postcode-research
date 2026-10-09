@@ -184,7 +184,7 @@ A PostCode summary view may:
 - preserve the repository state associated with each projection;
 - be compared across revisions.
 
-Thus the request **Summarize the project** is not intended merely as a better prompt for an LLM. It is a candidate entry point into a structured investigation of the program.
+Thus the request **Summarize the project** is not intended merely as a better prompt for an LLM. It is one candidate entry point among others into a structured investigation of the program.
 
 This may also provide a useful bridge between familiar contemporary AI use and PostCode's broader research question:
 

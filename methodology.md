@@ -119,7 +119,9 @@ Not every small capability needs a separately formalized hypothesis. When a capa
 Relevant observations include:
 
 - the information need the capability was intended to serve;
-- how it entered the investigation: explicitly requested, automatically selected, suggested and accepted, or produced by request-scoped or autonomous system-initiated investigation;
+- how the resulting view or information entered the investigation relative to human intent: explicitly requested, automatically selected within an expressed information need, constructed after a suggestion was accepted, or introduced without prior request or acceptance;
+- whether additional system-initiated investigation contributed and, if so, whether it was request-scoped or autonomous;
+- whether the result was a synthesized qualified projection, a coordination of independently qualified projections, or a mixture, when that construction could affect trust or usefulness;
 - whether it satisfied the information need or supported a useful next step;
 - which further views, lenses, or subjects the human pursued;
 - when the human instead used the source escape hatch, sought another representation, or abandoned the investigation;
@@ -219,7 +221,7 @@ Relevant recorded context and events include:
 - explicit and automatically selected lenses, lens parameter values, projections and their composition within views, presentations, presentation parameter values, and resulting views;
 - entities and relationships discovered or opened;
 - projections produced;
-- views and investigation contexts opened, closed, or revisited;
+- views opened, closed, or revisited;
 - relationships among views, including derivation, navigation lineage, and changes in captured basis;
 - test projections inspected;
 - revisions and branches inspected;

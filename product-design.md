@@ -283,7 +283,7 @@ selects a lens, a lens parameter, and a presentation.
 
 The resolved construction, consequential selection criteria, and omissions must remain inspectable. Interpretation may guide investigation and may itself be useful output, but must not masquerade as mechanically established truth.
 
-Resolving a request may require information that has not yet been established. Request interpretation may consume qualified information but does not itself derive program claims; obtaining such information is request-scoped system-initiated investigation. Outcomes—including candidates, ambiguity, incomplete coverage, and inability to resolve the request—remain attributable and qualified.
+Resolving a request may require information that has not yet been established. Request interpretation may consume qualified information but does not itself derive program claims; obtaining such information is [request-scoped system-initiated investigation](#system-initiated-investigation). Outcomes—including candidates, ambiguity, incomplete coverage, and inability to resolve the request—remain attributable and qualified.
 
 <a id="system-initiated-investigation"></a>
 
@@ -297,6 +297,8 @@ System-initiated investigation may be:
 - **autonomous:** investigation PostCode undertakes without a parent request.
 
 Selecting unspecified elements of a view in order to answer an expressed information need is part of interpreting the request, not by itself system-initiated investigation.
+
+Request-scoped investigation remains PostCode-initiated even when its parent request was initiated by a human or external agent. It remains request-scoped only while it serves that parent request; work that extends beyond that purpose or continues after the parent request is satisfied or cancelled is autonomous.
 
 The two forms must remain distinguishable. When system-initiated investigation influences what PostCode shows, selects, suggests, or reports, its relationship to any parent request or autonomous trigger, together with its relevant results and qualifications, must remain identifiable in the resulting investigation and observation stream.
 
@@ -326,7 +328,7 @@ Source-level detail and conventional repository artifacts should not be PostCode
 
 PostCode therefore provides an identifiable **source escape hatch** through which the human can inspect language-specific definitions, conventional source, documentation, files, and other repository artifacts. Escape-hatch use can provide implementation detail, verify a projection, or continue an investigation that available conceptual representations cannot support.
 
-Source use is legitimate, not failure. Each use of the escape hatch is a **source excursion**. It remains visibly distinct from conceptual representation and is recorded for later analysis because repeated use may reveal missing or inadequate capabilities.
+Source use is legitimate, not failure. Each use of the escape hatch is a **source excursion**. It remains visibly distinct from conceptual representation and is recorded through [research observation support](#research-observation-support) because repeated use may reveal missing or inadequate capabilities.
 
 Progressive disclosure of a language-specific analysis rule, declaration, source location, or other source-level detail is also a source excursion and must remain identifiable according to the level of detail disclosed. An investigation that begins through source-level navigation retains that origin in its investigation context.
 
@@ -392,7 +394,7 @@ PostCode is used as the instrument of a research project. It therefore produces 
 
 The observation stream includes relevant requests, choices, investigations, results, qualifications, navigation, source excursions, investigation-context evolution, resource decisions, agent-context interaction, and contemporaneous subjective reports. It distinguishes human-, agent-, and PostCode-initiated activity; for PostCode-initiated investigation, it also distinguishes request-scoped from autonomous work and retains the parent request or autonomous trigger. The stream preserves enough provenance to relate observations to the PostCode version, repository state, session, task, and research-versus-development context.
 
-Research observations are kept in designated storage outside the investigated repository. Development diagnostics and operational telemetry may use different mechanisms and must not silently enter the research evidence stream.
+Research observations are kept in designated storage outside the investigated repository, consistent with the [generated-output evidence boundary](#generated-output-evidence-boundary). Development diagnostics and operational telemetry may use different mechanisms and must not silently enter the research evidence stream.
 
 <a id="projection-scope"></a>
 
@@ -434,3 +436,5 @@ When experience across languages reveals common concepts, PostCode can accrete s
 Outputs produced by PostCode about a repository—including observations, exported views or projections, command-line output, cached results, and reports—must not silently become independent repository evidence in subsequent analysis of that same repository. Otherwise PostCode can create a feedback loop in which its earlier conclusions appear to corroborate themselves.
 
 PostCode may retain, reuse, and compare its outputs as PostCode-produced artifacts with their provenance intact. It must support storing them outside the analyzed repository or explicitly excluding their locations from repository evidence.
+
+Markings within generated output may supplement but must not replace its separation from repository evidence.
