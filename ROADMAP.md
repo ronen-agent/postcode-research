@@ -2,6 +2,8 @@
 
 This document describes the current development plan for PostCode and records plausible later directions without treating them as commitments.
 
+It identifies which research-enabling capabilities and contexts may be pursued and why; detailed application behavior belongs in the application repository's governing specification.
+
 The research questions are described in [`research.md`](research.md), the current design in [`product-design.md`](product-design.md), and the process by which development produces research evidence in [`methodology.md`](methodology.md).
 
 ## 1. Roadmap Stance
@@ -39,11 +41,10 @@ It should support:
 - analysis of the PostCode repository in one programming language;
 - a small initial set of mechanically derived lenses;
 - one or more basic interpretive lenses whose claims remain explicitly qualified;
-- summary views that select and present projections appropriate to their subjects;
-- simple presentations and views that preserve provenance, epistemological status, guarantees, and limitations;
-- CLI support for those views;
-- navigation among subjects, relationships, and views;
-- convenient access to source;
+- useful summary and orientation views;
+- views that preserve provenance, epistemological status, guarantees, and limitations;
+- a practical way to request and inspect those views;
+- enough navigation and source access to sustain an investigation;
 - enough formative observation support to record use, friction, and immediate reactions.
 
 Including both summary views and an interpretive lens from the beginning puts representation selection and the epistemological contract under pressure: PostCode must assemble useful orientation from qualified projections while keeping interpretation distinguishable from precise analysis.
@@ -58,49 +59,33 @@ The first formative loop should determine which capabilities become useful next.
 
 ### 3.1 Following repository changes
 
-Observe changes made by external coding agents and allow affected projection requests with following bindings to be repeated so that relevant views can show information based on newly captured states. Changes in captured basis must remain visible. This becomes important when manual re-execution disrupts sustained use or leaves the workspace visibly stale.
+Support continued investigation as coding agents change a repository, without allowing information based on an earlier state to appear current. This becomes important when manually reconstructing an investigation after each change disrupts sustained use or obscures what the human is supervising.
 
 ### 3.2 Prose investigation and selection
 
-Allow prose requests to identify subjects, select or parameterize lenses, choose or parameterize presentations, create useful views, and request qualified explanations. This becomes important when explicit controls make investigation awkward or require the user to know the lens and presentation vocabulary prematurely.
+Allow prose information needs to produce useful qualified views without requiring the human to know PostCode's full lens and presentation vocabulary. This becomes important when explicit selection makes investigation awkward or forces the human to translate conceptual questions into PostCode mechanics.
 
 ### 3.3 Shared coding-agent context
 
-Generate the machine-readable context described in [`product-design.md`](product-design.md#371-shared-machine-readable-context), allowing prompts to refer directly to focused views, projected relationships, and the current investigation. Agent-supplied context can later complete the exchange.
+Provide the shared machine-readable context described in [`product-design.md`](product-design.md#371-shared-machine-readable-context), allowing prompts to refer directly to focused views, projected relationships, and the current investigation. Agent-supplied context can later complete the exchange.
 
 Its timing should depend on when repeatedly translating PostCode concepts back into source-level terms becomes a material obstacle to formative use.
 
 ### 3.4 Revision and projection comparison
 
-Allow the same lens and subject to be projected at two repository states and initially present the results together:
+Support comparison of qualified information across repository states so the human can investigate what changed at a conceptual level rather than only through source diffs. Begin with the smallest comparison capability that can produce formative evidence; add conceptual-diff analysis when simpler comparison proves useful but inadequate.
 
-```text
-stateA = repository at revisionA
-stateB = repository at revisionB
-
-before = lens([stateA], subject, lens_parameters)
-after  = lens([stateB], subject, lens_parameters)
-
-comparison_view = comparison_presentation(
-  [before, after],
-  context,
-  presentation_parameters
-)
-```
-
-Stable projection behavior is a prerequisite: changes in the projection mechanism must not masquerade as changes in the program.
-
-Specialized comparison presentations—such as side-by-side layouts, alignment based on already established correspondence, or animation of an established change—should be added only if simpler presentation proves useful but inadequate. Identifying additions, removals, movement, correspondence, or conceptual significance instead requires qualified comparison or revision-diff lenses; presentations can then expose those results through highlights, overlays, animation, or change summaries.
+Stable projection behavior is a prerequisite: changes in PostCode must not masquerade as changes in the program.
 
 ### 3.5 Lens and presentation growth
 
-Add or revise lenses and presentations in response to recurring needs. A failed investigation does not by itself imply that a new lens is required; the problem may instead lie in projection content, lens parameters, presentation behavior, presentation parameters, selection, available evidence, or the underlying projection approach.
+Add or revise capabilities in response to recurring investigative needs. A failed investigation does not by itself imply that a new lens is required; the problem may instead concern available information, representation, selection, interaction, evidence, or the underlying projection approach.
 
-Candidate lenses are recorded in [`product-design.md`](product-design.md#41-candidate-lenses). Their eventual set, behavior, and grouping should be shaped by use.
+Illustrative lens families are described in [`product-design.md`](product-design.md#41-illustrative-lens-families). The capabilities pursued next should be shaped by use rather than by treating those examples as a backlog.
 
-### 3.6 Workspace usability and chrome
+### 3.6 Usability and sustained interaction
 
-Refine shared workspace controls, layout, navigation, feedback, and presentation affordances when interface friction interferes with sustained use or obscures what is being learned about projections. Visual polish by itself is not a roadmap milestone.
+Address interaction friction when it interferes with sustained formative use or obscures what is being learned about projections. Visual polish by itself is not a roadmap milestone.
 
 ## 4. Expanding Formative Contexts
 
@@ -180,7 +165,7 @@ The following fit the design but are not required for the immediate investigatio
 - an integrated coding-agent conversation;
 - runtime adapters for debuggers, profilers, tracers, or test runners;
 - debugger or execution control;
-- polished or specialized projection-diff presentations;
+- specialized comparison interaction;
 - educational tooling.
 
 Runtime observations can be introduced if static repository evidence proves insufficient for important questions. Existing runtime systems should supply the observations; PostCode need not become the debugger, profiler, tracer, test runner, or execution environment.
