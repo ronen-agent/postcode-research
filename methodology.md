@@ -12,7 +12,7 @@ Building the system is necessary because many of the relevant questions cannot b
 
 The initial method is therefore sustained use, observation, and revision rather than a fixed efficacy experiment.
 
-To preserve evidence from that use, PostCode is designed to export a stream of relevant interaction events and contemporaneous user reports to a configured research destination for subsequent analysis. The contents and limitations of that evidence are described in [Formative Logging](#6-formative-logging).
+To preserve evidence from that use, PostCode is designed to export a stream of relevant interaction events and contemporaneous user reports to a designated research destination for subsequent analysis. The contents and limitations of that evidence are described in [Formative Logging](#6-formative-logging).
 
 The central formative question is:
 
@@ -42,7 +42,7 @@ Abstractions should likewise earn their place through accumulated pressure from 
 
 PostCode should be exercised across substantially different projects, tasks, architectures, domains, and programming languages. No single development context is representative; variation helps expose context-specific assumptions and reduces the risk of optimizing PostCode for any one of them.
 
-Formative research use should use the latest production release of PostCode.
+Each formative research investigation should use an identified version of PostCode held stable for its duration and direct its observation records to a designated research destination.
 
 Formative use should include both inspection-only investigations and development tasks. Inspection-only use isolates PostCode's support for understanding software; development tasks additionally exercise direction, change supervision, and interaction with coding agents.
 
@@ -67,7 +67,7 @@ This context is primarily formative self-study, not an efficacy experiment. It i
 
 It also has important limitations. The developer is motivated to exercise PostCode and can change both the tool and its subject in response to friction. It cannot by itself establish how other developers would behave or whether they would prefer PostCode to source.
 
-PostCode-on-PostCode use undertaken as formative research remains research use even when it supports application development, and therefore uses the latest production release. Runs undertaken to test or debug PostCode are development activity rather than research observations and would typically use a development or test build.
+PostCode-on-PostCode use undertaken as formative research remains research use even when it supports application development and therefore follows the version-stability and observation-destination requirements above. Runs undertaken to test or debug PostCode are development activity rather than research observations.
 
 <a id="existing-project-development"></a>
 

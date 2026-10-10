@@ -300,7 +300,7 @@ Selecting unspecified elements of a view in order to answer an expressed informa
 
 Request-scoped investigation remains PostCode-initiated even when its parent request was initiated by a human or external agent. It remains request-scoped only while it serves that parent request; work that extends beyond that purpose or continues after the parent request is satisfied or cancelled is autonomous.
 
-The two forms must remain distinguishable. When system-initiated investigation influences what PostCode shows, selects, suggests, or reports, its relationship to any parent request or autonomous trigger, together with its relevant results and qualifications, must remain identifiable in the resulting investigation and observation stream.
+The two forms must remain distinguishable. When system-initiated investigation influences what PostCode shows, selects, suggests, or reports, its relationship to any parent request or autonomous trigger, together with its relevant results and qualifications, must remain identifiable in the resulting investigation and observation records.
 
 <a id="investigation-context-and-continuity"></a>
 
@@ -392,9 +392,9 @@ The context exchange may eventually become interactive: agents could request pro
 
 PostCode is used as the instrument of a research project. It therefore produces research-oriented observations about how its concepts and interactions function in practice, without requiring a separate research diary during every use.
 
-The observation stream includes relevant requests, choices, investigations, results, qualifications, navigation, source excursions, investigation-context evolution, resource decisions, agent-context interaction, and contemporaneous subjective reports. It distinguishes human-, agent-, and PostCode-initiated activity; for PostCode-initiated investigation, it also distinguishes request-scoped from autonomous work and retains the parent request or autonomous trigger. The stream preserves enough provenance to relate observations to the PostCode version, repository state, session, task, and research-versus-development context.
+PostCode's observation facilities record relevant requests, choices, investigations, results, qualifications, navigation, source excursions, investigation-context evolution, resource decisions, agent-context interaction, and contemporaneous subjective reports. Each record distinguishes human-, agent-, and PostCode-initiated activity; for PostCode-initiated investigation, it also distinguishes request-scoped from autonomous work and retains the parent request or autonomous trigger. The records preserve enough provenance to relate each to the PostCode version, repository state, session, task, and whether it arose from research or another use.
 
-A production build used for research directs research observations to designated storage outside the investigated repository and outside the evidence available to PostCode and its coding agents. PostCode may record observations to that storage but must not consult them as evidence. Development and test records, together with operational diagnostics and telemetry from any build, are not research observations and must not enter the research evidence stream. They may use other storage, including repository-local storage, subject to the [generated-output evidence boundary](#generated-output-evidence-boundary). The recorded research-versus-development context identifies the activity that produced a record independently of the build used.
+For research use, PostCode delivers observation records to a designated research destination; in other uses, it may suppress, generate, or store observation records by any mechanism. In all cases, observation records are subject to the [generated-output evidence boundary](#generated-output-evidence-boundary).
 
 <a id="projection-scope"></a>
 
@@ -433,10 +433,8 @@ When experience across languages reveals common concepts, PostCode can accrete s
 
 ## 5. Generated-Output Evidence Boundary
 
-Outputs produced by PostCode about a repository—including observations, exported views or projections, command-line output, cached results, and reports—must not silently become independent repository evidence in subsequent analysis of that same repository. Otherwise PostCode can create a feedback loop in which its earlier conclusions appear to corroborate themselves.
+Outputs produced by PostCode about a repository—including observations, exported views or projections, command-line output, cached results, and reports—must not become independent repository evidence in subsequent analysis of that same repository. Otherwise PostCode can create a feedback loop in which its earlier conclusions appear to corroborate themselves.
 
-PostCode may retain, reuse, and compare its outputs as PostCode-produced artifacts with their provenance intact. It must support storing them outside the analyzed repository or explicitly excluding their locations from repository evidence.
+PostCode may retain, reuse, and compare its outputs as PostCode-produced artifacts, provided their provenance and separation from repository evidence remain intact.
 
-Research observations are subject to the stricter separation stated in [Research Observation Support](#research-observation-support).
-
-Markings within generated output may supplement but must not replace its separation from repository evidence.
+Markings within generated output may supplement but must not replace that separation.
