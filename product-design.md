@@ -394,7 +394,7 @@ PostCode is used as the instrument of a research project. It therefore produces 
 
 The observation stream includes relevant requests, choices, investigations, results, qualifications, navigation, source excursions, investigation-context evolution, resource decisions, agent-context interaction, and contemporaneous subjective reports. It distinguishes human-, agent-, and PostCode-initiated activity; for PostCode-initiated investigation, it also distinguishes request-scoped from autonomous work and retains the parent request or autonomous trigger. The stream preserves enough provenance to relate observations to the PostCode version, repository state, session, task, and research-versus-development context.
 
-Research observations are kept in designated storage outside the investigated repository, consistent with the [generated-output evidence boundary](#generated-output-evidence-boundary). Development diagnostics and operational telemetry may use different mechanisms and must not silently enter the research evidence stream.
+In research use, research observations are kept in designated storage outside the investigated repository, consistent with the [generated-output evidence boundary](#generated-output-evidence-boundary). Development diagnostics and operational telemetry may use different mechanisms and must not silently enter the research evidence stream.
 
 <a id="projection-scope"></a>
 
