@@ -392,7 +392,7 @@ The context exchange may eventually become interactive: agents could request pro
 
 PostCode is used as the instrument of a research project. It therefore produces research-oriented observations about how its concepts and interactions function in practice, without requiring a separate research diary during every use.
 
-PostCode's observation facilities record relevant requests, choices, investigations, results, qualifications, navigation, source excursions, investigation-context evolution, resource decisions, agent-context interaction, and contemporaneous subjective reports. Each record distinguishes human-, agent-, and PostCode-initiated activity; for PostCode-initiated investigation, it also distinguishes request-scoped from autonomous work and retains the parent request or autonomous trigger. The records preserve enough provenance to relate each to the PostCode version, repository state, session, task, and whether it arose from research or another use.
+PostCode's observation facilities record relevant requests, choices, investigations, results, qualifications, navigation, source excursions, investigation-context evolution, resource decisions, agent-context interaction, and contemporaneous subjective reports. Each record distinguishes human-, agent-, and PostCode-initiated activity; for PostCode-initiated investigation, it also distinguishes request-scoped from autonomous work and retains the parent request or autonomous trigger. The records preserve enough provenance to relate each to the PostCode version, repository state, session, and task.
 
 For research use, PostCode delivers observation records to a designated research destination, subject to the [Generated-Output Evidence Boundary](#generated-output-evidence-boundary).
 
