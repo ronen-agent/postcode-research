@@ -42,7 +42,7 @@ Abstractions should likewise earn their place through accumulated pressure from 
 
 PostCode should be exercised across substantially different projects, tasks, architectures, domains, and programming languages. No single development context is representative; variation helps expose context-specific assumptions and reduces the risk of optimizing PostCode for any one of them.
 
-Each formative research investigation should use an identified version of PostCode held stable for its duration and direct its observation records to a designated research destination.
+Each formative research episode—a bounded period of use analyzed as a unit—should use an identified version of PostCode held stable for its duration and direct its observation records to a designated research destination.
 
 Formative use should include both inspection-only investigations and development tasks. Inspection-only use isolates PostCode's support for understanding software; development tasks additionally exercise direction, change supervision, and interaction with coding agents.
 
@@ -66,8 +66,6 @@ It is especially useful for discovering:
 This context is primarily formative self-study, not an efficacy experiment. It is intended to expose missing representations, bad abstractions, insufficient precision, awkward interactions, and limits of the underlying idea.
 
 It also has important limitations. The developer is motivated to exercise PostCode and can change both the tool and its subject in response to friction. It cannot by itself establish how other developers would behave or whether they would prefer PostCode to source.
-
-PostCode-on-PostCode use undertaken as formative research remains research use even when it supports application development and therefore follows the version-stability and observation-destination requirements above. Runs undertaken to test or debug PostCode are development activity rather than research observations.
 
 <a id="existing-project-development"></a>
 
@@ -207,10 +205,6 @@ Independent evaluation can later ask a different question:
 ## 6. Formative Logging
 
 Formative evidence should combine automatically recorded interaction events with contemporaneous subjective observations. The conceptual requirement for this support is stated in [Research Observation Support](product-design.md#research-observation-support); the relevant recorded context and events are listed below.
-
-Formative investigation should maintain an explicit evidence boundary. Observation records, subsequent analysis, and withheld reference material remain outside the repository under investigation and outside the evidence available to PostCode and its coding agents.
-
-Without this boundary, coding agents developing PostCode might use research observations or findings as development guidance, and PostCode-on-PostCode projections might rely on those same materials rather than independently recovering information from application-development evidence.
 
 Relevant recorded context and events include:
 

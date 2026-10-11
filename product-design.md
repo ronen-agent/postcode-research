@@ -368,7 +368,7 @@ A view's reported uncertainty and limitations can also become development feedba
 
 PostCode can expose machine-readable context representing the human's current investigation. Agent instructions can direct coding agents to use that context when interpreting the human's instructions.
 
-The context should make focused views, underlying subjects and projections, captured bases, qualifications, relationships among views, and relevant source mappings available as shared referents. A reference to a projection over its captured basis must remain distinguishable from a reference to its underlying request repeated against current inputs. The context is generated rather than a canonical representation of the program and must not silently become repository evidence.
+The context should make focused views, underlying subjects and projections, captured bases, qualifications, relationships among views, and relevant source mappings available as shared referents. A reference to a projection over its captured basis must remain distinguishable from a reference to its underlying request repeated against current inputs. The context is generated rather than a canonical representation of the program and is subject to the [Generated-Output Evidence Boundary](#generated-output-evidence-boundary).
 
 This allows the human to refer to projected concepts in instructions to a coding agent—for example, “remove the dependency shown in the focused view” or “preserve the behavior represented here”—without reconstructing source-level coordinates.
 
@@ -394,7 +394,7 @@ PostCode is used as the instrument of a research project. It therefore produces 
 
 PostCode's observation facilities record relevant requests, choices, investigations, results, qualifications, navigation, source excursions, investigation-context evolution, resource decisions, agent-context interaction, and contemporaneous subjective reports. Each record distinguishes human-, agent-, and PostCode-initiated activity; for PostCode-initiated investigation, it also distinguishes request-scoped from autonomous work and retains the parent request or autonomous trigger. The records preserve enough provenance to relate each to the PostCode version, repository state, session, task, and whether it arose from research or another use.
 
-For research use, PostCode delivers observation records to a designated research destination; in other uses, it may suppress, generate, or store observation records by any mechanism. In all cases, observation records are subject to the [generated-output evidence boundary](#generated-output-evidence-boundary).
+For research use, PostCode delivers observation records to a designated research destination, subject to the [Generated-Output Evidence Boundary](#generated-output-evidence-boundary).
 
 <a id="projection-scope"></a>
 
@@ -433,7 +433,7 @@ When experience across languages reveals common concepts, PostCode can accrete s
 
 ## 5. Generated-Output Evidence Boundary
 
-Outputs produced by PostCode about a repository—including observations, exported views or projections, command-line output, cached results, and reports—must not become independent repository evidence in subsequent analysis of that same repository. Otherwise PostCode can create a feedback loop in which its earlier conclusions appear to corroborate themselves.
+Outputs produced by PostCode about a repository—including observation records, exported views or projections, command-line output, cached results, and reports—must not become independent repository evidence in subsequent analysis of that same repository. Otherwise PostCode can create a feedback loop in which its earlier conclusions appear to corroborate themselves.
 
 PostCode may retain, reuse, and compare its outputs as PostCode-produced artifacts, provided their provenance and separation from repository evidence remain intact.
 
