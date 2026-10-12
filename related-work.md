@@ -70,11 +70,11 @@ Review basis: arXiv abstract and publication-status metadata; full case study no
 
 **Qiao, Y., Haque, S., & Hundhausen, C. (2026). _Beyond the Prompt: Linking What Developers Ask, Do, and Understand with Coding Agents._ Preprint, arXiv:2609.33712; submitted 27 September 2026.** [Paper](https://arxiv.org/abs/2609.33712)
 
-Provisional methodological lead. Reports a workflow combining prompt analysis, recorded activity, and separate process/solution explanation rubrics, applied to ten experienced developers using Copilot on unfamiliar software. Task performance and understanding diverged for two participants; this small observational sample does not support population claims.
+Provisional methodological lead. Reports a workflow combining prompt analysis, recorded activity, and separate process/solution explanation rubrics, applied to ten experienced developers using Copilot on unfamiliar software. Task performance and understanding diverged for two participants. Understanding scores assess participants' elicited explanations, graded by models using researcher-refined rubrics; they do not measure everything participants may know. This small observational sample does not support population claims.
 
-Relevant to PostCode's questions about mental models and supervision, and to distinguishing interaction traces from evidence of understanding. Inspect the instruments before adapting them to sustained formative episodes.
+Relevant to PostCode's questions about mental models and supervision, and to distinguishing interaction traces from evidence of understanding. Evaluate the instruments' suitability before adapting them to sustained formative episodes.
 
-Review basis (12 October 2026): indexed arXiv abstract and metadata returned by search. Direct abstract-page, HTML, and PDF retrieval failed; full methods, instruments, and publication status beyond the preprint remain unverified. Newly found outside this run's main coverage window.
+Review basis (12 October 2026): indexed arXiv abstract and metadata in the initial watch; subsequent PR review accessed the primary abstract and [versioned full text](https://arxiv.org/html/2609.33712v1), inspecting the explanation rubrics, grading procedure, study setting, and limitations. Instruments and grading were not independently validated; publication status beyond the preprint remains unverified. Newly found outside the watch's main coverage window.
 
 **Whiteboard (/dev/fast) (2026). Open-source technical project.** [Repository](https://github.com/devdotfast/whiteboard)
 
@@ -130,7 +130,7 @@ Review basis: project documentation; implementation, maturity, and actual guaran
 
 Describes a repository knowledge graph that distinguishes deterministically *derived* relationships, *authored* assertions, and *inferred* semantic relationships with provenance. It exposes structured and natural-language queries and generated views for humans and agents.
 
-Close prior art for provenance categories overlapping PostCode's derived facts, recorded assertions, and interpretation. PostCode's [epistemological contract](product-design.md#epistemological-contract) additionally distinguishes how information was obtained from what it establishes, including scope, completeness, observed executions, and unavailable analysis. Deterministic extraction alone does not establish semantic correctness or completeness. Whether Roteiro preserves equivalent distinctions and how they reach human-facing views require further assessment; the shared taxonomy alone establishes neither equivalence nor a distinctive PostCode contribution.
+Close prior art for provenance categories overlapping PostCode's derived facts, recorded assertions, and interpretation. PostCode's [epistemological contract](product-design.md#22-epistemological-contract) additionally distinguishes how information was obtained from what it establishes, including scope, completeness, observed executions, and unavailable analysis. Deterministic extraction alone does not establish semantic correctness or completeness. Whether Roteiro preserves equivalent distinctions and how they reach human-facing views require further assessment; the shared taxonomy alone establishes neither equivalence nor a distinctive PostCode contribution.
 
 Review basis: project documentation; implementation and analysis guarantees not independently assessed.
 
