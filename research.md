@@ -204,7 +204,9 @@ PostCode does not assume that agent-mediated development invalidates what has al
 
 Relevant literature and provisional distinctions from neighboring work are recorded in [`related-work.md`](related-work.md).
 
-Instead, it investigates whether the economics have changed.
+The rationale has close precedents. [Merino, Ghafari, and Nierstrasz (2026)](https://arxiv.org/abs/2608.22151) argue that generative AI changes the cost of obtaining contextual visualizations and discuss continuous exploration within agent-mediated development. [Moldable development](https://arxiv.org/abs/2409.18811) already makes inexpensive contextual tools central to understanding and acting on software; its implementation in [Glamorous Toolkit](https://gtoolkit.com/) also incorporates AI. Cheap task-specific representations and sustained conceptual interaction are therefore shared research concerns, not ideas PostCode claims to originate.
+
+PostCode investigates whether these changes make its proposed workflow useful, under which conditions, and with which qualifications.
 
 In conventional development, developers continuously read and manipulate source. In doing so, they acquire and refresh a detailed source-grounded mental model of the program as a side effect of implementation work. A separate visualization or higher-level representation must therefore provide enough additional value to justify supplementing an already-familiar representation.
 

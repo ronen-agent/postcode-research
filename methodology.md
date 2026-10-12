@@ -275,6 +275,16 @@ User studies can support appropriately scoped claims about developer behavior, i
 
 All findings should remain scoped to their evidence. Negative and mixed findings should be treated with the same discipline as positive ones; a technique may be useful for one task, repository, language, or development context and unhelpful for another.
 
+### 8.4 Comparisons and reuse assessments
+
+When related systems are assessed, distinguish the question being asked and the evidence required:
+
+- **Analysis validation and reuse:** inspect versioned implementations and exercise representative cases to establish what their results mean, which guarantees and limitations apply, and whether integration can preserve PostCode's contracts. Similar terminology or deterministic execution alone does not establish equivalent semantics. Reuse assessment also considers integration effort and support for research observation.
+- **Interface comparison:** compare identified versions on specified human tasks, with the information, source access, setup, and assistance available in each condition made explicit. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
+- **Sustained-use evidence:** observe understanding, direction, and supervision across development episodes and changing program states. Success on isolated questions or benchmark cases does not establish viability as a routine working surface.
+
+Project documentation establishes reported capabilities, not demonstrated guarantees or effectiveness. Agent-monitor benchmarks may supply useful cases for analysis or supervision, but model performance on them does not itself establish human usefulness. Comparative self-study retains the limitations described above; general claims about developer behavior still require independent evaluation. Record the assessment's version, scope, evidence, and unresolved questions so that reuse decisions and research claims can be judged separately.
+
 ## 9. Relationship to Development Workflows
 
 This methodology overlays software-development workflows. Its observation process does not prescribe how the projects in which PostCode is used plan and implement their work or require access to particular planning, task, or outcome mechanisms.

@@ -34,6 +34,8 @@ and:
 
 Either can be true without the other. The answers may suggest different actions: continuing formative development, releasing software or demonstrations, writing up a finding, seeking collaborators, conducting a more focused evaluation, or doing none of those yet.
 
+At these checkpoints, also reassess the nearby work recorded in [`related-work.md`](related-work.md): which ideas require attribution, which specific contribution claims remain supportable, and whether an existing system offers useful analyses to reuse or an interface to compare. Reuse opportunities and comparison opportunities require separate assessments. Evidence of overlap may refine a claim or reduce implementation work without requiring a narrower research programme; new interaction or design knowledge may still be valuable when its component mechanisms are established. Distinguish published arguments and reported capabilities from inspected implementations and evidence of usefulness, and record consequential findings in the relevant research documents or roadmap.
+
 ## 3. Publication Strategy
 
 PostCode crosses several existing research areas, but the project need not address all of their communities, and an individual contribution may address only one—or none—of them. The appropriate audience should follow from the finding rather than from the full scope of the project.

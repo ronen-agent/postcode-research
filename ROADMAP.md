@@ -87,6 +87,14 @@ Illustrative lens families are described in [`product-design.md`](product-design
 
 Address interaction friction when it interferes with sustained formative use or obscures what is being learned about projections. Visual polish by itself is not a roadmap milestone.
 
+### 3.7 Assessing related systems
+
+A bounded assessment of systems identified in [`related-work.md`](related-work.md#28-implications-of-recent-prior-art) could clarify opportunities for reuse and meaningful interaction comparisons. Archbird is a candidate for assessing analysis reuse and its existing interface; Whiteboard and Glamorous Toolkit are also candidates for interaction comparison.
+
+Select a small set of representative questions or development tasks and identify the versions, implemented capabilities, actual guarantees, and unresolved limitations. For reuse, assess fit with PostCode's captured evidence, qualification, language semantics, and observation requirements, together with integration effort. For comparison, assess whether the interface supports the human tasks relevant to the research question. Follow the [methodological distinctions](methodology.md#84-comparisons-and-reuse-assessments) when interpreting the results.
+
+The assessment could support reuse, a later comparison study, a more precise research claim, or retaining the current approach. It is candidate work, not a commitment to adopt another system or replace existing implementation, and should be selected when its likely value justifies the effort and any delay to formative use.
+
 ## 4. Expanding Formative Contexts
 
 PostCode should eventually be exercised across the different contexts described in [`methodology.md`](methodology.md#2-formative-use). These contexts are sources of different pressure, not consecutive milestones that must all be completed.
