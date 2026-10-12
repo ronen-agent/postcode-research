@@ -17,7 +17,7 @@ See [`ROADMAP.md`](ROADMAP.md) for planned work and candidate directions.
 ## Documents
 
 - [`research.md`](research.md) defines the research motivation, questions, and possible contributions.
-- [`product-design.md`](product-design.md) describes the conceptual product design.
+- [`product-design.md`](product-design.md) describes the conceptual product design. It is copied verbatim into the application repository as `foundation/product-design.md`, where the adopted version governs application design and development. Revisions are adopted explicitly; see [application repository setup](application/repository-setup.md).
 - [`methodology.md`](methodology.md) describes how building and using PostCode can produce research evidence.
 - [`research-strategy.md`](research-strategy.md) describes how findings may shape the broader research direction and publication strategy.
 - [`related-work.md`](related-work.md) records relevant prior work and comparisons.
