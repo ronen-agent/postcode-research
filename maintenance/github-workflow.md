@@ -18,7 +18,9 @@ Inspect relevant open, merged, and closed upstream PRs, including proposals from
 
 When there are changes worth proposing, locate `ronen-agent`'s existing fork of upstream and verify its upstream relationship rather than trusting its name. If no fork exists, create one under `ronen-agent`; normally it will be named `ronen-agent/postcode-research`. Reuse this fork across runs. Do not overwrite an unrelated repository occupying that name. If the available tools cannot create or access the fork, report that setup requirement instead of changing the publication model.
 
-Resolve the latest upstream default-branch revision before preparing a new proposal. Bring the corresponding fork branch up to date by fast-forwarding it when possible. If it contains divergent or fork-only work, preserve that work and create the proposal branch directly from the latest upstream revision instead; do not reset or force-push it. If the available tools cannot establish that revision in the fork, report the limitation.
+Resolve the latest upstream default-branch revision and create each new proposal branch in the fork directly from that revision. If the available tools cannot establish that revision in the fork, report the limitation.
+
+Synchronizing the fork's default branch is optional housekeeping and must not be a prerequisite for preparing a proposal. If synchronizing it, verify that the update is a fast-forward and use a non-forced update guarded by the fork branch's expected current revision. Preserve divergent or fork-only work; do not reset or force-push the branch.
 
 Use a descriptive, unique branch name, such as `<task-name>/YYYY-MM-DD`, adding a distinguishing suffix if needed. Keep existing proposal branches separate.
 
