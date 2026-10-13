@@ -30,15 +30,13 @@ The repository should contain the following adopted foundation material:
 foundation/
   README.md
   product-design.md
-  task-protocol.md
-  baseline-conventions.md
+  task-records.md
 ```
 
 The adopted documents should be copied verbatim from the following research-project documents:
 
 - `foundation/product-design.md` from [`../product-design.md`](../product-design.md);
-- `foundation/task-protocol.md` from [`task-protocol.md`](task-protocol.md);
-- `foundation/baseline-conventions.md` from [`baseline-conventions.md`](baseline-conventions.md).
+- `foundation/task-records.md` from [`task-records.md`](task-records.md).
 
 `foundation/README.md` should contain:
 
@@ -50,25 +48,16 @@ The documents in this directory are adopted foundation material for developing P
 ## Governing Documents
 
 - [`product-design.md`](product-design.md) is the adopted governing conceptual description of PostCode. It defines the product hypothesis and the principles the application must preserve. It is aspirational about implementation status; application plans and decisions must conform to it unless the human explicitly authorizes a foundation revision.
-- [`task-protocol.md`](task-protocol.md) governs how authorized implementation tasks are opened, recorded, followed up, verified, and concluded.
-- [`baseline-conventions.md`](baseline-conventions.md) contains baseline development conventions adopted across the application.
+- [`task-records.md`](task-records.md) defines the durable application-development records required by the PostCode Research Project. The application repository owns the operative task protocol that satisfies those requirements.
 ```
 
 ## `AGENTS.md`
 
 The repository's `AGENTS.md` should include the following elements:
 
-- **Session startup**
+- **Task protocol**
 
-  ```markdown
-  ## Session Startup
-
-  Before performing substantive implementation work, read and follow [`foundation/task-protocol.md`](foundation/task-protocol.md).
-
-  - If `_work/TASK.md` exists, begin that task according to the task protocol.
-  - If the human asks to continue an existing task, locate and follow the relevant active task record.
-  - Otherwise, work interactively. Do not create a task record until the human explicitly authorizes a substantive implementation request.
-  ```
+  The application repository should maintain its own operative task protocol at an app-owned location. `AGENTS.md` should identify that protocol, require application-development agents to follow it, and state that it must satisfy `foundation/task-records.md`.
 
 - **Adopted foundation**
 
@@ -77,21 +66,3 @@ The repository's `AGENTS.md` should include the following elements:
 
   Read and follow the adopted documents under [`foundation/`](foundation/README.md) where applicable. Do not modify them as part of ordinary application development; the human may explicitly adopt revised versions.
   ```
-
-- **Development conventions**
-
-  ```markdown
-  ## Development Conventions
-
-  Follow [`foundation/baseline-conventions.md`](foundation/baseline-conventions.md) and any app-local conventions in `dev/conventions.md`.
-  ```
-
-## `.gitignore`
-
-The root `.gitignore` should exclude `_work/TASK.md`, either through the explicit rule:
-
-```gitignore
-/_work/TASK.md
-```
-
-or through a broader rule that covers it.
