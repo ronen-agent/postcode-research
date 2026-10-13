@@ -56,9 +56,9 @@ Potentially important empirical motivation for PostCode's attempt to provide bet
 
 Introduces an Evidence-Grounded Behavior Graph organizing evidence about agent behaviors and relationships into task-oriented oversight views, with links to supporting evidence. Its evaluation includes scenarios involving consequential changes that may not be exposed by ordinary test results.
 
-Close prior art for evidence-grounded oversight, structured relationships, and task-specific representations. Its primary object is agent behavior and verification decisions; PostCode's is the evolving software and the human conceptual interface used to direct and supervise it. Its benchmark may provide useful evaluation scenarios.
+Close prior art for evidence-grounded oversight, structured relationships, and task-specific representations. Its primary object is agent behavior and verification decisions; PostCode's is the evolving software and the human conceptual interface used to direct and supervise it. Its benchmark may provide useful evaluation scenarios. AgentMonBench comprises SpecGAP, SilentSwap, and FeedbackTrace; SilentSwap specifically introduces behavioral substitutions that preserve existing test outcomes. This resolves the historical handover's benchmark-name discrepancy: SilentSwap is a component, not an alternative name for the whole benchmark.
 
-Review basis: abstract and selected full-text sections on the method and evaluation. The reported experiments evaluate monitors across eight models, with illustrative real-world cases; they do not establish the effectiveness of a sustained human development interface.
+Review basis: abstract and selected full-text sections on the method and evaluation; benchmark composition and SilentSwap construction rechecked in sections 3 and Appendix B on 12 October 2026. The reported experiments evaluate monitors across eight models, with illustrative real-world cases; they do not establish the effectiveness of a sustained human development interface.
 
 **Ferris & Bonilla (2026). _A Case Study in Assuring AI-Written Software._ Preprint, arXiv:2610.08651; reported as accepted to the NeurIPS 2026 Meta-Agents Workshop.** [Paper](https://arxiv.org/abs/2610.08651)
 
@@ -67,6 +67,14 @@ Observational case study of software developed with coding agents and supervised
 Relevant to PostCode's epistemological contract: alternative evidence must be clear about what it actually establishes. A case study rather than evidence of broad developer behavior, and not itself a projection environment.
 
 Review basis: arXiv abstract and publication-status metadata; full case study not assessed.
+
+**Qiao, Y., Haque, S., & Hundhausen, C. (2026). _Beyond the Prompt: Linking What Developers Ask, Do, and Understand with Coding Agents._ Preprint, arXiv:2609.33712; submitted 27 September 2026.** [Paper](https://arxiv.org/abs/2609.33712)
+
+Provisional methodological lead. Reports a workflow combining prompt analysis, recorded activity, and separate process/solution explanation rubrics, applied to ten experienced developers using Copilot on unfamiliar software. Task performance and understanding diverged for two participants. Understanding scores assess participants' elicited explanations, graded by models using researcher-refined rubrics; they do not measure everything participants may know. This small observational sample does not support population claims.
+
+Relevant to PostCode's questions about mental models and supervision, and to distinguishing interaction traces from evidence of understanding. Evaluate the instruments' suitability before adapting them to sustained formative episodes.
+
+Review basis (12 October 2026): indexed arXiv abstract and metadata in the initial watch; subsequent PR review accessed the primary abstract and [versioned full text](https://arxiv.org/html/2609.33712v1), inspecting the explanation rubrics, grading procedure, study setting, and limitations. Instruments and grading were not independently validated; publication status beyond the preprint remains unverified. Newly found outside the watch's main coverage window.
 
 **Whiteboard (/dev/fast) (2026). Open-source technical project.** [Repository](https://github.com/devdotfast/whiteboard)
 
@@ -122,7 +130,7 @@ Review basis: project documentation; implementation, maturity, and actual guaran
 
 Describes a repository knowledge graph that distinguishes deterministically *derived* relationships, *authored* assertions, and *inferred* semantic relationships with provenance. It exposes structured and natural-language queries and generated views for humans and agents.
 
-Close prior art for provenance categories overlapping PostCode's derived facts, recorded assertions, and interpretation. PostCode's [epistemological contract](product-design.md#epistemological-contract) additionally distinguishes how information was obtained from what it establishes, including scope, completeness, observed executions, and unavailable analysis. Deterministic extraction alone does not establish semantic correctness or completeness. Whether Roteiro preserves equivalent distinctions and how they reach human-facing views require further assessment; the shared taxonomy alone establishes neither equivalence nor a distinctive PostCode contribution.
+Close prior art for provenance categories overlapping PostCode's derived facts, recorded assertions, and interpretation. PostCode's [epistemological contract](product-design.md#22-epistemological-contract) additionally distinguishes how information was obtained from what it establishes, including scope, completeness, observed executions, and unavailable analysis. Deterministic extraction alone does not establish semantic correctness or completeness. Whether Roteiro preserves equivalent distinctions and how they reach human-facing views require further assessment; the shared taxonomy alone establishes neither equivalence nor a distinctive PostCode contribution.
 
 Review basis: project documentation; implementation and analysis guarantees not independently assessed.
 
@@ -141,6 +149,14 @@ Describes provenance-bearing repository observations, a persistent knowledge gra
 Strong architectural overlap with evidence-bearing projections. Because the system is described as in development, advertised capabilities should not automatically be treated as demonstrated results.
 
 Review basis: project overview; implementation, maturity, and actual guarantees not independently assessed.
+
+**tt-a1i/archify (ongoing). _Archify._ Open-source technical project; newly inspected 12 October 2026, release date not established.** [Repository](https://github.com/tt-a1i/archify)
+
+Documents agent-generated interactive diagrams from descriptions or repositories, typed intermediate representations, revision-pinned source links, and iterative refinement. Its stated validation covers artifact structure and presentation; those checks must not be mistaken for proof of architectural meaning or runtime behavior.
+
+A concrete candidate for assessing presentation reuse and question-driven interaction separately. It adds a practical comparison opportunity to PostCode's representation-selection questions, without establishing equivalent epistemological contracts or sustained-use effectiveness.
+
+Review basis: repository README sections on source-backed architecture, interaction, and validation; implementation not inspected or run. Newly found, not established as newly released.
 
 **Graphify — provisional lead (not yet verified as identified).**
 
@@ -211,6 +227,22 @@ Surveys how tests provide feedback and evidence in LLM-assisted software enginee
 Relevant to PostCode's separation of test intent, test realization, execution evidence, and confidence in inferred behavior. This does not itself propose test intent as a human-facing program projection, but it cautions against treating test success as a generic correctness guarantee.
 
 Review basis: arXiv abstract; full survey not assessed.
+
+**Qi, Z., Li, H., Chen, J., Chen, H., Zhao, Y., Zhu, D., Cerny, T., Liu, B., & He, S. (2026). _Merged, Not Measured: An Empirical Study of Performance Issues Fixed by Coding Agents._ Preprint, arXiv:2609.37985; submitted 29 September 2026.** [Paper](https://arxiv.org/abs/2609.37985)
+
+Studies 1,262 performance fixes and re-executes selected accepted and rejected changes. The merged re-execution sample was purposive, not representative; passing tests and merge decisions did not establish claimed performance or preservation of untested behavior.
+
+Relevant to qualified test evidence and conceptual change review: distinguish a claimed benefit, the property a test checks, and the behavior actually observed. This supplies candidate evaluation cases, not evidence that a projection interface improves supervision.
+
+Review basis (12 October 2026): arXiv metadata and selected full-text sections, including re-execution design, test evidence, and validity threats; artifacts not executed.
+
+**Peng, H., Calvo, R., Kalu, K. G., & Davis, J. C. (2026). _How Do Coding Agents Optimize Software and Report Performance Validation? A Large-Scale Empirical Study of Open-Source Pull Requests._ Preprint, arXiv:2610.03969; submitted 2 October 2026.** [Paper](https://arxiv.org/abs/2610.03969)
+
+Compares 1,130 agentic and 1,130 human-authored performance PRs. Validation reports often lack quantitative metrics or quantified trade-offs. The study analyzes reported evidence; it does not execute changes or verify performance claims.
+
+Relevant to PostCode's distinction between recorded assertions and observations: a benchmark mentioned in a PR is not an independently established measurement. Read alongside Qi et al.; the studies use different sampling and validation methods, so their percentages are not interchangeable.
+
+Review basis (12 October 2026): arXiv metadata, abstract, and selected full-text sections on reported metrics and validity threats; no independent replication.
 
 ### 1.7 Potentially relevant but more peripheral
 
