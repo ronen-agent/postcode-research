@@ -64,5 +64,5 @@ The repository's `AGENTS.md` should include the following elements:
   ```markdown
   ## Adopted Foundation
 
-  Read and follow the adopted documents under [`foundation/`](foundation/README.md) where applicable. Do not modify them as part of ordinary application development; the human may explicitly adopt revised versions.
+  Treat the documents under [`foundation/`](foundation/README.md) as adopted, governing material. Read and follow the documents relevant to the work. Do not modify any file under `foundation/` unless the human explicitly asks to revise or adopt foundation material.
   ```
