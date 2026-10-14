@@ -22,6 +22,8 @@ The immediate question is deliberately narrower:
 
 > **Can trustworthy projection-based views become a viable way for humans to understand, direct, and supervise software development instead of routinely working through conventional programming-language source?**
 
+PostCode is therefore not merely asking whether projections are a more convenient interface to otherwise readable source. It also asks whether human understanding and supervision can remain viable when the human lacks expertise in the implementation language or the program's persistent representation is not intended for human reading.
+
 This includes both understanding software that already exists and supervising the creation or continued development of software implemented by coding agents.
 
 Natural follow-up questions include:
