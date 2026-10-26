@@ -308,7 +308,7 @@ In particular, the **epistemological-status discipline** should eventually be co
 
 PostCode approaches **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. Specific sources, versioned comparisons, and evidence of useful interaction remain to be added after review.
 
-The practical baseline includes **capable agent chat with repository access, ad hoc generated diagrams, and ordinary maintained notes**. Comparing PostCode merely against a source-only workflow or text-only chat would not isolate its contribution.
+The practical baseline includes **capable agent chat with repository access, ad hoc generated diagrams, and ordinary maintained notes**. Comparing PostCode against a deliberately limited text-only chat would not isolate its contribution.
 
 These are provisional distinctions to test against the literature, not novelty claims.
 
