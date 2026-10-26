@@ -129,9 +129,7 @@ Additional repositories are useful only while they expose new assumptions, needs
 
 ### 4.5 Additional languages
 
-Apply PostCode to software in another programming language when cross-language pressure can test the applicability, realization, and limits of established architectural concepts already used in initial journeys. PostCode should preserve the language's semantics rather than force them into abstractions inherited from the first language.
-
-Observe which entities, lenses, lens parameter values, guarantees, and test concepts transfer; which require language-specific treatment; and where shared terminology conceals different semantics.
+Try PostCode on software written in another programming language. Check which architectural concepts and investigation capabilities remain useful, what needs adaptation, and where language-specific differences matter.
 
 ### 4.6 Unfamiliar-language challenge
 
@@ -148,8 +146,6 @@ Difficulty integrating a language through an existing abstraction is evidence ab
 ### 4.7 Cross-language consolidation
 
 After multiple languages and real tasks have exerted pressure on the design, compare the language integrations, lenses actually used, guarantees, unavailable projections, language-specific concepts, test projections, and source excursions.
-
-Shared abstractions should be consolidated only where the evidence supports them. Starting from familiar architectural concepts is not a claim of shared implementation semantics. A federation of common concepts and language-specific extensions may be preferable to a universal ontology.
 
 ## 5. Public Availability, External Use, and Evaluation
 
