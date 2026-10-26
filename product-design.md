@@ -265,7 +265,7 @@ A change to a displayed label must not masquerade as a change to the program. Co
 
 ## 3. Interaction Model
 
-PostCode supports investigation through qualified views rather than requiring the human to navigate conventional source. Interfaces may include graphical interaction, prose, command-line interaction, machine-readable output, or combinations of them. These interfaces share the same conceptual model and epistemological contract.
+PostCode supports investigation through qualified views. Interfaces may include graphical interaction, prose, command-line interaction, machine-readable output, or combinations of them. These interfaces share the same conceptual model and epistemological contract.
 
 <a id="investigation-and-representation-selection"></a>
 
