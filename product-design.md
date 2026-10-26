@@ -10,6 +10,8 @@ The goal is a projection-based software-development environment in which humans 
 
 The human user is presumed to understand relevant concepts of computation, software design, and architecture, but not the programming language used to implement the software. PostCode must not present programming-language source to the human. Source remains input to analyses and coding agents; relevant evidence attribution, qualifications, and implementation mappings remain available without requiring source-language literacy. The conceptual model does not assume that the program's persistent representation is intended for human reading.
 
+This prohibition applies to all human-facing output, including agent-generated explanations and diagnostics. Implementation identifiers, paths, and evidence references may be shown as labels or provenance, but understanding must not depend on interpreting programming-language syntax. Code excerpts, declarations, and raw type signatures are not human-facing representations.
+
 The first design decision is a simplification: PostCode's projections and views are read-only. The human continues to direct program changes by instructing coding agents in prose. This defers questions about semantics, authority, ambiguity, round-tripping, and implementation conformance that need not be answered to investigate the core projection model. Later versions could support bidirectional views without invalidating that model.
 
 The core projection pipeline is:
