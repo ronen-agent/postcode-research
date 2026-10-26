@@ -306,6 +306,10 @@ In particular, the **epistemological-status discipline** should eventually be co
 
 ## 2. Positioning Hypotheses
 
+The research framing now begins with **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared visual architectural artifacts and partial, qualified retained accounts. This calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. Specific sources, versioned comparisons, and evidence of useful interaction remain to be added after review.
+
+The practical baseline includes **capable agent chat with repository access, ad hoc generated diagrams, and ordinary maintained notes**. Comparing PostCode merely against a source-only workflow or text-only chat would not isolate its contribution.
+
 These are provisional distinctions to test against the literature, not novelty claims.
 
 ### 2.1 Versus conventional software visualization
@@ -316,7 +320,7 @@ PostCode is not primarily asking:
 
 It asks:
 
-> Can multiple trustworthy projections become a viable primary human investigation surface?
+> Can shared, qualified architectural representations support human reasoning and design in collaboration with coding agents more effectively than capable agent chat, including ad hoc diagrams and notes?
 
 It additionally asks whether agent-mediated selection and generation can make task-specific projections cheap enough to alter the historical economics of software visualization.
 
@@ -395,9 +399,9 @@ Several of these dimensions already overlap with moldable development and the ot
 
 Recent publications and project descriptions reinforce PostCode's existing empirical focus and require precise attribution of overlapping ideas. Repository representations, provenance categories, task-specific views, evidence graphs, semantic change representations, and test-to-code evidence have precedents. Their broad existence should not be presented as a PostCode invention. The entries above distinguish what was checked from what remains to be established about implementations, guarantees, and usefulness.
 
-The central research question remains the one already stated in [`research.md`](research.md#5-research-questions):
+The central research question is reframed in [`research.md`](research.md#5-research-questions):
 
-> **Can task-adaptive, epistemically qualified representations provide a viable primary conceptual interface through which humans understand, direct, and supervise software development, without routinely relying on conventional programming-language source?**
+> **What would support the effective practice of software design and architecture by humans collaborating with coding agents without requiring programming-language proficiency—and what does a shared, qualified architectural working environment contribute beyond capable agent chat?**
 
 As [`research.md`](research.md#31-creation-continued-development-and-existing-software) emphasizes, this includes investigation of unfamiliar programs, continued development of existing software, and development from inception. In the last case, intentions, rationale, and implementation may co-evolve, rather than requiring conceptual structure to be recovered after the fact. Related spec-driven work is therefore relevant, not categorically separate.
 
