@@ -2,7 +2,7 @@
 
 > *Humans should be able to practice the discipline of software design and architecture in collaboration with agents that implement the software, without needing to be programmers themselves.*
 
-The PostCode Research Project investigates how best to support that practice. Capable coding-agent conversations already allow substantial software-design work without the human reading source code. The research asks what further representations, interactions, and tools—if any—can improve that collaboration, including for people who have not learned to read or write programming-language source.
+The PostCode Research Project investigates how best to support that practice. Capable coding-agent conversations can already support substantial software-design work without reading source code, at least for experienced developers. The research asks what further representations, interactions, and tools—if any—can improve that collaboration, including for people who have not learned to read or write programming-language source.
 
 One leading hypothesis is that shared architectural representations, grounded in partial, qualified, retained understanding, can help people reason about designs, examine implementations, and revisit architectural questions from different perspectives. These may take textual, structured, or visual forms, drawing where useful on established software-architecture concepts and notations without assuming a complete or authoritative account of the software.
 
@@ -10,7 +10,7 @@ The project explores these questions by building the [PostCode application](http
 
 The research proceeds by studying PostCode during real software development. The application is intended to record and export observations, including relevant interaction events and contemporaneous user reports. This evidence stream will support later analysis of how PostCode is used, where it succeeds or fails, and how the design should evolve.
 
-The application is developed in a separate repository so that it can stand alone as a software project. Once minimally functional, it will be used to understand and supervise its own further development.
+The application is developed in a separate repository so that it can stand alone as a software project. Once minimally functional, it will be used to help understand, design, and evaluate changes during its own continued development.
 
 ## Status
 
