@@ -306,7 +306,7 @@ In particular, the **epistemological-status discipline** should eventually be co
 
 ## 2. Positioning Hypotheses
 
-The research framing now begins with **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. Specific sources, versioned comparisons, and evidence of useful interaction remain to be added after review.
+PostCode approaches **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. Specific sources, versioned comparisons, and evidence of useful interaction remain to be added after review.
 
 The practical baseline includes **capable agent chat with repository access, ad hoc generated diagrams, and ordinary maintained notes**. Comparing PostCode merely against a source-only workflow or text-only chat would not isolate its contribution.
 
@@ -322,37 +322,17 @@ It asks:
 
 > Can shared, qualified architectural representations support human reasoning and design in collaboration with coding agents more effectively than capable agent chat, including ad hoc diagrams and notes?
 
-It additionally asks whether agent-mediated selection and generation can make task-specific projections cheap enough to alter the historical economics of software visualization.
+It also asks what systematic, qualified and retained representations contribute when capable agents can already generate and select inexpensive task-specific visualizations.
 
 This describes PostCode's emphasis, not a boundary of software-visualization research. Merino et al. (2026) and moldable development also address continuous, contextual interaction; their overlap must be considered when evaluating any claimed distinction.
 
-### 2.2 Versus conventional LLM code summarization
+### 2.2 Versus capable conversational coding agents
 
-PostCode overlaps superficially with an already common AI interaction:
+Capable coding agents can already inspect repositories, answer questions, explain behavior, propose designs, generate diagrams, and maintain ordinary architectural notes. These capabilities are not unique to PostCode, nor is generating a structured description sufficient to establish a contribution.
 
-> Summarize this code.
+PostCode asks whether incorporating such explanations into a **qualified, navigable projection system** improves human architectural reasoning and collaboration. Candidate contributions include preserving the captured program basis of an account, distinguishing mechanical analysis from recorded intent and interpretation, retaining supporting evidence and limitations, enabling follow-up investigations through stable referents, recording corrections, and comparing architectural perspectives and revisions.
 
-The distinction is not that PostCode can produce prose summaries while existing LLMs cannot.
-
-Instead, PostCode asks whether program summarization can become part of a **qualified, navigable projection system**.
-
-A PostCode summary view may:
-
-- coordinate projections produced by mechanically defined lenses;
-- include a synthesized summary projection where a new qualified account is useful;
-- incorporate recorded assertions and behavioral evidence;
-- expose provenance;
-- distinguish derived facts from interpretation;
-- state limitations and unavailable information;
-- link directly into deeper projections;
-- preserve the repository state associated with each projection;
-- be compared across revisions.
-
-Thus the request **Summarize the project** is not intended merely as a better prompt for an LLM. It is one candidate entry point among others into a structured investigation of the program.
-
-This may also provide a useful bridge between familiar contemporary AI use and PostCode's broader research question:
-
-> **Can the adaptive representation pattern people increasingly use for documents and other information become trustworthy enough to serve as a routine human interface to software?**
+Some or all of these practices may be reproduced through careful prompting, ordinary documents, and existing agent tools. Their usefulness must be assessed through actual architectural tasks against that strong conversational baseline, not inferred from the existence of a separate interface or a machine-readable model.
 
 ### 2.3 Versus AI code review
 
@@ -382,16 +362,16 @@ PostCode does not initially make a higher-level model authoritative or generate 
 
 The following combination describes PostCode's intended research emphasis and provides dimensions for comparison with related work:
 
-- sustained software development rather than one-shot comprehension;
+- sustained human–agent architectural design and evaluation rather than one-shot comprehension;
 - source as a secondary rather than assumed-primary human representation;
-- multiple task-dependent lenses and projections;
+- multiple task-dependent lenses, qualified projections, and partial retained architectural accounts;
 - automatic selection of lenses and presentations from human information needs;
 - epistemological status and provenance visible at the point of every claim;
 - explicit accommodation of incomplete and language-dependent analyses;
 - tests treated as projected evidence rather than merely pass/fail gates;
 - revision/projection comparison for agent-mediated changes;
 - empirical pressure across unrelated projects and eventually languages;
-- explicit willingness to discover that source remains superior for some classes of work.
+- explicit comparison with capable coding-agent chat, including diagrams and notes, and willingness to find that chat or source is preferable for some work.
 
 Several of these dimensions already overlap with moldable development and the other work above. Whether any particular conjunction, mechanism, or finding is distinctive requires a specific comparison; this list does not establish an unoccupied research territory.
 
@@ -399,7 +379,7 @@ Several of these dimensions already overlap with moldable development and the ot
 
 Recent publications and project descriptions reinforce PostCode's existing empirical focus and require precise attribution of overlapping ideas. Repository representations, provenance categories, task-specific views, evidence graphs, semantic change representations, and test-to-code evidence have precedents. Their broad existence should not be presented as a PostCode invention. The entries above distinguish what was checked from what remains to be established about implementations, guarantees, and usefulness.
 
-The central research question is reframed in [`research.md`](research.md#5-research-questions):
+The central research question is stated in [`research.md`](research.md#5-research-questions):
 
 > **What would support the effective practice of software design and architecture by humans collaborating with coding agents without requiring programming-language proficiency—and what does a shared, qualified architectural working environment contribute beyond capable agent chat?**
 
