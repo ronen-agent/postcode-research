@@ -34,7 +34,7 @@ At suitable checkpoints, also consider whether [Publication-Aware Prioritization
 
 ### 2.1 Initial implementation and bootstrap transition
 
-The immediate milestone is the smallest trustworthy read-only version of PostCode that can be used during development of PostCode itself. Its purpose is to make the projection model concrete enough to evaluate and to create the conditions for sustained formative use.
+The immediate milestone is a bounded, trustworthy, read-only architectural investigation experience that can be used during real development and compared with capable agent chat. It builds on the bootstrap implementation of the projection model and enables evaluation through sustained formative use. Implementation increments should serve that experience rather than define the research ambition.
 
 It should support:
 
@@ -44,14 +44,20 @@ It should support:
 - a usable set of views through which the developer can conduct a genuine investigation;
 - views that preserve provenance, epistemological status, guarantees, and limitations;
 - a practical way to request and inspect those views;
-- enough navigation and source access to sustain an investigation;
-- enough formative observation support to record use, friction, and immediate reactions.
+- enough navigation, qualification and supporting information to sustain an investigation without displaying programming-language source;
+- enough formative observation support to record use, inadequate explanations or views, friction, and immediate reactions.
 
 Including both mechanically derived and interpretive information from the beginning puts the epistemological contract under pressure: PostCode must keep interpretation distinguishable from precise analysis while making both useful during investigation.
 
 PostCode should be used on its own development as soon as any implemented capability can contribute usefully. That use will broaden as further subjects, lenses, views, and observation support become available.
 
 There is no objective boundary between the bootstrap transition and ongoing formative development. At some point, experience may support the judgment that PostCode has a coherent minimal set of capabilities for sustained formative use. That judgment marks the end of the bootstrap transition; PostCode-on-PostCode use will already have begun and will continue afterward.
+
+### 2.2 Bounded architectural representation exploration
+
+Develop and evaluate a bounded PostCode investigation using shared architectural representations, including visual structural or behavioral presentations where useful. Choose the codebase, architectural question, and relevant notations when planning the investigation. Examine whether partial, qualified retained accounts support reasoning across perspectives and whether revisiting a subject reveals gaps, consequences, or corrections.
+
+Compare with capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to refine PostCode's presentations and investigation capabilities. This does not require a universal architecture model or a visual editor.
 
 ## 3. Candidate Capability Directions
 
@@ -73,13 +79,13 @@ Its timing should depend on when repeatedly translating PostCode concepts back i
 
 ### 3.4 Revision and projection comparison
 
-Support comparison of qualified information across repository states so the human can investigate what changed at a conceptual level rather than only through source diffs. Begin with the smallest comparison capability that can produce formative evidence; add conceptual-diff analysis when simpler comparison proves useful but inadequate.
+Support comparison of qualified information across repository states so the human can investigate what changed at a conceptual level rather than relying solely on an agent's description of the patch. Begin with the smallest comparison capability that can produce formative evidence; add conceptual-diff analysis when simpler comparison proves useful but inadequate.
 
 Stable projection behavior is a prerequisite: changes in PostCode must not masquerade as changes in the program.
 
 ### 3.5 Capability growth
 
-Add or revise capabilities in response to recurring investigative needs. A failed investigation does not by itself imply that a new lens is required; the problem may instead concern available information, representation, selection, interaction, evidence, or the underlying projection approach.
+Add or revise capabilities in response to recurring architectural investigative needs, drawing provisionally on established architecture/design concepts and visual languages where useful. A failed investigation does not by itself imply that a new lens is required; the problem may instead concern available information, representation, selection, interaction, evidence, or the underlying projection approach.
 
 Illustrative lens families are described in [`product-design.md`](product-design.md#illustrative-lens-families). The capabilities pursued next should be shaped by use rather than by treating those examples as a backlog.
 
@@ -123,27 +129,23 @@ Additional repositories are useful only while they expose new assumptions, needs
 
 ### 4.5 Additional languages
 
-Apply PostCode to software in another programming language when cross-language pressure can test concepts that have emerged through actual use. PostCode should preserve the language's semantics rather than force them into abstractions inherited from the first language.
-
-Observe which entities, lenses, lens parameter values, guarantees, and test concepts transfer; which require language-specific treatment; and where shared terminology conceals different semantics.
+Try PostCode on software written in another programming language. Check which architectural concepts and investigation capabilities remain useful, what needs adaptation, and where language-specific differences matter.
 
 ### 4.6 Unfamiliar-language challenge
 
 A later experiment may use a language the developer does not know well. Where practical, coding agents can integrate the new language into PostCode from PostCode-level requirements while reporting where the existing abstractions fail to transfer.
 
-The developer's unfamiliarity with the language also strengthens the trust experiment: source-language expertise is less available to expose a plausible-looking but incorrect projection. PostCode must instead earn trust through analysis, provenance, and explicit guarantees.
+The developer's unfamiliarity with the implementation language places greater demands on the accuracy, provenance, and limitations of PostCode's architectural representations. An apparently convincing account must not conceal what has not been established.
 
 The experiment can ask:
 
-> **Can the developer form a useful understanding of a program through PostCode without first learning enough of its implementation language to reconstruct that understanding from source?**
+> **Can the developer understand and evaluate a program through PostCode without proficiency in its implementation language?**
 
 Difficulty integrating a language through an existing abstraction is evidence about the abstraction, not merely an implementation inconvenience.
 
 ### 4.7 Cross-language consolidation
 
-After multiple languages and real tasks have exerted pressure on the design, compare the language integrations, lenses actually used, guarantees, unavailable projections, language-specific concepts, test projections, and source excursions.
-
-Shared abstractions should be consolidated only where the evidence supports them. A federation of common concepts and language-specific extensions may be preferable to a universal ontology.
+After multiple languages and real tasks have exerted pressure on the design, compare the language integrations, lenses actually used, guarantees, unavailable projections, language-specific concepts, test projections, and reports of inadequate representations.
 
 ## 5. Public Availability, External Use, and Evaluation
 

@@ -1,6 +1,6 @@
 # Candidate Conventions for PostCode-Mediated Development
 
-This document lists candidate language-agnostic conventions that may help humans understand, direct and supervise software through PostCode without routinely working through conventional source.
+This document lists candidate language-agnostic conventions that may help humans practice software design and architecture with coding agents through PostCode, without needing to work directly in conventional programming-language source.
 
 These are candidates to keep in mind during PostCode development, not conventions PostCode currently endorses. They were initially extracted from conventions used while developing [the author's pre-existing project](methodology.md#existing-project-development) by separating their underlying language-independent intent from their TypeScript-specific realization.
 
@@ -10,15 +10,15 @@ The methodological safeguards for evaluating proposed conventions are described 
 
 ## 1. What Would Make a Convention Relevant?
 
-A convention is of particular interest here when it may make software or its recorded development context more conceptually supervisable under PostCode-mediated development. For example, it might make important boundaries, effects, invariants, behavior, rationale or verification easier to discover and project without requiring the human to reconstruct them from source.
+A convention is of particular interest here when it may make software or its recorded development context easier to understand, design, and evaluate through PostCode. For example, it might make important boundaries, effects, invariants, behavior, rationale or verification easier to discover and project without requiring implementation-language proficiency.
 
-Language independence is not sufficient by itself. Many ordinary engineering practices apply across languages without being especially relevant to source-secondary supervision. Project-specific architectural decisions may also be language-independent without being appropriate recommendations for other projects.
+Language independence is not sufficient by itself. Many ordinary engineering practices apply across languages without being especially relevant to PostCode-mediated architectural practice. Project-specific architectural decisions may also be language-independent without being appropriate recommendations for other projects.
 
 The candidate set concerns language-agnostic properties of software design and recorded development context rather than source-level style or coding technique.
 
 Candidate conventions should therefore be evaluated by asking:
 
-- whether the convention improves PostCode-mediated supervision;
+- whether the convention improves architectural understanding, direction, or evaluation through PostCode;
 - whether it produces independently useful conceptual clarity or only tool-relative projectability;
 - whether it generalizes across projects and languages;
 - whether it compensates for a weakness in PostCode that should instead be addressed in the tool;

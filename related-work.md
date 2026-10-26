@@ -62,7 +62,7 @@ Review basis: abstract and selected full-text sections on the method and evaluat
 
 **Ferris & Bonilla (2026). _A Case Study in Assuring AI-Written Software._ Preprint, arXiv:2610.08651; reported as accepted to the NeurIPS 2026 Meta-Agents Workshop.** [Paper](https://arxiv.org/abs/2610.08651)
 
-Observational case study of software developed with coding agents and supervised substantially through tests, monitoring, reviewing agents, and other assurance mechanisms rather than comprehensive source inspection. Some assurance mechanisms failed or measured inadequate proxies.
+Observational case study of software developed with coding agents and supervised substantially through tests, monitoring, reviewing agents, and other assurance mechanisms. Some assurance mechanisms failed or measured inadequate proxies.
 
 Relevant to PostCode's epistemological contract: alternative evidence must be clear about what it actually establishes. A case study rather than evidence of broad developer behavior, and not itself a projection environment.
 
@@ -118,19 +118,19 @@ CodeMap provides dynamic information extraction and interactive switching betwee
 
 Very close prior art for PostCode's projected codebase views.
 
-Important distinction: its usage scenario still treats source inspection in VS Code as the verification surface; PostCode deliberately asks whether qualified projections themselves can support sustained investigation and supervision.
+Important distinction: its usage scenario retains a conventional VS Code verification workflow; PostCode instead aims to support architectural investigation without presenting programming-language source to the human.
 
 **Merino, L., Ghafari, M., & Nierstrasz, O. (2018). _Towards Actionable Visualization for Software Developers._ Journal of Software: Evolution and Process, 30, e1923.**
 
 Merino et al. identify the effort involved in finding an appropriate visualization and connecting it to a developer's immediate task as barriers to the adoption of software visualization.
 
-This is particularly relevant to PostCode's hypothesis that agent-mediated generation and selection may reduce the cost of obtaining task-specific representations. It provides prior art against which to test whether those changes, together with reduced incidental source familiarity during agent-mediated development, can make projections a routine working surface. The full rationale appears in [`research.md`](research.md#4-why-this-question-may-be-different-now).
+This explains part of the changed economics of obtaining representations in agent-mediated development, rather than a distinctive benefit over capable agent chat. See [`research.md`](research.md#4-why-agent-mediated-development-changes-the-problem).
 
 **Merino, Ghafari, & Nierstrasz (2026). _Towards Actionable Visualization: Ten Years Later, What Generative AI Changes and What It Cannot._ VISSOFT 2026, Visions track; author version arXiv:2608.22151.** [Paper](https://arxiv.org/abs/2608.22151) · [Conference program](https://vissoft.io/2026/program.html)
 
 Revisits actionable visualization in light of generative AI, discussing the sharply reduced cost of purpose-built, question-specific views, AI assistance in translating developer questions into representations, visualization within agentic workflows, and requirements for faithful, traceable evidence.
 
-Exceptionally close conceptual prior art for PostCode's rationale. The overlap extends beyond visualization economics and automatic selection to continuous, question-driven exploration and navigable views embedded in agent-mediated development. The paper explicitly points to Glamorous Toolkit and moldable development as existing work in this direction. Sustained conceptual interaction therefore cannot be assumed to distinguish PostCode on its own. PostCode should investigate particular interaction choices, epistemological contracts, and conditions of usefulness against this prior work. Read alongside the authors' 2018 paper and [`research.md`](research.md#4-why-this-question-may-be-different-now).
+Exceptionally close conceptual prior art for PostCode's rationale. The overlap extends beyond visualization economics and automatic selection to continuous, question-driven exploration and navigable views embedded in agent-mediated development. The paper explicitly points to Glamorous Toolkit and moldable development as existing work in this direction. Sustained conceptual interaction therefore cannot be assumed to distinguish PostCode on its own. PostCode should investigate particular interaction choices, epistemological contracts, and conditions of usefulness against this prior work. Read alongside the authors' 2018 paper and [`research.md`](research.md#4-why-agent-mediated-development-changes-the-problem).
 
 Review basis: full author-version text and official conference program. This is a vision and research-agenda paper; its arguments about changed economics are not themselves evidence that PostCode's workflow is effective.
 
@@ -138,7 +138,7 @@ Review basis: full author-version text and official conference program. This is 
 
 Moldable development makes contextual analysis and interaction tools inexpensive to construct so that developers can investigate software through a live, explorable domain model. The patterns paper draws on several years of experience with open-source and industrial systems. Current Glamorous Toolkit materials explicitly address reducing code reading, constructing contextual tools with AI, and incorporating those tools into human–agent interaction.
 
-Close prior art for task-specific representations, conceptual investigation, and tools that evolve with the software and the questions asked of it. It is relevant to PostCode's questions about sustained use, development from inception, and the distinction between independently useful conceptual clarity and tool-relative projectability. A comparison should examine who constructs and selects tools, how qualifications reach users, how views remain grounded as inputs change, and when source is used. These are comparison questions, not established advantages for PostCode. Glamorous Toolkit merits assessment as a possible interaction comparator alongside systems focused on analysis infrastructure.
+Close prior art for task-specific representations, conceptual investigation, and tools that evolve with the software and the questions asked of it. It is relevant to PostCode's questions about sustained use, development from inception, and the distinction between independently useful conceptual clarity and tool-relative projectability. A comparison should examine who constructs and selects tools, how qualifications reach users, how views remain grounded as inputs change, and whether architectural work requires implementation-language proficiency. These are comparison questions, not established advantages for PostCode. Glamorous Toolkit merits assessment as a possible interaction comparator alongside systems focused on analysis infrastructure.
 
 Review basis: paper abstract and project/method documentation; the full patterns paper, implementation, and reported experience have not been independently assessed here.
 
@@ -306,49 +306,33 @@ In particular, the **epistemological-status discipline** should eventually be co
 
 ## 2. Positioning Hypotheses
 
+PostCode approaches **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. Specific sources, versioned comparisons, and evidence of useful interaction remain to be added after review.
+
+The practical baseline includes **capable agent chat with repository access, ad hoc generated diagrams, and ordinary maintained notes**. Comparing PostCode against a deliberately limited text-only chat would not isolate its contribution.
+
 These are provisional distinctions to test against the literature, not novelty claims.
 
 ### 2.1 Versus conventional software visualization
 
 PostCode is not primarily asking:
 
-> Can a visualization make source easier to understand?
+> Can a visualization make a program easier to understand?
 
 It asks:
 
-> Can multiple trustworthy projections become a viable primary human investigation surface?
+> Can shared, qualified architectural representations support human reasoning and design in collaboration with coding agents more effectively than capable agent chat, including ad hoc diagrams and notes?
 
-It additionally asks whether agent-mediated selection and generation can make task-specific projections cheap enough to alter the historical economics of software visualization.
+It also asks what systematic, qualified and retained representations contribute when capable agents can already generate and select inexpensive task-specific visualizations.
 
 This describes PostCode's emphasis, not a boundary of software-visualization research. Merino et al. (2026) and moldable development also address continuous, contextual interaction; their overlap must be considered when evaluating any claimed distinction.
 
-### 2.2 Versus conventional LLM code summarization
+### 2.2 Versus capable conversational coding agents
 
-PostCode overlaps superficially with an already common AI interaction:
+Capable coding agents can already inspect repositories, answer questions, explain behavior, propose designs, generate diagrams, and maintain ordinary architectural notes. These capabilities are not unique to PostCode, nor is generating a structured description sufficient to establish a contribution.
 
-> Summarize this code.
+PostCode asks whether incorporating such explanations into a **qualified, navigable projection system** improves human architectural reasoning and collaboration. Candidate contributions include preserving the captured program basis of an account, distinguishing mechanical analysis from recorded intent and interpretation, retaining supporting evidence and limitations, enabling follow-up investigations through stable referents, recording corrections, and comparing architectural perspectives and revisions.
 
-The distinction is not that PostCode can produce prose summaries while existing LLMs cannot.
-
-Instead, PostCode asks whether program summarization can become part of a **qualified, navigable projection system**.
-
-A PostCode summary view may:
-
-- coordinate projections produced by mechanically defined lenses;
-- include a synthesized summary projection where a new qualified account is useful;
-- incorporate recorded assertions and behavioral evidence;
-- expose provenance;
-- distinguish derived facts from interpretation;
-- state limitations and unavailable information;
-- link directly into deeper projections;
-- preserve the repository state associated with each projection;
-- be compared across revisions.
-
-Thus the request **Summarize the project** is not intended merely as a better prompt for an LLM. It is one candidate entry point among others into a structured investigation of the program.
-
-This may also provide a useful bridge between familiar contemporary AI use and PostCode's broader research question:
-
-> **Can the adaptive representation pattern people increasingly use for documents and other information become trustworthy enough to serve as a routine human interface to software?**
+Some or all of these practices may be reproduced through careful prompting, ordinary documents, and existing agent tools. Their usefulness must be assessed through actual architectural tasks against that strong conversational baseline, not inferred from the existence of a separate interface or a machine-readable model.
 
 ### 2.3 Versus AI code review
 
@@ -378,16 +362,16 @@ PostCode does not initially make a higher-level model authoritative or generate 
 
 The following combination describes PostCode's intended research emphasis and provides dimensions for comparison with related work:
 
-- sustained software development rather than one-shot comprehension;
-- source as a secondary rather than assumed-primary human representation;
-- multiple task-dependent lenses and projections;
+- sustained human–agent architectural design and evaluation rather than one-shot comprehension;
+- architectural practice without presenting programming-language source to the human;
+- multiple task-dependent lenses, qualified projections, and partial retained architectural accounts;
 - automatic selection of lenses and presentations from human information needs;
 - epistemological status and provenance visible at the point of every claim;
 - explicit accommodation of incomplete and language-dependent analyses;
 - tests treated as projected evidence rather than merely pass/fail gates;
 - revision/projection comparison for agent-mediated changes;
 - empirical pressure across unrelated projects and eventually languages;
-- explicit willingness to discover that source remains superior for some classes of work.
+- explicit comparison with capable coding-agent chat, including diagrams and notes, and willingness to find that chat is sufficient for some work.
 
 Several of these dimensions already overlap with moldable development and the other work above. Whether any particular conjunction, mechanism, or finding is distinctive requires a specific comparison; this list does not establish an unoccupied research territory.
 
@@ -395,9 +379,9 @@ Several of these dimensions already overlap with moldable development and the ot
 
 Recent publications and project descriptions reinforce PostCode's existing empirical focus and require precise attribution of overlapping ideas. Repository representations, provenance categories, task-specific views, evidence graphs, semantic change representations, and test-to-code evidence have precedents. Their broad existence should not be presented as a PostCode invention. The entries above distinguish what was checked from what remains to be established about implementations, guarantees, and usefulness.
 
-The central research question remains the one already stated in [`research.md`](research.md#5-research-questions):
+The central research question is stated in [`research.md`](research.md#5-research-questions):
 
-> **Can task-adaptive, epistemically qualified representations provide a viable primary conceptual interface through which humans understand, direct, and supervise software development, without routinely relying on conventional programming-language source?**
+> **What would support the effective practice of software design and architecture by humans collaborating with coding agents without requiring programming-language proficiency—and what does a shared, qualified architectural working environment contribute beyond capable agent chat?**
 
 As [`research.md`](research.md#31-creation-continued-development-and-existing-software) emphasizes, this includes investigation of unfamiliar programs, continued development of existing software, and development from inception. In the last case, intentions, rationale, and implementation may co-evolve, rather than requiring conceptual structure to be recovered after the fact. Related spec-driven work is therefore relevant, not categorically separate.
 
