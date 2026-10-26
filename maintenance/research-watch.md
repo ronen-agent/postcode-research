@@ -6,7 +6,7 @@ This procedure defines how to review research and technical projects relevant to
 
 Identify genuinely new and consequential findings that overlap the current questions in [research.md](../research.md) and the bibliography in [related-work.md](../related-work.md). Include the broader questions of understanding, directing, and supervising agent-mediated software development, rather than searching only for systems that resemble PostCode's proposed implementation.
 
-Relevant work may concern conceptual interaction, task-adaptive representations, epistemological qualification, evidence and provenance, human oversight, sustained development, development from inception, source use, or methods for studying these activities. Education and agent-facing representations matter when they illuminate PostCode's questions; their relevance does not expand the project's immediate scope automatically.
+Relevant work may concern conceptual interaction, architectural representations, epistemological qualification, evidence and provenance, human architectural judgment, sustained development, development from inception, code-independent practice, or methods for studying these activities. Education and agent-facing representations matter when they illuminate PostCode's questions; their relevance does not expand the project's immediate scope automatically.
 
 Prepare proposed additions and corrections for human review. Do not treat a review as authorization to change the project's direction.
 
