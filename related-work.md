@@ -4,7 +4,7 @@ This is a working account of research related to PostCode, not a systematic lite
 
 Its purpose is to identify nearby research traditions, potentially overlapping systems, useful methodological precedent, and work that may sharpen PostCode's research questions. The bibliography and positioning hypotheses should evolve together as the project and literature review develop.
 
-Review-basis notes identify the material checked for particular entries. An abstract or project description supports an account of what its authors report; it does not establish implementation maturity, analysis guarantees, or human usefulness. Entries without a review-basis note retain their earlier working status and should be checked before supporting a formal comparison. The notes below record checks made on 12 October 2026.
+Review-basis notes identify the material checked for particular entries. An abstract or project description supports an account of what its authors report; it does not establish implementation maturity, analysis guarantees, or human usefulness. Entries without a review-basis note retain their earlier working status and should be checked before supporting a formal comparison. Dated notes below record the checks made for each entry.
 
 ## 1. Working Bibliography
 
@@ -84,6 +84,30 @@ Its declared scope is a shared workspace in which humans and agents architect so
 
 Review basis: repository README; implementation and sustained-use behavior not assessed.
 
+**Xu, G., Zhang, R., Wu, X., & Chen, H. (2026). _What Coding Agents Leave Unsaid: Measuring Task-State Gaps Between Execution and Reports._ Preprint, arXiv:2610.20003; submitted 14 October, revised 15 October 2026 (v2).** [Paper](https://arxiv.org/abs/2610.20003)
+
+CTXGAP measures task-state recoverability from accumulated agent reports versus recorded execution context. Across a non-random 37-task cohort, model readers recovered substantially less from reports, even after successful fixes. Probes, relevance judgments, and much grading are model-generated; human audits examine parts of the instrument, not end-user supervision.
+
+Relevant to whether PostCode preserves information needed to discover and investigate consequential changes. A possible evaluation dimension is recoverability of failures, assumptions, and unresolved risks alongside task success; recoverability is not itself human understanding or good decisions.
+
+Review basis (19 October 2026): metadata and selected v2 sections 3–7, limitations, and selected appendices on measurement and release scope. Full context can include private reasoning unavailable in a public execution view; cached-score reproducibility differs from reusing complete trajectories. No replication performed.
+
+**Gullstrand Heander, L., Sergeyuk, A., Zakharov, I., Söderberg, E., & Mukhortov, N. (2026). _Trust-Calibrated Code Review: A Participatory Design Study of Review Workflows for LLM-Generated Multi-File Changes._ ESEM 2026, LIPIcs 394, 89:1–89:21; published 5 October 2026.** [Paper](https://doi.org/10.4230/LIPIcs.ESEM.2026.89) · [Earlier preprint](https://arxiv.org/abs/2606.01969)
+
+Participatory design with 17 practitioners (seven returning for co-design) proposes overview, file-analysis, and snippet-review levels, including chunking and risk signals. A 43-person survey assessed a prototype walkthrough: anticipated effort reductions are expectations, not observed improvements in review or calibrated trust.
+
+Close interaction-design precedent for conceptual change review and allocating human attention. Compare how risk signals are justified and how evidence reaches each level; risk estimates should not be equated with PostCode's epistemological qualifications.
+
+Review basis (19 October 2026): publisher metadata and selected proceedings sections 3–6, including recruitment, synthesis, survey method, and validity threats. Newly found; the June preprint is the same work, not an additional finding. No functioning prototype or longitudinal use independently assessed.
+
+**Deng, H., et al. (2026). _SWE-Journey: Towards More Realistic Evaluation of Coding Assistants through Long-Horizon, Multi-Turn Interaction._ Preprint, arXiv:2610.11559; submitted 8 October 2026.** [Paper](https://arxiv.org/abs/2610.11559)
+
+Combines synthesized development sequences with persona-conditioned simulated users. Its persona comparisons vary expertise, information, control, goals, and verification together; they do not isolate programming expertise or measure real humans' understanding.
+
+Relevant to constructing sustained direction/supervision tasks, including the source-language-unfamiliar case in [research.md](research.md#5-research-questions). Its task-generation approach merits inspection separately from any human-interface evaluation; successful interaction with a simulator cannot establish PostCode's human usefulness.
+
+Review basis (19 October 2026): metadata, PDF sections 3 and 5, and Appendix A.3–A.4 on persona construction and task checks. Synthetic tasks and simulated behavior constrain transfer. No artifacts run or comparative human study assessed.
+
 ### 1.3 Code comprehension and software visualization
 
 **Gao, J., Xue, Y., Xie, X., Cao, J., et al. (2026). _Understanding Codebase like a Professional! Human–AI Collaboration for Code Comprehension._ ICPC 2026.**
@@ -117,6 +141,14 @@ Moldable development makes contextual analysis and interaction tools inexpensive
 Close prior art for task-specific representations, conceptual investigation, and tools that evolve with the software and the questions asked of it. It is relevant to PostCode's questions about sustained use, development from inception, and the distinction between independently useful conceptual clarity and tool-relative projectability. A comparison should examine who constructs and selects tools, how qualifications reach users, how views remain grounded as inputs change, and when source is used. These are comparison questions, not established advantages for PostCode. Glamorous Toolkit merits assessment as a possible interaction comparator alongside systems focused on analysis infrastructure.
 
 Review basis: paper abstract and project/method documentation; the full patterns paper, implementation, and reported experience have not been independently assessed here.
+
+**Hansen, M., Issa, K., & Hasselbring, W. (2026). _A Chat Assistant for Software Exploration in a 3D Software Visualization._ VISSOFT 2026 research-track program; author version arXiv:2610.09901, submitted 7 October 2026.** [Paper](https://arxiv.org/abs/2610.09901) · [Program](https://vissoft.io/2026/program.html) · [Artifacts](https://doi.org/10.5281/zenodo.20729543)
+
+ExplorViz integrates natural-language questions and tool-triggered navigation, highlighting, settings, and visual restructuring. An eleven-person study, mostly students, reports favorable perceptions for simpler operations and mixed restructuring results. Restructuring concerns the visualized model; this does not establish implementation changes or sustained software development.
+
+Direct prior art for delegating interaction with program views. A bounded comparator could distinguish choosing information, manipulating a presentation, and changing a conceptual model. Perceived explanation correctness does not establish factual accuracy or an equivalent epistemological contract.
+
+Review basis (19 October 2026): selected author-version sections IV and VI, including tasks, discussion, and validity threats; official September program. Study conducted December 2025; indexed artifact v2 dates to June 2026, so October's preprint is not evidence of a new implementation release. Artifact contents and implementation not independently assessed.
 
 **Archbird (2026). Technical software project.** [Website](https://archbird.org/)
 
