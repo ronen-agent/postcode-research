@@ -108,11 +108,13 @@ They can test whether PostCode can:
 
 OSS use should involve genuine questions or development tasks where possible. Artificial tours of repositories may reveal projection defects, but they provide weaker evidence about sustained usefulness.
 
-### Initial visual architectural journey
+### 2.5 Architectural representation investigations
 
-Use the Cockatiel resilience-library issue as an initial bounded journey for exploring visual architectural interaction. Reuse the genuine problem and known repository context, not the recorded dialogue as a mandatory script. Choose established structural and behavioral notations only as the investigation requires them. Examine whether moving between responsibilities, policy composition, recovery states, and asynchronous consequences produces useful new questions or corrections; assess whether a partial retained account helps across those perspectives.
+Use bounded, genuine architectural questions or development tasks to explore whether shared visual representations help people reason about software with coding agents. Choose contexts for the architectural questions and methodological contrasts they expose, rather than prescribing a particular repository, issue, or previous dialogue. Draw provisionally on established structural and behavioral notations as the investigation calls for them.
 
-Use capable chat with repository access, ad hoc diagrams and ordinary retained notes as an explicit practical baseline. A diagram being understandable or attractive does not itself demonstrate added value. Record concrete differences in architectural reasoning, discovered issues, continuity, and ability to challenge conclusions. Design-versus-implementation correspondence may be explored in a subsequent bounded task rather than made a prerequisite for the first journey. All generalization remains subject to the evidence limits below.
+Examine whether different architectural perspectives reveal gaps, raise useful questions, change earlier interpretations, or make consequences easier to reason about. Observe whether partial, qualified retained accounts help when moving between perspectives. Some investigations may concern existing software; others may begin with intended designs and later examine their implementation. Neither path must be a prerequisite for the other.
+
+Use capable chat with repository access, ad hoc diagrams, and ordinary retained notes as an explicit practical baseline. A diagram being understandable or attractive does not itself demonstrate added value. Record concrete differences in architectural reasoning, discovered issues, continuity, and ability to challenge conclusions. All generalization remains subject to the evidence limits below.
 
 ## 3. Evaluating Projection Capabilities
 
