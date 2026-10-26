@@ -11,7 +11,7 @@ Research strategy is distinct from both methodology and roadmap. Methodology gov
 PostCode may produce several kinds of value:
 
 - a tool or interaction model useful for human architectural practice with coding agents;
-- findings about when shared visual architectural artifacts and partial qualified knowledge contribute beyond capable agent chat;
+- findings about when shared architectural representations, including visual artifacts, and partial qualified knowledge contribute beyond capable agent chat;
 - design knowledge about projection-based development environments;
 - empirical findings about how people understand, design, direct and evaluate agent-produced software;
 - concepts or mechanisms that transfer beyond PostCode;
