@@ -10,7 +10,7 @@ PostCode is a development project conducted as formative research.
 
 Building the system is necessary because many of the relevant questions cannot be answered in advance: which projections prove useful, which information remains difficult to expose, when source is preferable, how much qualification users need, and which abstractions survive contact with real software.
 
-The initial method is therefore sustained use, observation, and revision rather than a fixed efficacy experiment. The present leading design hypothesis concerns shared visual architectural artifacts and partial qualified retained knowledge; neither their superiority nor their required implementation is presumed.
+The initial method is therefore sustained use, observation, and revision rather than a fixed efficacy experiment.
 
 To preserve evidence from that use, PostCode is designed to export a stream of relevant interaction events and contemporaneous user reports to a designated research destination for subsequent analysis. The contents and limitations of that evidence are described in [Formative Logging](#6-formative-logging).
 
