@@ -6,11 +6,11 @@ This document describes the conceptual product design through which PostCode's r
 
 ## 1. Design Premise
 
-The goal is a projection-based software-development environment through which a human can understand, direct, and supervise software using task-appropriate, epistemologically qualified representations rather than routinely working through conventional programming-language source.
+The research aspiration is that humans can practice software design and architecture in collaboration with agents that implement the software, without needing to be programmers themselves. PostCode explores a human-facing architectural working environment: task-appropriate, epistemologically qualified representations through which humans can investigate existing software, develop and discuss intended designs, and evaluate implementations. Its usefulness must be examined against capable coding-agent chat with repository access, diagrams, and retained notes—not just against reading source directly.
 
-The conceptual model should not presuppose that the human knows the implementation language or that the program's persistent representation is intended for human reading.
+The conceptual model should not presuppose that the human knows how to read or write conventional programming-language source, nor that the program's persistent representation is intended for human reading. It does presuppose that meaningful architectural practice requires substantial computational and design knowledge; whether that competence can be acquired independently of programming proficiency is an open motivating question.
 
-The first design decision is a simplification: PostCode's projections and views are read-only. The human continues to direct program changes by instructing coding agents in prose. This defers questions about semantics, authority, ambiguity, round-tripping, and implementation conformance that need not be answered to investigate the core projection model. Later versions could support bidirectional views without invalidating that model.
+The first design decision is a simplification: PostCode's projections and views, including architectural diagrams, are read-only. The human continues to direct program changes by instructing coding agents in prose. This defers questions about semantics, authority, ambiguity, round-tripping, and implementation conformance that need not be answered to investigate the core projection model. Later versions could support bidirectional views without invalidating that model.
 
 The core projection pipeline is:
 
@@ -26,6 +26,8 @@ lenses and projections
        ↓
 read-only view
 ```
+
+This implementation-derived pipeline is one source of architectural knowledge, not the whole architectural practice. Human-agent design discussions may supply intended architecture and rationale as recorded assertions, while subsequent analysis supplies qualified information about implementation. Partial, overlapping, revisable accounts of selected concerns may support different architectural viewpoints; they must not imply a complete or canonical model of the program. Established architectural concepts and visual notations are useful starting points to test, not guaranteed mappings from source.
 
 PostCode can also present runtime observations supplied by debuggers, profilers, tracers, test runners, or other external systems. Such observations remain qualified by the executions in which they were made; PostCode need not itself become an execution environment.
 
@@ -241,7 +243,7 @@ Questions such as “Why does this exist?”, “What happened here?”, or “W
 
 ### 2.4 Identity and Continuity of Attention
 
-PostCode does not presuppose persistent semantic identities for program entities or relationships, or a formal architecture model. Entities and relationships are discovered from the implementation according to explicit analysis rules, with language-dependent guarantees.
+PostCode does not presuppose persistent semantic identities for program entities or relationships, or a complete, authoritative architecture model. A qualified, partial architectural account may be useful without describing the entire implementation. Entities and relationships are discovered from the implementation according to explicit analysis rules, with language-dependent guarantees.
 
 The design distinguishes continuity of human attention from continuity of the underlying program structure:
 
@@ -257,7 +259,7 @@ An entity's identity, its implementation identifier, and the label presented to 
 
 An implementation identifier may be arbitrary or language-specific. A descriptive label expresses interpreted meaning. A PostCode-level term may provide continuity across implementations or languages but must not silently become canonical merely because PostCode introduced it.
 
-Views may expose implementation identifiers, descriptive labels, or both. Exact identifiers and source mappings remain available for traceability and agent coordination; inferred labels retain their provenance and interpretive status. Language-independent terminology should emerge through use rather than being imposed in advance.
+Views may expose implementation identifiers, descriptive labels, or both. Exact identifiers and source mappings remain available for traceability and agent coordination; inferred labels retain their provenance and interpretive status. Established software-design and architecture terminology can be adopted provisionally as a human-facing vocabulary and tested through use. Its correspondence to implementation details and its transferability across languages must be established or qualified case by case; an architectural label must not become mechanically authoritative merely by being familiar.
 
 A change to a displayed label must not masquerade as a change to the program. Conversely, a renamed implementation identifier need not break continuity of attention when the available evidence supports continued reference to the same subject.
 
@@ -427,9 +429,9 @@ Which lenses, parameters, and groupings prove useful is a research result to be 
 
 Support for a programming language supplies the entities, analyses, and guarantees available for that language.
 
-PostCode does not presuppose which programming concepts should be language-independent. Shared concepts and language-specific extensions may coexist; their boundary is a research result to be discovered through use across languages.
+PostCode may begin with established software architecture and design concepts—such as responsibility, boundary, ownership, state, interaction, contract, and concurrency—as candidates for human-facing investigation. Their usefulness and meaning in specific projects are empirical questions. Shared concepts and language-specific extensions may coexist; their correspondence and limits across implementation languages remain research results rather than assumptions.
 
-When experience across languages reveals common concepts, PostCode can accrete shared abstractions. It must not discard or distort language-specific semantics to fit a preselected universal model.
+When experience supports useful common concepts, PostCode can refine shared abstractions. It must not discard or distort language-specific semantics to fit a preselected universal model.
 
 <a id="generated-output-evidence-boundary"></a>
 
