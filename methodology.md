@@ -63,7 +63,7 @@ It is especially useful for discovering:
 
 This context is primarily formative self-study, not an efficacy experiment. It is intended to expose missing representations, bad abstractions, insufficient precision, awkward interactions, and limits of the underlying idea.
 
-It also has important limitations. The developer is motivated to exercise PostCode and can change both the tool and its subject in response to friction. It cannot by itself establish how other developers would behave or whether they would prefer PostCode to source.
+It also has important limitations. The developer is motivated to exercise PostCode and can change both the tool and its subject in response to friction. It cannot by itself establish how other developers would behave or whether PostCode improves on capable coding-agent chat or source-oriented tools.
 
 <a id="existing-project-development"></a>
 
@@ -267,7 +267,9 @@ The governing distinction is:
 
 ### 8.1 Formative self-study
 
-Evidence from sustained formative use, interaction logs, contemporaneous observations, source excursions, and resulting design changes can help determine what is required to make projection-based investigation viable. It supports design findings, bounded observations about the developer's experience, and hypotheses for later investigation.
+Evidence from sustained formative use, interaction logs, contemporaneous observations, source excursions, and resulting design changes can help determine what is required to support architectural investigation. It supports design findings, bounded observations about the developer's experience, and hypotheses for later investigation.
+
+Because this self-study involves a developer with extensive programming experience, deliberately avoiding source does not test whether someone without programming-language proficiency could exercise comparable architectural judgment. The [unfamiliar-language challenge](ROADMAP.md#46-unfamiliar-language-challenge) offers a partial test of reliance on implementation-language knowledge, but is not a substitute for studying practitioners who have not learned conventional programming.
 
 ### 8.2 External exploratory use
 
