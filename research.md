@@ -10,6 +10,8 @@ The proposition motivating PostCode is:
 
 This is an aspiration to investigate, not a claim that architectural practice can already be separated from programming-language proficiency. The question is whether humans can develop and exercise architectural judgment without needing to learn how to read or write conventional programming-language source.
 
+PostCode deliberately excludes programming-language source from its human-facing presentations to investigate that possibility. This is a product-design choice, not a finding that every architectural task can be supported without source-language literacy. Inadequacies and unanswerable questions are evidence about the limits of the approach.
+
 A practitioner would still need substantial computational and architectural knowledge: behavior, state, concurrency, interfaces, responsibilities, invariants, failure handling, resource constraints, design tradeoffs, and the limits of available evidence. The question is whether that knowledge and the judgment needed to exercise it can be acquired and practiced without the traditional apprenticeship of writing and debugging code.
 
 The analogy is to building architecture: architects practice a design discipline, collaborate with specialists who construct buildings, and use drawings, models, specifications, and prose as working artifacts. They still need to understand construction and its constraints. Software differs in important ways—source code is also a precise executable description, and architectural concepts often map ambiguously to implementation—but the analogy suggests that *practicing architecture* is a more useful framing than merely *supervising implementation*.
@@ -215,7 +217,7 @@ Humans and coding agents use qualified architectural representations as ongoing 
 
 A capable conversational coding agent, with ordinary diagrams and notes, may offer equivalent architectural collaboration without PostCode-specific machinery.
 
-Either would be an important finding rather than a failure of the research.
+This would be an important finding rather than a failure of the research.
 
 ### Greenfield and existing-code use differ
 
@@ -288,6 +290,7 @@ Potential negative or limiting findings include:
 - test intent cannot be represented adequately in architectural terms without losing consequential detail;
 - cross-language abstractions prove shallow or misleading;
 - important implementation facts routinely escape projection;
+- some consequential architectural questions or decisions cannot be addressed reliably without implementation-language proficiency, even with agent assistance and qualified representations;
 - projection comparisons often fail to provide useful information beyond ordinary agent-generated explanations of changes;
 - PostCode works well only on projects whose development it has influenced;
 - pressure toward projectability produces implementations optimized for PostCode's analyses without improving—and perhaps while degrading—other desirable software properties;
