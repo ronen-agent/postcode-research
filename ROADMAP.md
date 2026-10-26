@@ -55,9 +55,9 @@ There is no objective boundary between the bootstrap transition and ongoing form
 
 ### 2.2 Bounded architectural representation exploration
 
-Explore shared architectural representations as working artifacts in a concrete investigation or development task. Include visual structural or behavioral presentations when useful for testing their contribution to architectural reasoning. Select the case and representations through application-level planning, informed by research questions and available evidence. Examine whether partial, qualified retained accounts support reasoning across perspectives and whether revisiting a subject reveals gaps, consequences, or corrections.
+Develop and evaluate a bounded PostCode investigation using shared architectural representations, including visual structural or behavioral presentations where useful. Select the case and relevant notations through application-level planning. Examine whether partial, qualified retained accounts support reasoning across perspectives and whether revisiting a subject reveals gaps, consequences, or corrections.
 
-This exploration need not initially depend on PostCode implementing visual presentations; existing agent and diagramming tools may suffice to test a candidate experience. Compare against capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to decide which presentations, if any, PostCode should implement. No graphical capability, universal model, or visual editor is committed by this research milestone, and no particular repository, issue, or dialogue is prescribed.
+Compare with capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to refine PostCode's presentations and investigation capabilities. This does not require a universal architecture model, a visual editor, or a particular repository, issue, or dialogue as the first journey.
 
 ## 3. Candidate Capability Directions
 
