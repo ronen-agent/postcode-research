@@ -8,7 +8,7 @@ The proposition motivating PostCode is:
 
 > **Humans should be able to practice the discipline of software design and architecture in collaboration with agents that implement the software, without needing to be programmers themselves.**
 
-This is an aspiration to investigate, not a claim that architectural practice can already be separated from programming-language proficiency. The distinction is not between *seeing* and *not seeing* source. It is between needing to **know how to read and write conventional programming-language source** and being able to design, understand, and evaluate software without that proficiency.
+This is an aspiration to investigate, not a claim that architectural practice can already be separated from programming-language proficiency. The question is whether humans can develop and exercise architectural judgment without needing to learn how to read or write conventional programming-language source.
 
 A practitioner would still need substantial computational and architectural knowledge: behavior, state, concurrency, interfaces, responsibilities, invariants, failure handling, resource constraints, design tradeoffs, and the limits of available evidence. The question is whether that knowledge and the judgment needed to exercise it can be acquired and practiced without the traditional apprenticeship of writing and debugging code.
 
