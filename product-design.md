@@ -8,9 +8,9 @@ This document describes the conceptual product design through which PostCode's r
 
 The goal is a projection-based software-development environment in which humans can practice software design and architecture in collaboration with agents that implement the software. PostCode provides task-appropriate, epistemologically qualified representations that help humans understand, design, direct, and evaluate software without requiring them to know how to read or write conventional programming-language source.
 
-The human user is expected to understand relevant concepts of computation, software design, and architecture. The conceptual model does not assume that the program's persistent representation is intended for human reading.
+The human user is presumed to understand relevant concepts of computation, software design, and architecture. The conceptual model does not assume that the program's persistent representation is intended for human reading.
 
-The first design decision is a simplification: PostCode's projections and views, including architectural diagrams, are read-only. The human continues to direct program changes by instructing coding agents in prose. This defers questions about semantics, authority, ambiguity, round-tripping, and implementation conformance that need not be answered to investigate the core projection model. Later versions could support bidirectional views without invalidating that model.
+The first design decision is a simplification: PostCode's projections and views are read-only. The human continues to direct program changes by instructing coding agents in prose. This defers questions about semantics, authority, ambiguity, round-tripping, and implementation conformance that need not be answered to investigate the core projection model. Later versions could support bidirectional views without invalidating that model.
 
 The core projection pipeline is:
 
@@ -26,8 +26,6 @@ lenses and projections
        ↓
 read-only view
 ```
-
-This implementation-derived pipeline is one source of architectural knowledge, not the whole architectural practice. Human-agent design discussions may supply intended architecture and rationale as recorded assertions, while subsequent analysis supplies qualified information about implementation. Partial, overlapping, revisable accounts of selected concerns may support different architectural viewpoints; they must not imply a complete or canonical model of the program. Established architectural concepts and visual notations are useful starting points to test, not guaranteed mappings from source.
 
 PostCode can also present runtime observations supplied by debuggers, profilers, tracers, test runners, or other external systems. Such observations remain qualified by the executions in which they were made; PostCode need not itself become an execution environment.
 
