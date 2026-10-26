@@ -106,19 +106,13 @@ They can test whether PostCode can:
 
 OSS use should involve genuine questions or development tasks where possible. Artificial tours of repositories may reveal projection defects, but they provide weaker evidence about sustained usefulness.
 
-### 2.5 Architectural representation investigations
-
-Use bounded, genuine architectural questions or development tasks to explore whether shared architectural representations help people reason about software with coding agents. Choose contexts for the architectural questions and methodological contrasts they expose, rather than prescribing a particular repository, issue, or previous dialogue. Include visual presentations using established structural or behavioral notations where appropriate.
-
-Examine whether different architectural perspectives reveal gaps, raise useful questions, change earlier interpretations, or make consequences easier to reason about. Observe whether partial, qualified retained accounts help when moving between perspectives. Some investigations may concern existing software; others may begin with intended designs and later examine their implementation. Neither path must be a prerequisite for the other.
-
-Compare PostCode-assisted investigation with capable chat that has repository access and can produce ad hoc diagrams and ordinary retained notes. A diagram being understandable or attractive does not itself demonstrate added value. Record concrete differences in architectural reasoning, discovered issues, continuity, and ability to challenge conclusions. All generalization remains subject to the evidence limits below.
-
 ## 3. Evaluating Projection Capabilities
 
 Every lens, projection capability, recurring view construction, or representation-selection rule introduced into PostCode embodies a provisional claim that it will help satisfy some human information need. Formative use should evaluate that claim rather than assume usefulness from the apparent reasonableness of the design.
 
 Not every small capability needs a separately formalized hypothesis. When a capability has a consequential or recurring role, however, its intended information need and expected contribution should be clear enough to compare with what happens in use.
+
+Evaluate architectural representations in genuine design or investigation tasks, using established structural or behavioral notations where useful. Compare against capable coding-agent chat with repository access, ad hoc diagrams, and retained notes.
 
 Relevant observations include:
 
