@@ -40,7 +40,7 @@ PostCode does not initially investigate software-architecture education or skill
 
 Research may help identify which architectural concepts and experiences are essential to effective collaboration, and where proficiency in conventional programming remains important. It should not presume that a source-independent interface automatically produces competent architects.
 
-Conventional source has served as an implementation medium, an inspection medium, and a learning medium. Agent-mediated development raises the possibility that these roles can separate; PostCode primarily studies human-facing architectural practice.
+Conventional source has served as an implementation medium, a foundation for program understanding, and a medium for learning software development. Agent-mediated development raises the possibility that these roles can separate; PostCode primarily studies human-facing architectural practice.
 
 ## 2. Beyond Conversational Collaboration
 
@@ -74,7 +74,7 @@ Those are separate research questions.
 
 PostCode may weaken one historical reason for privileging conventional programming-language source: the assumption that humans need to work directly with it to understand programs and make architectural decisions.
 
-A related but separate question is whether working directly with conventional source is also necessary for humans to **learn** the concepts and acquire the judgment required for effective software development. PostCode does not initially investigate that educational question, although the concepts that prove useful in architectural practice may eventually provide evidence relevant to it.
+A related but separate question is whether programming-language proficiency is necessary for humans to **learn** the concepts and acquire the judgment required for effective software development. PostCode does not initially investigate that educational question, although the concepts that prove useful in architectural practice may eventually provide evidence relevant to it.
 
 This separation is methodological rather than a claim about the eventual programming system.
 
