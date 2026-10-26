@@ -170,7 +170,7 @@ Evidence about the convention's effects can be gathered from interaction logs an
 Interpretation should distinguish:
 
 - a convention that formalizes a property already observed without explicit instruction from one intended to produce a property not yet observed;
-- a response to a missing PostCode capability from a property genuinely needed for source-secondary supervision;
+- a response to a missing PostCode capability from a property genuinely needed for effective architectural practice with coding agents;
 - an independently useful improvement in conceptual clarity from adaptation that merely makes the software easier for PostCode to project;
 - a convention that generalizes across projects or languages from one that depends on a particular implementation, analysis, project or language.
 
