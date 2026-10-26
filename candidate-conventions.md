@@ -10,7 +10,7 @@ The methodological safeguards for evaluating proposed conventions are described 
 
 ## 1. What Would Make a Convention Relevant?
 
-A convention is of particular interest here when it may make software or its recorded development context easier to understand, design, and evaluate through PostCode. For example, it might make important boundaries, effects, invariants, behavior, rationale or verification easier to discover and project without requiring the human to reconstruct them from source.
+A convention is of particular interest here when it may make software or its recorded development context easier to understand, design, and evaluate through PostCode. For example, it might make important boundaries, effects, invariants, behavior, rationale or verification easier to discover and project without requiring implementation-language proficiency.
 
 Language independence is not sufficient by itself. Many ordinary engineering practices apply across languages without being especially relevant to PostCode-mediated architectural practice. Project-specific architectural decisions may also be language-independent without being appropriate recommendations for other projects.
 
