@@ -1,8 +1,12 @@
 # PostCode Research Project
 
-> *When coding agents do the coding, humans should be able to understand, direct, and supervise software development without ever needing to see programming-language source code.*
+> *Humans should be able to practice the discipline of software design and architecture in collaboration with agents that implement the software, without needing to be programmers themselves.*
 
-The PostCode Research Project investigates whether a software-development environment can make that possible. It does so by building the [PostCode application](https://github.com/ronen/postcode), which presents task-appropriate views of program structure, behavior, history, rationale, and other evidence while preserving the provenance, epistemological status, and limitations of their content.
+This is a research aspiration, not an established possibility. It asks whether people can develop and exercise architectural judgment without needing proficiency in reading or writing conventional programming-language source. They would still need substantial knowledge of computation, software behavior, design principles, and their consequences.
+
+The PostCode Research Project investigates how to support that practice, and **what can improve it beyond capable natural-language collaboration with coding agents**. Its current leading hypothesis is that shared visual architectural representations, developed through progressive investigation and grounded in partial, qualified, retained knowledge, might help people reason about designs, examine implementations, and revisit architectural questions from different perspectives.
+
+The project builds the [PostCode application](https://github.com/ronen/postcode) to explore these hypotheses. Representations should draw where useful on established software-architecture concepts and visual notations, without pretending to constitute a complete or authoritative model of the software. The application preserves the provenance, epistemological status, and limitations of what it presents. Initial visual representations remain read-only; humans and agents develop and revise their understanding through conversation.
 
 The research proceeds by studying PostCode during real software development. The application is intended to record and export observations, including relevant interaction events and contemporaneous user reports. This evidence stream will support later analysis of how PostCode is used, where it succeeds or fails, and how the design should evolve.
 
