@@ -6,9 +6,9 @@ This document describes the conceptual product design through which PostCode's r
 
 ## 1. Design Premise
 
-The research aspiration is that humans can practice software design and architecture in collaboration with agents that implement the software, without needing to be programmers themselves. PostCode explores a human-facing architectural working environment: task-appropriate, epistemologically qualified representations through which humans can investigate existing software, develop and discuss intended designs, and evaluate implementations. Its usefulness must be examined against capable coding-agent chat with repository access, diagrams, and retained notes—not just against reading source directly.
+The goal is a projection-based software-development environment in which humans can practice software design and architecture in collaboration with agents that implement the software. PostCode provides task-appropriate, epistemologically qualified representations that support understanding, designing, directing, and evaluating software without presupposing proficiency in reading or writing conventional programming-language source.
 
-The conceptual model should not presuppose that the human knows how to read or write conventional programming-language source, nor that the program's persistent representation is intended for human reading. It does presuppose that meaningful architectural practice requires substantial computational and design knowledge; whether that competence can be acquired independently of programming proficiency is an open motivating question.
+The conceptual model draws on established concepts of computation, software design, and architecture. It does not assume that the program's persistent representation is intended for human reading.
 
 The first design decision is a simplification: PostCode's projections and views, including architectural diagrams, are read-only. The human continues to direct program changes by instructing coding agents in prose. This defers questions about semantics, authority, ambiguity, round-tripping, and implementation conformance that need not be answered to investigate the core projection model. Later versions could support bidirectional views without invalidating that model.
 
