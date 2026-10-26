@@ -44,8 +44,8 @@ It should support:
 - a usable set of views through which the developer can conduct a genuine investigation;
 - views that preserve provenance, epistemological status, guarantees, and limitations;
 - a practical way to request and inspect those views;
-- enough navigation and source access to sustain an investigation;
-- enough formative observation support to record use, friction, and immediate reactions.
+- enough navigation, qualification and supporting information to sustain an investigation without displaying programming-language source;
+- enough formative observation support to record use, inadequate explanations or views, friction, and immediate reactions.
 
 Including both mechanically derived and interpretive information from the beginning puts the epistemological contract under pressure: PostCode must keep interpretation distinguishable from precise analysis while making both useful during investigation.
 
@@ -79,7 +79,7 @@ Its timing should depend on when repeatedly translating PostCode concepts back i
 
 ### 3.4 Revision and projection comparison
 
-Support comparison of qualified information across repository states so the human can investigate what changed at a conceptual level rather than only through source diffs. Begin with the smallest comparison capability that can produce formative evidence; add conceptual-diff analysis when simpler comparison proves useful but inadequate.
+Support comparison of qualified information across repository states so the human can investigate what changed at a conceptual level rather than relying solely on an agent's description of the patch. Begin with the smallest comparison capability that can produce formative evidence; add conceptual-diff analysis when simpler comparison proves useful but inadequate.
 
 Stable projection behavior is a prerequisite: changes in PostCode must not masquerade as changes in the program.
 
@@ -135,17 +135,17 @@ Try PostCode on software written in another programming language. Check which ar
 
 A later experiment may use a language the developer does not know well. Where practical, coding agents can integrate the new language into PostCode from PostCode-level requirements while reporting where the existing abstractions fail to transfer.
 
-The developer's unfamiliarity with the language also strengthens the trust experiment: source-language expertise is less available to expose a plausible-looking but incorrect projection. PostCode must instead earn trust through analysis, provenance, and explicit guarantees.
+The developer's unfamiliarity with the implementation language places greater demands on the accuracy, provenance, and limitations of PostCode's architectural representations. An apparently convincing account must not conceal what has not been established.
 
 The experiment can ask:
 
-> **Can the developer form a useful understanding of a program through PostCode without first learning enough of its implementation language to reconstruct that understanding from source?**
+> **Can the developer understand and evaluate a program through PostCode without proficiency in its implementation language?**
 
 Difficulty integrating a language through an existing abstraction is evidence about the abstraction, not merely an implementation inconvenience.
 
 ### 4.7 Cross-language consolidation
 
-After multiple languages and real tasks have exerted pressure on the design, compare the language integrations, lenses actually used, guarantees, unavailable projections, language-specific concepts, test projections, and source excursions.
+After multiple languages and real tasks have exerted pressure on the design, compare the language integrations, lenses actually used, guarantees, unavailable projections, language-specific concepts, test projections, and reports of inadequate representations.
 
 ## 5. Public Availability, External Use, and Evaluation
 
