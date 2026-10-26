@@ -241,7 +241,7 @@ Questions such as “Why does this exist?”, “What happened here?”, or “W
 
 ### 2.4 Identity and Continuity of Attention
 
-PostCode does not presuppose persistent semantic identities for program entities or relationships, or a complete, authoritative architecture model. A qualified, partial architectural account may be useful without describing the entire implementation. Entities and relationships are discovered from the implementation according to explicit analysis rules, with language-dependent guarantees.
+PostCode does not presuppose persistent semantic identities for program entities or relationships, or a complete, authoritative architecture model. Entities and relationships are discovered from the implementation according to explicit analysis rules, with language-dependent guarantees.
 
 The design distinguishes continuity of human attention from continuity of the underlying program structure:
 
