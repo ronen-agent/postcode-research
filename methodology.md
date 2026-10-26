@@ -108,11 +108,11 @@ OSS use should involve genuine questions or development tasks where possible. Ar
 
 ### 2.5 Architectural representation investigations
 
-Use bounded, genuine architectural questions or development tasks to explore whether shared visual representations help people reason about software with coding agents. Choose contexts for the architectural questions and methodological contrasts they expose, rather than prescribing a particular repository, issue, or previous dialogue. Draw provisionally on established structural and behavioral notations as the investigation calls for them.
+Use bounded, genuine architectural questions or development tasks to explore whether shared architectural representations help people reason about software with coding agents. Choose contexts for the architectural questions and methodological contrasts they expose, rather than prescribing a particular repository, issue, or previous dialogue. Include visual presentations drawn from established structural or behavioral notations where they offer a useful hypothesis to test, without treating visual display as a prerequisite for every investigation.
 
 Examine whether different architectural perspectives reveal gaps, raise useful questions, change earlier interpretations, or make consequences easier to reason about. Observe whether partial, qualified retained accounts help when moving between perspectives. Some investigations may concern existing software; others may begin with intended designs and later examine their implementation. Neither path must be a prerequisite for the other.
 
-Use capable chat with repository access, ad hoc diagrams, and ordinary retained notes as an explicit practical baseline. A diagram being understandable or attractive does not itself demonstrate added value. Record concrete differences in architectural reasoning, discovered issues, continuity, and ability to challenge conclusions. All generalization remains subject to the evidence limits below.
+Early exploration may use existing diagramming and agent tools before equivalent presentations are implemented in PostCode. Such trials inform product design but do not establish how well PostCode itself works. Compare with capable chat with repository access, ad hoc diagrams, and ordinary retained notes. A diagram being understandable or attractive does not itself demonstrate added value. Record concrete differences in architectural reasoning, discovered issues, continuity, and ability to challenge conclusions. All generalization remains subject to the evidence limits below.
 
 ## 3. Evaluating Projection Capabilities
 
