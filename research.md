@@ -20,7 +20,7 @@ The immediate research question is how to support such architectural practice in
 
 This deliberately sets a strong baseline. Coding agents can already inspect repositories, explain behavior, propose designs, create diagrams, and maintain written notes. PostCode must earn its usefulness against that practice, not merely against manual source reading or text chat without tools.
 
-The current leading hypothesis is that **shared visual architectural representations**, grounded in **partial, qualified, retained understanding**, may serve as working artifacts for humans and agents: helping them explore one architectural concern, change perspective, revise an account, consider a design, and examine how an implementation realizes it. Established software-architecture concepts and notations provide starting vocabulary, not an asserted universal program ontology.
+The current leading hypothesis is that **shared architectural representations**, grounded in **partial, qualified, retained understanding**, may serve as working artifacts for humans and agents: helping them explore one architectural concern, change perspective, revise an account, consider a design, and examine how an implementation realizes it. They may be textual, structured, or visual. Established software-architecture concepts and notations provide starting vocabulary, not an asserted universal program ontology.
 
 The research remains open to finding that excellent conversation and ordinary agent-generated diagrams and notes are sufficient for many or all of these purposes.
 
