@@ -53,9 +53,11 @@ PostCode should be used on its own development as soon as any implemented capabi
 
 There is no objective boundary between the bootstrap transition and ongoing formative development. At some point, experience may support the judgment that PostCode has a coherent minimal set of capabilities for sustained formative use. That judgment marks the end of the bootstrap transition; PostCode-on-PostCode use will already have begun and will continue afterward.
 
-### First visual architectural journey
+### 2.2 Bounded visual architectural investigation
 
-Use Cockatiel as the initial architectural journey, retaining the problem rather than following a scripted historical dialogue. Start with established visual notations suitable for emerging questions (for example structural views, state machines, or interaction diagrams), and permit read-only, conversation-driven revision. Explore partial qualified retained accounts, different perspectives on the same subject, and investigation of asynchronous consequences after a responsibility or ownership design. Test what this provides beyond capable chat with agent-created diagrams and notes. Select resulting application changes only after assessing the experience; do not precommit to a universal model or a visual editor.
+Explore shared read-only architectural representations as working artifacts in a concrete investigation or development task. Select the case and relevant structural or behavioral notations through application-level planning, informed by the research questions and the available evidence. Examine whether partial, qualified retained accounts support reasoning across perspectives, and whether revisiting a subject reveals gaps, consequences, or corrections.
+
+Compare with capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to decide what application capabilities, if any, merit further work; do not precommit to a universal model or a visual editor. The research roadmap does not prescribe a particular codebase, issue, or dialogue as the required first journey.
 
 ## 3. Candidate Capability Directions
 
