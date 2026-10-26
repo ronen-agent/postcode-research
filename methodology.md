@@ -10,13 +10,13 @@ PostCode is a development project conducted as formative research.
 
 Building the system is necessary because many of the relevant questions cannot be answered in advance: which projections prove useful, which information remains difficult to expose, when source is preferable, how much qualification users need, and which abstractions survive contact with real software.
 
-The initial method is therefore sustained use, observation, and revision rather than a fixed efficacy experiment.
+The initial method is therefore sustained use, observation, and revision rather than a fixed efficacy experiment. The present leading design hypothesis concerns shared visual architectural artifacts and partial qualified retained knowledge; neither their superiority nor their required implementation is presumed.
 
 To preserve evidence from that use, PostCode is designed to export a stream of relevant interaction events and contemporaneous user reports to a designated research destination for subsequent analysis. The contents and limitations of that evidence are described in [Formative Logging](#6-formative-logging).
 
 The central formative question is:
 
-> **What is required to make projection-based software investigation and supervision viable?**
+> **What is required for representations to support useful human architectural practice with coding agents, and what do they contribute beyond capable agent chat?**
 
 The governing methodological loop is:
 
@@ -36,7 +36,7 @@ use again
 
 The process is directed by what the evidence supports. Positive, negative, limiting, mixed, and unexpected findings should all be allowed to redirect the work.
 
-Abstractions should likewise earn their place through accumulated pressure from real use rather than elegance alone.
+Abstractions should likewise earn their place through accumulated pressure from real use rather than elegance alone. Established architectural concepts and notations are legitimate provisional starting points; evidence determines whether and how they fit real investigations, rather than requiring every concept to be rediscovered from source.
 
 ## 2. Formative Use
 
@@ -108,6 +108,12 @@ They can test whether PostCode can:
 
 OSS use should involve genuine questions or development tasks where possible. Artificial tours of repositories may reveal projection defects, but they provide weaker evidence about sustained usefulness.
 
+### Initial visual architectural journey
+
+Use the Cockatiel resilience-library issue as an initial bounded journey for exploring visual architectural interaction. Reuse the genuine problem and known repository context, not the recorded dialogue as a mandatory script. Choose established structural and behavioral notations only as the investigation requires them. Examine whether moving between responsibilities, policy composition, recovery states, and asynchronous consequences produces useful new questions or corrections; assess whether a partial retained account helps across those perspectives.
+
+Use capable chat with repository access, ad hoc diagrams and ordinary retained notes as an explicit practical baseline. A diagram being understandable or attractive does not itself demonstrate added value. Record concrete differences in architectural reasoning, discovered issues, continuity, and ability to challenge conclusions. Design-versus-implementation correspondence may be explored in a subsequent bounded task rather than made a prerequisite for the first journey. All generalization remains subject to the evidence limits below.
+
 ## 3. Evaluating Projection Capabilities
 
 Every lens, projection capability, recurring view construction, or representation-selection rule introduced into PostCode embodies a provisional claim that it will help satisfy some human information need. Formative use should evaluate that claim rather than assume usefulness from the apparent reasonableness of the design.
@@ -121,6 +127,9 @@ Relevant observations include:
 - whether additional system-initiated investigation contributed and, if so, whether it was request-scoped or autonomous;
 - whether the result was a synthesized qualified projection, a coordination of independently qualified projections, or a mixture, when that construction could affect trust or usefulness;
 - whether it satisfied the information need or supported a useful next step;
+- whether visual working artifacts helped the human notice architectural relationships, reason about consequences, generate questions, or identify gaps beyond what comparable conversation provided;
+- whether partial retained knowledge was reused or revised when examining a different perspective;
+- whether intentions and observed or inferred implementation behavior could be compared without disguising uncertainty;
 - which further views, lenses, or subjects the human pursued;
 - when the human instead used the source escape hatch, sought another representation, or abandoned the investigation;
 - which information was useful, missing, misleading, or unnecessarily prominent;
@@ -147,6 +156,7 @@ Possible interpretations include:
 - the system selected an inappropriate lens or presentation;
 - the available repository evidence cannot support the desired claim;
 - source is intrinsically clearer or more efficient for this question;
+- a capable conversational agent with ordinary diagrams and notes provides the same help without a dedicated PostCode capability;
 - the projection-based approach is poorly suited to the activity.
 
 Formative use should also help determine which textual results belong in transient conversation, which should become retained views, and which should contribute to longer-lived investigation context.
@@ -280,7 +290,7 @@ All findings should remain scoped to their evidence. Negative and mixed findings
 When related systems are assessed, distinguish the question being asked and the evidence required:
 
 - **Analysis validation and reuse:** inspect versioned implementations and exercise representative cases to establish what their results mean, which guarantees and limitations apply, and whether integration can preserve PostCode's contracts. Similar terminology or deterministic execution alone does not establish equivalent semantics. Reuse assessment also considers integration effort and support for research observation.
-- **Interface comparison:** compare identified versions on specified human tasks, with the information, source access, setup, and assistance available in each condition made explicit. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
+- **Interface comparison:** compare identified versions on specified human tasks, with the information, source access, setup, and assistance available in each condition made explicit. A capable conversational coding agent with repository tools, ad hoc diagrams and ordinary notes is a primary comparator, rather than a deliberately impoverished text-only chat. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
 - **Sustained-use evidence:** observe understanding, direction, and supervision across development episodes and changing program states. Success on isolated questions or benchmark cases does not establish viability as a routine working surface.
 
 Project documentation establishes reported capabilities, not demonstrated guarantees or effectiveness. Agent-monitor benchmarks may supply useful cases for analysis or supervision, but model performance on them does not itself establish human usefulness. Comparative self-study retains the limitations described above; general claims about developer behavior still require independent evaluation. Record the assessment's version, scope, evidence, and unresolved questions so that reuse decisions and research claims can be judged separately.
