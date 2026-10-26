@@ -34,7 +34,7 @@ At suitable checkpoints, also consider whether [Publication-Aware Prioritization
 
 ### 2.1 Initial implementation and bootstrap transition
 
-The immediate milestone is the smallest trustworthy read-only version of PostCode that can be used during development of PostCode itself. Its purpose is to make the projection model concrete enough to evaluate and to create the conditions for sustained formative use.
+The immediate milestone is a bounded, trustworthy, read-only architectural investigation experience that can produce formative evidence of whether PostCode adds value beyond capable agent chat. The ongoing minimal PostCode-on-PostCode bootstrap remains useful, but implementation increments should serve that experience rather than define the research ambition. Its purpose is to make the projection model concrete enough to evaluate and to create the conditions for sustained formative use.
 
 It should support:
 
@@ -52,6 +52,10 @@ Including both mechanically derived and interpretive information from the beginn
 PostCode should be used on its own development as soon as any implemented capability can contribute usefully. That use will broaden as further subjects, lenses, views, and observation support become available.
 
 There is no objective boundary between the bootstrap transition and ongoing formative development. At some point, experience may support the judgment that PostCode has a coherent minimal set of capabilities for sustained formative use. That judgment marks the end of the bootstrap transition; PostCode-on-PostCode use will already have begun and will continue afterward.
+
+### First visual architectural journey
+
+Use Cockatiel as the initial architectural journey, retaining the problem rather than following a scripted historical dialogue. Start with established visual notations suitable for emerging questions (for example structural views, state machines, or interaction diagrams), and permit read-only, conversation-driven revision. Explore partial qualified retained accounts, different perspectives on the same subject, and investigation of asynchronous consequences after a responsibility or ownership design. Test what this provides beyond capable chat with agent-created diagrams and notes. Select resulting application changes only after assessing the experience; do not precommit to a universal model or a visual editor.
 
 ## 3. Candidate Capability Directions
 
@@ -79,7 +83,7 @@ Stable projection behavior is a prerequisite: changes in PostCode must not masqu
 
 ### 3.5 Capability growth
 
-Add or revise capabilities in response to recurring investigative needs. A failed investigation does not by itself imply that a new lens is required; the problem may instead concern available information, representation, selection, interaction, evidence, or the underlying projection approach.
+Add or revise capabilities in response to recurring architectural investigative needs, drawing provisionally on established architecture/design concepts and visual languages where useful. A failed investigation does not by itself imply that a new lens is required; the problem may instead concern available information, representation, selection, interaction, evidence, or the underlying projection approach.
 
 Illustrative lens families are described in [`product-design.md`](product-design.md#illustrative-lens-families). The capabilities pursued next should be shaped by use rather than by treating those examples as a backlog.
 
@@ -123,7 +127,7 @@ Additional repositories are useful only while they expose new assumptions, needs
 
 ### 4.5 Additional languages
 
-Apply PostCode to software in another programming language when cross-language pressure can test concepts that have emerged through actual use. PostCode should preserve the language's semantics rather than force them into abstractions inherited from the first language.
+Apply PostCode to software in another programming language when cross-language pressure can test the applicability, realization, and limits of established architectural concepts already used in initial journeys. PostCode should preserve the language's semantics rather than force them into abstractions inherited from the first language.
 
 Observe which entities, lenses, lens parameter values, guarantees, and test concepts transfer; which require language-specific treatment; and where shared terminology conceals different semantics.
 
@@ -143,7 +147,7 @@ Difficulty integrating a language through an existing abstraction is evidence ab
 
 After multiple languages and real tasks have exerted pressure on the design, compare the language integrations, lenses actually used, guarantees, unavailable projections, language-specific concepts, test projections, and source excursions.
 
-Shared abstractions should be consolidated only where the evidence supports them. A federation of common concepts and language-specific extensions may be preferable to a universal ontology.
+Shared abstractions should be consolidated only where the evidence supports them. Starting from familiar architectural concepts is not a claim of shared implementation semantics. A federation of common concepts and language-specific extensions may be preferable to a universal ontology.
 
 ## 5. Public Availability, External Use, and Evaluation
 
