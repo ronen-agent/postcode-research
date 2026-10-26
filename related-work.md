@@ -62,7 +62,7 @@ Review basis: abstract and selected full-text sections on the method and evaluat
 
 **Ferris & Bonilla (2026). _A Case Study in Assuring AI-Written Software._ Preprint, arXiv:2610.08651; reported as accepted to the NeurIPS 2026 Meta-Agents Workshop.** [Paper](https://arxiv.org/abs/2610.08651)
 
-Observational case study of software developed with coding agents and supervised substantially through tests, monitoring, reviewing agents, and other assurance mechanisms rather than comprehensive source inspection. Some assurance mechanisms failed or measured inadequate proxies.
+Observational case study of software developed with coding agents and supervised substantially through tests, monitoring, reviewing agents, and other assurance mechanisms. Some assurance mechanisms failed or measured inadequate proxies.
 
 Relevant to PostCode's epistemological contract: alternative evidence must be clear about what it actually establishes. A case study rather than evidence of broad developer behavior, and not itself a projection environment.
 
