@@ -20,7 +20,7 @@ The immediate research question is how to support such architectural practice in
 
 This deliberately sets a strong baseline. Coding agents can already inspect repositories, explain behavior, propose designs, create diagrams, and maintain written notes. PostCode must earn its usefulness against that practice, not merely against manual source reading or text chat without tools.
 
-The current leading hypothesis is that **shared architectural representations**, grounded in **partial, qualified, retained understanding**, may serve as working artifacts for humans and agents: helping them explore one architectural concern, change perspective, revise an account, consider a design, and examine how an implementation realizes it. They may be textual, structured, or visual. Established software-architecture concepts and notations provide starting vocabulary, not an asserted universal program ontology.
+The current leading hypothesis is that **shared architectural representations**, grounded in **partial, qualified, retained understanding**, may serve as working artifacts for humans and agents: helping them explore one architectural concern, change perspective, revise an account, consider a design, and examine how an implementation realizes it. They may be textual, structured, or visual. Established software-architecture concepts and notations provide starting vocabulary, not an asserted universal program ontology. This is a deliberate choice to draw on an existing discipline rather than wait for shared concepts to emerge solely from source investigations. A borrowed concept should be refined or set aside when it obscures consequential behavior or fails to support useful reasoning.
 
 The research remains open to finding that excellent conversation and ordinary agent-generated diagrams and notes are sufficient for many or all of these purposes.
 
@@ -60,7 +60,7 @@ A central epistemological discipline remains essential. Machine-readable structu
 
 There are at least three distinct representation questions:
 
-1. **Human representation:** Through what representations should humans understand, direct and supervise software development?
+1. **Human representation:** Through what representations and interactions can humans practice software design and architecture with coding agents?
 2. **Agent representation:** What representation is most useful for coding agents to consume and manipulate?
 3. **Persistent program representation:** What should be the canonical durable representation from which the program is built?
 
@@ -72,9 +72,9 @@ Agents might still work best with conventional source. Conventional source might
 
 Those are separate research questions.
 
-PostCode may weaken one historical reason for the privileged status of conventional programming-language source: that humans need to work directly with it in order to understand and supervise programs.
+PostCode may weaken one historical reason for privileging conventional programming-language source: the assumption that humans need to work directly with it to understand programs and make architectural decisions.
 
-A related but separate question is whether working directly with conventional source is also necessary for humans to **learn** the concepts and acquire the judgment required for effective software development. PostCode does not initially investigate that educational question, although the concepts that prove useful for supervision may eventually provide evidence relevant to it.
+A related but separate question is whether working directly with conventional source is also necessary for humans to **learn** the concepts and acquire the judgment required for effective software development. PostCode does not initially investigate that educational question, although the concepts that prove useful in architectural practice may eventually provide evidence relevant to it.
 
 This separation is methodological rather than a claim about the eventual programming system.
 
@@ -88,9 +88,9 @@ There is another distinction within the human-facing question.
 
 PostCode can participate in software development at different points in a program's lifecycle:
 
-- a program may be developed through PostCode-mediated supervision from its inception;
+- PostCode may support architectural design and subsequent development from a program's inception;
 - PostCode may be introduced during the continued development of an existing codebase;
-- PostCode may be used to investigate and supervise changes to an unfamiliar codebase whose development it has never participated in.
+- PostCode may be used to investigate and evaluate changes to an unfamiliar codebase whose development it has never participated in.
 
 These cases may behave differently.
 
@@ -112,19 +112,19 @@ This makes the point at which PostCode enters a program's lifecycle a research d
 
 ### 3.2 How does PostCode-mediated development affect the software?
 
-There are two related but distinct questions. First, using PostCode may cause software and its recorded development context to evolve differently without any explicit policy requiring that result. Second, experience may suggest that agents should deliberately be asked to preserve particular language-agnostic properties of the software and its recorded development context when working under PostCode-mediated human supervision.
+There are two related but distinct questions. First, using PostCode may cause software and its recorded development context to evolve differently without any explicit policy requiring that result. Second, experience may suggest that agents should deliberately be asked to preserve particular language-agnostic properties of the software and its recorded development context during PostCode-mediated collaboration.
 
 #### 3.2.1 Emergent effects
 
 This raises a further question:
 
-> **Does software created or evolved under PostCode-mediated human supervision differ in significant ways from software produced through current prose + source-code interaction with coding agents?**
+> **Does software created or evolved through PostCode-mediated architectural collaboration differ in significant ways from software developed through ordinary coding-agent conversations?**
 
 Differences might appear in the implementation itself, in the information preserved alongside it, or in both.
 
 For example, sustained interaction at a conceptual level might create pressure for implementations whose structure corresponds more clearly to the concepts through which humans reason about the software.
 
-Such software might exhibit greater **conceptual clarity**: architectural boundaries, responsibilities, effects, invariants, behavior, tests or other implementation properties might correspond more clearly to the conceptual structure through which the human supervises development.
+Such software might exhibit greater **conceptual clarity**: architectural boundaries, responsibilities, effects, invariants, behavior, tests or other implementation properties might correspond more clearly to the conceptual structure through which the human reasons about and directs development.
 
 That could be an independently useful property of the software.
 
@@ -138,7 +138,7 @@ Whether either effect occurs is an open question.
 
 #### 3.2.2 Deliberate conventions for PostCode-mediated development
 
-PostCode-mediated development may also benefit from explicitly stated conventions for how coding agents implement and document changes. Such conventions would not prescribe the source-language realization in detail. They would instead encourage language-agnostic properties of the software and its recorded development context that help a human understand, direct and supervise the software without routinely working through source.
+PostCode-mediated development may also benefit from explicitly stated conventions for how coding agents implement and document changes. Such conventions would not prescribe the source-language realization in detail. They would instead encourage language-agnostic properties of the software and its recorded development context that help a human understand, design, direct and evaluate the software without routinely working through source.
 
 Possible candidates might concern correspondence between conceptual and implementation boundaries, the discoverability of effects and invariants, the expression of behavior through tests, or the preservation of links among human requests, implementation changes, rationale and verification. These are hypotheses to investigate rather than conventions PostCode currently endorses.
 
@@ -146,47 +146,17 @@ Deliberate conventions raise the same distinction between independently useful c
 
 The project should therefore distinguish effects that arise through ordinary PostCode-mediated development from effects produced by explicit instructions to coding agents. Experience should determine which conventions prove useful, how far they generalize across projects and languages, and whether they should remain project choices, become PostCode recommendations, or eventually be represented or checked by PostCode itself.
 
-## 4. Why This Question May Be Different Now
+## 4. Why Agent-Mediated Development Changes the Problem
 
-Software visualization, architecture recovery, program-comprehension tools and higher-level program representations long predate coding agents.
+Software architecture, visualization, program-comprehension tools, and higher-level program representations long predate coding agents. [Merino, Ghafari, and Nierstrasz (2026)](https://arxiv.org/abs/2608.22151) discuss how generative AI reduces the cost of contextual visualizations, while [moldable development](https://arxiv.org/abs/2409.18811) and [Glamorous Toolkit](https://gtoolkit.com/) already demonstrate the importance of contextual tools. Relevant precedents and their overlap with PostCode are discussed in [`related-work.md`](related-work.md).
 
-PostCode does not assume that agent-mediated development invalidates what has already been learned from those fields.
+In conventional development, humans acquire and refresh much of their understanding of a program through the work of reading, writing, debugging, and changing its source. When coding agents take on more implementation work, that incidental source-level familiarity may diminish even though humans still need to make architectural decisions and evaluate what was built.
 
-Relevant literature and provisional distinctions from neighboring work are recorded in [`related-work.md`](related-work.md).
+At the same time, capable agents make source-free architectural conversations practical: they can inspect a repository, explain how it works, explore design alternatives, generate diagrams, and maintain notes. Generative AI makes such representations cheap **for ordinary chat as well as for PostCode**. Cheap generation and automatic selection therefore help explain why this style of collaboration is possible now, but do not by themselves justify a dedicated projection environment.
 
-The rationale has close precedents. [Merino, Ghafari, and Nierstrasz (2026)](https://arxiv.org/abs/2608.22151) argue that generative AI changes the cost of obtaining contextual visualizations and discuss continuous exploration within agent-mediated development. [Moldable development](https://arxiv.org/abs/2409.18811) already makes inexpensive contextual tools central to understanding and acting on software; its implementation in [Glamorous Toolkit](https://gtoolkit.com/) also incorporates AI. Cheap task-specific representations and sustained conceptual interaction are therefore shared research concerns, not ideas PostCode claims to originate.
+The remaining question is whether **systematic, qualified, retained and navigable architectural information** improves collaboration beyond those conversational capabilities: for example, by helping people revisit a design through different perspectives, inspect evidence for architectural claims, recognize incomplete understanding, or compare intended architecture with the subsequent implementation. The importance of particular representations and the right amount of retained structure are questions for use and evaluation, not assumed advantages.
 
-PostCode investigates whether these changes make its proposed workflow useful, under which conditions, and with which qualifications. But the main comparator is now capable coding-agent collaboration through conversation, not merely traditional source-centered work. Such agents may already provide task-specific visualizations and architectural explanations at low cost.
-
-In conventional development, developers continuously read and manipulate source. In doing so, they acquire and refresh a detailed source-grounded mental model of the program as a side effect of implementation work. A separate visualization or higher-level representation must therefore provide enough additional value to justify supplementing an already-familiar representation.
-
-Agent-mediated development may weaken that incidental acquisition of source-level knowledge.
-
-At the same time, generative systems may substantially reduce the cost of obtaining a task-specific representation. A useful projection need not be a separately designed artifact or require the developer to find, configure and learn a specialized visualization tool. It may instead be generated for one particular information need, narrowly scoped to the relevant entities or relationships, and discarded or regenerated when no longer useful.
-
-Generative systems may also reduce the cost of **selecting the representation itself**. Rather than deciding in advance that a dependency graph, call tree, table, timeline or behavioral summary is required, the developer may be able to ask:
-
-> What depends on this?
-
-> What changed here?
-
-> Why does this exist?
-
-and delegate some combination of choosing the relevant information and choosing how to present it.
-
-This suggests three possible changes for the broader shift away from source-centered work:
-
-1. **The cost of obtaining a task-specific projection may fall dramatically.**
-2. **The cost of choosing the appropriate projection and presentation may also fall dramatically.**
-3. **The human may no longer acquire a detailed source-level model automatically through the act of implementation.**
-
-Put differently:
-
-> **In conventional development, alternative representations compete with source. In agent-mediated development, they may instead compete with having to reconstruct the program from source at all.**
-
-This is a hypothesis, not an assumption.
-
-PostCode may simply reproduce the historical pattern: source may remain sufficiently useful and information-dense that even cheap, automatically selected, targeted projections add relatively little. Alternatively, source-free chat with an excellent agent, including ad hoc diagrams and retained notes, may already provide nearly all the human value without a dedicated environment.
+Source may remain useful or necessary for some tasks, and capable chat with diagrams and notes may prove sufficient for others. The research seeks the circumstances in which additional architectural representations and interactions materially help.
 
 ## 5. Research Questions
 
@@ -207,7 +177,7 @@ PostCode investigates this through several related sets of questions.
 
 - Which established architectural concepts—responsibilities, boundaries, interfaces, state, ownership, interactions, concurrency, failure, contracts, and others—provide useful starting points? Which require revision or remain language-specific in application?
 - Which established visual notations, or combinations of notations, are useful working artifacts in architectural discussions? When are prose, ad hoc agent-generated diagrams, or source better?
-- Can partial, qualified and potentially overlapping retained accounts support navigation and reasoning across multiple architectural perspectives without implying a complete program model?
+- Can partial, qualified and potentially overlapping retained accounts support navigation and reasoning across multiple architectural perspectives without implying a complete program model? Does a coherent working understanding require some stable core, or can it remain largely task-specific?
 - Does investigating asynchronous behavior after understanding a responsibility boundary, for example, reveal gaps or change earlier interpretations? What structure or grounding does such reuse need?
 - Can the human and agent share stable conceptual referents as an investigation evolves, without assuming permanent semantic identities or source-level names?
 
@@ -216,11 +186,12 @@ PostCode investigates this through several related sets of questions.
 - Can intended designs developed in human-agent conversation be examined against implementations using the same architectural vocabulary, while distinguishing requirements, observations, inference and unresolved correspondence?
 - How do alternative perspectives change the evaluation of an intended design or its realization? What helps humans notice important architectural deviations or consequences after an agent implements a change?
 - What representations help supervise revisions at the level of responsibilities, behavior, constraints and other architectural concerns rather than merely source diffs?
-- Does PostCode-mediated practice change the resulting software or its recorded development context? If it becomes more projectable, is that independent architectural clarity or adaptation to PostCode?
+- Does PostCode-mediated practice change the resulting software or its recorded development context? If it becomes more projectable, is that independent architectural clarity or adaptation to PostCode? Can deliberate language-agnostic conventions help without imposing tool-specific structure?
 
 **Epistemology, applicability, and evaluation**
 
-- Which architectural claims can analysis establish, which require interpretation, and how can graphical presentations convey appropriate scope, evidence, limitations and uncertainty?
+- Which architectural claims can analysis establish, which require interpretation, and how can presentations convey appropriate scope, evidence, limitations and uncertainty?
+- What can architectural representations convey about test intent, observed behavior, and the limits of verification without depending on source-language syntax?
 - How does usefulness differ across new software, continued development, and unfamiliar repositories; across architectural styles and programming languages; and across experience levels?
 - How does a shared architectural working environment compare with capable agent chat equipped with repository tools, diagrams and ordinary notes? Which benefits, if any, require PostCode-specific infrastructure?
 - When does source access remain important, and when are qualified architectural representations sufficient?
@@ -236,9 +207,9 @@ It is intended as an ongoing development and research programme in which buildin
 
 Some possible findings include the following.
 
-### Projections become a routine working surface
+### Architectural representations become a routine working surface
 
-Developers supervising agents substantially reduce routine source inspection because task-specific projections often provide the information they need.
+Humans and coding agents use qualified architectural representations as ongoing working artifacts for understanding, design and evaluation, rather than merely as occasional summaries or illustrations.
 
 ### Capable chat or source makes PostCode unnecessary for some tasks
 
@@ -254,7 +225,7 @@ The circumstances under which PostCode enters the development lifecycle may turn
 
 ### PostCode changes the resulting software
 
-Software developed under PostCode-mediated supervision develops measurably or observably different characteristics from software developed through conventional prose + source-code interaction with coding agents.
+Software developed through PostCode-mediated architectural collaboration develops measurably or observably different characteristics from software developed through ordinary coding-agent conversations.
 
 Those differences might be beneficial, harmful, neutral, or merely adaptations to PostCode itself.
 
@@ -371,4 +342,4 @@ PostCode does not answer that question.
 
 It investigates one part of the larger problem:
 
-> **What happens when conventional programming-language source stops being assumed to be the primary human representation through which people understand, direct and supervise software development?**
+> **What helps humans practice software design and architecture with coding agents beyond what capable conversation already provides?**
