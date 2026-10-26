@@ -4,7 +4,7 @@
 
 The PostCode Research Project investigates how best to support that practice. Capable coding-agent conversations already allow substantial software-design work without the human reading source code. The research asks what further representations, interactions, and tools—if any—can improve that collaboration, including for people who have not learned to read or write programming-language source.
 
-One leading hypothesis is that shared visual architectural representations, grounded in partial, qualified, retained understanding, can help people reason about designs, examine implementations, and revisit architectural questions from different perspectives. The research draws on established software-architecture concepts and visual notations without assuming that any representation provides a complete or authoritative account of the software.
+One leading hypothesis is that shared architectural representations, grounded in partial, qualified, retained understanding, can help people reason about designs, examine implementations, and revisit architectural questions from different perspectives. These may take textual, structured, or visual forms, drawing where useful on established software-architecture concepts and notations without assuming a complete or authoritative account of the software.
 
 The project explores these questions by building the [PostCode application](https://github.com/ronen/postcode), which presents task-appropriate views of program structure, behavior, history, rationale, and other evidence while preserving the provenance, epistemological status, and limitations of their content.
 
