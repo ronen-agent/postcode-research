@@ -118,7 +118,7 @@ CodeMap provides dynamic information extraction and interactive switching betwee
 
 Very close prior art for PostCode's projected codebase views.
 
-Important distinction: its usage scenario still treats source inspection in VS Code as the verification surface; PostCode deliberately asks whether qualified projections themselves can support sustained investigation and supervision.
+Important distinction: its usage scenario relies on a source-oriented verification surface in VS Code; PostCode instead aims to support architectural investigation without presenting programming-language source to the human.
 
 **Merino, L., Ghafari, M., & Nierstrasz, O. (2018). _Towards Actionable Visualization for Software Developers._ Journal of Software: Evolution and Process, 30, e1923.**
 
@@ -138,7 +138,7 @@ Review basis: full author-version text and official conference program. This is 
 
 Moldable development makes contextual analysis and interaction tools inexpensive to construct so that developers can investigate software through a live, explorable domain model. The patterns paper draws on several years of experience with open-source and industrial systems. Current Glamorous Toolkit materials explicitly address reducing code reading, constructing contextual tools with AI, and incorporating those tools into human–agent interaction.
 
-Close prior art for task-specific representations, conceptual investigation, and tools that evolve with the software and the questions asked of it. It is relevant to PostCode's questions about sustained use, development from inception, and the distinction between independently useful conceptual clarity and tool-relative projectability. A comparison should examine who constructs and selects tools, how qualifications reach users, how views remain grounded as inputs change, and when source is used. These are comparison questions, not established advantages for PostCode. Glamorous Toolkit merits assessment as a possible interaction comparator alongside systems focused on analysis infrastructure.
+Close prior art for task-specific representations, conceptual investigation, and tools that evolve with the software and the questions asked of it. It is relevant to PostCode's questions about sustained use, development from inception, and the distinction between independently useful conceptual clarity and tool-relative projectability. A comparison should examine who constructs and selects tools, how qualifications reach users, how views remain grounded as inputs change, and whether architectural work requires implementation-language proficiency. These are comparison questions, not established advantages for PostCode. Glamorous Toolkit merits assessment as a possible interaction comparator alongside systems focused on analysis infrastructure.
 
 Review basis: paper abstract and project/method documentation; the full patterns paper, implementation, and reported experience have not been independently assessed here.
 
@@ -316,7 +316,7 @@ These are provisional distinctions to test against the literature, not novelty c
 
 PostCode is not primarily asking:
 
-> Can a visualization make source easier to understand?
+> Can a visualization make a program easier to understand?
 
 It asks:
 
@@ -363,7 +363,7 @@ PostCode does not initially make a higher-level model authoritative or generate 
 The following combination describes PostCode's intended research emphasis and provides dimensions for comparison with related work:
 
 - sustained human–agent architectural design and evaluation rather than one-shot comprehension;
-- source as a secondary rather than assumed-primary human representation;
+- architectural practice without presenting programming-language source to the human;
 - multiple task-dependent lenses, qualified projections, and partial retained architectural accounts;
 - automatic selection of lenses and presentations from human information needs;
 - epistemological status and provenance visible at the point of every claim;
@@ -371,7 +371,7 @@ The following combination describes PostCode's intended research emphasis and pr
 - tests treated as projected evidence rather than merely pass/fail gates;
 - revision/projection comparison for agent-mediated changes;
 - empirical pressure across unrelated projects and eventually languages;
-- explicit comparison with capable coding-agent chat, including diagrams and notes, and willingness to find that chat or source is preferable for some work.
+- explicit comparison with capable coding-agent chat, including diagrams and notes, and willingness to find that chat is sufficient for some work.
 
 Several of these dimensions already overlap with moldable development and the other work above. Whether any particular conjunction, mechanism, or finding is distinctive requires a specific comparison; this list does not establish an unoccupied research territory.
 
