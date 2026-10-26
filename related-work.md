@@ -118,7 +118,7 @@ CodeMap provides dynamic information extraction and interactive switching betwee
 
 Very close prior art for PostCode's projected codebase views.
 
-Important distinction: its usage scenario relies on a source-oriented verification surface in VS Code; PostCode instead aims to support architectural investigation without presenting programming-language source to the human.
+Important distinction: its usage scenario retains a conventional VS Code verification workflow; PostCode instead aims to support architectural investigation without presenting programming-language source to the human.
 
 **Merino, L., Ghafari, M., & Nierstrasz, O. (2018). _Towards Actionable Visualization for Software Developers._ Journal of Software: Evolution and Process, 30, e1923.**
 
