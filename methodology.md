@@ -182,7 +182,7 @@ PostCode should provide a simple way for the human to report that a view or expl
 
 Record such feedback with the information need, view, qualifications, captured basis, and investigation context where available. Subsequent questions, additional investigations, and abandonment can help interpret the report. Feedback indicates a perceived shortcoming, not necessarily an incorrect claim; absence of feedback does not establish adequacy.
 
-Activity outside PostCode cannot reliably be observed. Voluntary contemporaneous accounts can add context, but the observation stream cannot establish every unmet need or action the person took when PostCode was insufficient.
+Activity outside PostCode cannot reliably be observed. Voluntary contemporaneous accounts can add context, but the observation stream cannot establish every unmet need or action the person took when PostCode was insufficient. When recurring patterns emerge, lightweight selectable feedback options may make common reports easier to submit and compare; their categories need not be specified in advance.
 
 ## 6. Formative Logging
 
@@ -242,6 +242,8 @@ The governing distinction is:
 
 > **Formative use can produce design findings and hypotheses; independent evaluation is required for general claims about developer behavior.**
 
+The restriction on displaying source applies to PostCode's human-facing interface, not to independent research validation. Architectural claims should be assessed separately against suitable implementation evidence, tests, runtime observations, or expert inspection. User satisfaction and the absence of inadequacy reports do not establish that an explanation is correct.
+
 ### 8.1 Formative self-study
 
 Evidence from sustained formative use, interaction logs, contemporaneous inadequacy reports, other observations, and resulting design changes can help determine what is required to support architectural investigation. It supports design findings, bounded observations about the developer's experience, and hypotheses for later investigation.
@@ -263,7 +265,7 @@ All findings should remain scoped to their evidence. Negative and mixed findings
 When related systems are assessed, distinguish the question being asked and the evidence required:
 
 - **Analysis validation and reuse:** inspect versioned implementations and exercise representative cases to establish what their results mean, which guarantees and limitations apply, and whether integration can preserve PostCode's contracts. Similar terminology or deterministic execution alone does not establish equivalent semantics. Reuse assessment also considers integration effort and support for research observation.
-- **Interface comparison:** compare identified versions on specified human tasks, with the information, tools, setup, and assistance available in each condition made explicit. A capable conversational coding agent with repository tools, ad hoc diagrams and ordinary notes is a primary comparator, rather than a deliberately impoverished text-only chat. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
+- **Interface comparison:** compare identified versions on specified human tasks, with the information, tools, setup, and assistance available in each condition made explicit. A capable conversational coding agent with repository tools, ad hoc diagrams and ordinary notes is a primary comparator, rather than a deliberately impoverished text-only chat. When comparing code-independent architectural practice, neither condition should expose programming-language source to the human; any differences in source exposure must instead be treated as an explicit experimental variable. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
 - **Sustained-use evidence:** observe understanding, direction, and supervision across development episodes and changing program states. Success on isolated questions or benchmark cases does not establish viability as a routine working surface.
 
 Project documentation establishes reported capabilities, not demonstrated guarantees or effectiveness. Agent-monitor benchmarks may supply useful cases for analysis or supervision, but model performance on them does not itself establish human usefulness. Comparative self-study retains the limitations described above; general claims about developer behavior still require independent evaluation. Record the assessment's version, scope, evidence, and unresolved questions so that reuse decisions and research claims can be judged separately.
