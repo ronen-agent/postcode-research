@@ -34,7 +34,7 @@ At suitable checkpoints, also consider whether [Publication-Aware Prioritization
 
 ### 2.1 Initial implementation and bootstrap transition
 
-The immediate milestone is a bounded, trustworthy, read-only architectural investigation experience that can produce formative evidence of whether PostCode adds value beyond capable agent chat. The ongoing minimal PostCode-on-PostCode bootstrap remains useful, but implementation increments should serve that experience rather than define the research ambition. Its purpose is to make the projection model concrete enough to evaluate and to create the conditions for sustained formative use.
+The immediate milestone is a bounded, trustworthy, read-only architectural investigation experience that can be used during real development and compared with capable agent chat. It builds on the bootstrap implementation of the projection model and enables evaluation through sustained formative use. Implementation increments should serve that experience rather than define the research ambition.
 
 It should support:
 
@@ -55,9 +55,9 @@ There is no objective boundary between the bootstrap transition and ongoing form
 
 ### 2.2 Bounded architectural representation exploration
 
-Develop and evaluate a bounded PostCode investigation using shared architectural representations, including visual structural or behavioral presentations where useful. Select the case and relevant notations through application-level planning. Examine whether partial, qualified retained accounts support reasoning across perspectives and whether revisiting a subject reveals gaps, consequences, or corrections.
+Develop and evaluate a bounded PostCode investigation using shared architectural representations, including visual structural or behavioral presentations where useful. Choose the codebase, architectural question, and relevant notations when planning the investigation. Examine whether partial, qualified retained accounts support reasoning across perspectives and whether revisiting a subject reveals gaps, consequences, or corrections.
 
-Compare with capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to refine PostCode's presentations and investigation capabilities. This does not require a universal architecture model, a visual editor, or a particular repository, issue, or dialogue as the first journey.
+Compare with capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to refine PostCode's presentations and investigation capabilities. This does not require a universal architecture model or a visual editor.
 
 ## 3. Candidate Capability Directions
 
