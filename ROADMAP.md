@@ -53,11 +53,11 @@ PostCode should be used on its own development as soon as any implemented capabi
 
 There is no objective boundary between the bootstrap transition and ongoing formative development. At some point, experience may support the judgment that PostCode has a coherent minimal set of capabilities for sustained formative use. That judgment marks the end of the bootstrap transition; PostCode-on-PostCode use will already have begun and will continue afterward.
 
-### 2.2 Bounded visual architectural investigation
+### 2.2 Bounded architectural representation exploration
 
-Explore shared read-only architectural representations as working artifacts in a concrete investigation or development task. Select the case and relevant structural or behavioral notations through application-level planning, informed by the research questions and the available evidence. Examine whether partial, qualified retained accounts support reasoning across perspectives, and whether revisiting a subject reveals gaps, consequences, or corrections.
+Explore shared architectural representations as working artifacts in a concrete investigation or development task. Include visual structural or behavioral presentations when useful for testing their contribution to architectural reasoning. Select the case and representations through application-level planning, informed by research questions and available evidence. Examine whether partial, qualified retained accounts support reasoning across perspectives and whether revisiting a subject reveals gaps, consequences, or corrections.
 
-Compare with capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to decide what application capabilities, if any, merit further work; do not precommit to a universal model or a visual editor. The research roadmap does not prescribe a particular codebase, issue, or dialogue as the required first journey.
+This exploration need not initially depend on PostCode implementing visual presentations; existing agent and diagramming tools may suffice to test a candidate experience. Compare against capable coding-agent chat that can already generate diagrams and maintain notes. Use the findings to decide which presentations, if any, PostCode should implement. No graphical capability, universal model, or visual editor is committed by this research milestone, and no particular repository, issue, or dialogue is prescribed.
 
 ## 3. Candidate Capability Directions
 
