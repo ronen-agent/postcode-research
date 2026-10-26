@@ -427,7 +427,7 @@ Which lenses, parameters, and groupings prove useful is a research result to be 
 
 Support for a programming language supplies the entities, analyses, and guarantees available for that language.
 
-PostCode may begin with established software architecture and design concepts—such as responsibility, boundary, ownership, state, interaction, contract, and concurrency—as candidates for human-facing investigation. Their usefulness and meaning in specific projects are empirical questions. Shared concepts and language-specific extensions may coexist. PostCode must not discard or distort language-specific semantics to fit a preselected universal model.
+PostCode may begin with established software architecture and design concepts—such as responsibility, boundary, ownership, state, interaction, contract, and concurrency—as candidates for human-facing investigation. Their applicability to a particular program must be assessed rather than assumed. Shared concepts and language-specific extensions may coexist. PostCode must not discard or distort language-specific semantics to fit a preselected universal model.
 
 <a id="generated-output-evidence-boundary"></a>
 
