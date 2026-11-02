@@ -8,7 +8,7 @@ The research questions are described in [`research.md`](research.md). The concep
 
 PostCode is a development project conducted as formative research.
 
-Building the system is necessary because many of the relevant questions cannot be answered in advance: which projections prove useful, which information remains difficult to expose, when source is preferable, how much qualification users need, and which abstractions survive contact with real software.
+Building the system is necessary because many of the relevant questions cannot be answered in advance: which projections prove useful, which architectural questions remain inadequately supported, how much qualification users need, and which abstractions survive contact with real software.
 
 The initial method is therefore sustained use, observation, and revision rather than a fixed efficacy experiment.
 
@@ -16,7 +16,7 @@ To preserve evidence from that use, PostCode is designed to export a stream of r
 
 The central formative question is:
 
-> **What is required to make projection-based software investigation and supervision viable?**
+> **What is required for representations to support useful human architectural practice with coding agents, and what do they contribute beyond capable agent chat?**
 
 The governing methodological loop is:
 
@@ -35,8 +35,6 @@ use again
 ```
 
 The process is directed by what the evidence supports. Positive, negative, limiting, mixed, and unexpected findings should all be allowed to redirect the work.
-
-Abstractions should likewise earn their place through accumulated pressure from real use rather than elegance alone.
 
 ## 2. Formative Use
 
@@ -65,7 +63,7 @@ It is especially useful for discovering:
 
 This context is primarily formative self-study, not an efficacy experiment. It is intended to expose missing representations, bad abstractions, insufficient precision, awkward interactions, and limits of the underlying idea.
 
-It also has important limitations. The developer is motivated to exercise PostCode and can change both the tool and its subject in response to friction. It cannot by itself establish how other developers would behave or whether they would prefer PostCode to source.
+It also has important limitations. The developer is motivated to exercise PostCode and can change both the tool and its subject in response to friction. It cannot by itself establish how other developers would behave or whether PostCode improves on capable coding-agent chat.
 
 <a id="existing-project-development"></a>
 
@@ -114,6 +112,8 @@ Every lens, projection capability, recurring view construction, or representatio
 
 Not every small capability needs a separately formalized hypothesis. When a capability has a consequential or recurring role, however, its intended information need and expected contribution should be clear enough to compare with what happens in use.
 
+Evaluate architectural representations in genuine design or investigation tasks, using established structural or behavioral notations where useful. Compare against capable coding-agent chat with repository access, ad hoc diagrams, and retained notes.
+
 Relevant observations include:
 
 - the information need the capability was intended to serve;
@@ -121,8 +121,11 @@ Relevant observations include:
 - whether additional system-initiated investigation contributed and, if so, whether it was request-scoped or autonomous;
 - whether the result was a synthesized qualified projection, a coordination of independently qualified projections, or a mixture, when that construction could affect trust or usefulness;
 - whether it satisfied the information need or supported a useful next step;
+- whether visual working artifacts helped the human notice architectural relationships, reason about consequences, generate questions, or identify gaps beyond what comparable conversation provided;
+- whether partial retained knowledge was reused or revised when examining a different perspective;
+- whether intentions and observed or inferred implementation behavior could be compared without disguising uncertainty;
 - which further views, lenses, or subjects the human pursued;
-- when the human instead used the source escape hatch, sought another representation, or abandoned the investigation;
+- when the human requested more detail, reported inadequacy, pursued another representation, or abandoned the investigation;
 - which information was useful, missing, misleading, or unnecessarily prominent;
 - whether the qualifications and limitations were understood and trusted;
 - how the result varied across subjects, tasks, projects, architectures, domains, and programming languages.
@@ -131,9 +134,9 @@ These observations should combine interaction logs with contemporaneous annotati
 
 ## 4. Interpreting Formative Use
 
-To gather formative evidence, the developer will deliberately use PostCode during real development work and tolerate some friction that might otherwise prompt an immediate return to source.
+To gather formative evidence, the developer will deliberately use PostCode during real development work and tolerate some friction before deciding whether the available representations suffice.
 
-That tolerance is useful during formative self-study because sustained use exposes missing representations and awkward interactions. It also means that source-use frequency during formative use is not an unbiased measure of PostCode's success.
+That tolerance is useful during formative self-study because sustained use exposes missing representations and awkward interactions. It also means that continued use alone is not an unbiased measure of PostCode's success.
 
 When PostCode creates friction, the useful question is not merely whether it failed. Ask:
 
@@ -146,7 +149,8 @@ Possible interpretations include:
 - the projection contains the information but the selected presentation shows it poorly;
 - the system selected an inappropriate lens or presentation;
 - the available repository evidence cannot support the desired claim;
-- source is intrinsically clearer or more efficient for this question;
+- the available representations cannot support the architectural reasoning or verification needed for this question;
+- a capable conversational agent with ordinary diagrams and notes provides the same help without a dedicated PostCode capability;
 - the projection-based approach is poorly suited to the activity.
 
 Formative use should also help determine which textual results belong in transient conversation, which should become retained views, and which should contribute to longer-lived investigation context.
@@ -161,46 +165,24 @@ In addition to individual prompts, coding agents commonly receive standing proje
 
 When evaluating a convention in relation to PostCode, its rationale and whether it was already in force or adopted during formative use should be recorded where possible. Its intended role may be a project-specific engineering choice, a deliberate formative intervention, or both; that role is not a conclusion about the convention's effects or generality.
 
-Evidence about the convention's effects can be gathered from interaction logs and contemporaneous observations of whether projections become clearer, more complete or easier to trust; whether users need fewer source excursions or explanatory prompts; whether agents can implement conceptual requests with less clarification; whether the convention creates friction, artificial structure or other costs; and whether the resulting software remains clear outside PostCode. Before-and-after observations and comparison among PostCode-on-PostCode, existing-project development, ab initio development, unfamiliar software and different languages can provide further evidence.
+Evidence about the convention's effects can be gathered from interaction logs and contemporaneous observations of whether projections become clearer, more complete or easier to trust; whether users report fewer inadequacies or need fewer remedial explanations; whether agents can implement conceptual requests with less clarification; whether the convention creates friction, artificial structure or other costs; and whether the resulting software remains clear outside PostCode. Before-and-after observations and comparison among PostCode-on-PostCode, existing-project development, ab initio development, unfamiliar software and different languages can provide further evidence.
 
 Interpretation should distinguish:
 
 - a convention that formalizes a property already observed without explicit instruction from one intended to produce a property not yet observed;
-- a response to a missing PostCode capability from a property genuinely needed for source-secondary supervision;
+- a response to a missing PostCode capability from a property genuinely needed for effective architectural practice with coding agents;
 - an independently useful improvement in conceptual clarity from adaptation that merely makes the software easier for PostCode to project;
 - a convention that generalizes across projects or languages from one that depends on a particular implementation, analysis, project or language.
 
 Local adoption creates an opportunity for observation; it does not by itself establish benefit, necessity, causation or generalizability.
 
-## 5. Source Excursions
+## 5. Reporting Inadequacy
 
-Opening source is a legitimate investigative action, not a failure.
+PostCode should provide a simple way for the human to report that a view or explanation is inadequate. The report should require neither a diagnosis of the problem nor a written justification; optional detail can distinguish missing information, an unhelpful representation, insufficient support for a claim, or another difficulty.
 
-Source should remain conveniently available during formative use for two methodological reasons:
+Record such feedback with the information need, view, qualifications, captured basis, and investigation context where available. Subsequent questions, additional investigations, and abandonment can help interpret the report. Feedback indicates a perceived shortcoming, not necessarily an incorrect claim; absence of feedback does not establish adequacy.
 
-1. PostCode needs visibility into when and why source was needed.
-2. The cost of switching to another application should not become an artificial source of friction.
-
-Source excursions help answer:
-
-> **What prompted this source excursion, and what did source provide?**
-
-Their use should be recorded automatically when possible. PostCode may also ask unobtrusively what the developer was looking for, with responses such as:
-
-- missing projection;
-- needed more detail;
-- wanted to verify or trust-check;
-- source seemed clearer;
-- needed local implementation logic;
-- other.
-
-The prompt should not block source access and should be easy to ignore.
-
-The count of source openings is not meaningful by itself. Interpretation requires the task, reason, available alternatives, and the developer's deliberate willingness to tolerate formative friction.
-
-Independent evaluation can later ask a different question:
-
-> **When developers have convenient access to both projections and source, what do they choose, for which tasks, and why?**
+Activity outside PostCode cannot reliably be observed. Voluntary contemporaneous accounts can add context, but the observation stream cannot establish every unmet need or action the person took when PostCode was insufficient. When recurring patterns emerge, lightweight selectable feedback options may make common reports easier to submit and compare; their categories need not be specified in advance.
 
 ## 6. Formative Logging
 
@@ -220,8 +202,7 @@ Relevant recorded context and events include:
 - test projections inspected;
 - revisions and branches inspected;
 - projection comparisons;
-- source views opened;
-- navigation between projections and source;
+- reports that a view or explanation was inadequate, including available context and optional clarification;
 - unavailable, refused, or failed projection requests;
 - analysis applicability and availability, execution state, and result materialization;
 - analysis-cost estimates, resource budgets or thresholds, user choices, and actual resource use where available;
@@ -233,7 +214,7 @@ Subjective observations may record that the user:
 - wanted different information;
 - wanted a different presentation of existing information;
 - distrusted the projection;
-- source was intrinsically clearer;
+- considered the available explanation or presentation inadequate;
 - lost orientation or a coherent sense of the program;
 - could not express the intended change to the coding agent using the available context.
 
@@ -241,13 +222,13 @@ The goal is not exhaustive annotation. It is to avoid losing useful observations
 
 Immediate reactions provide context for later interpretation; they are not standardized satisfaction measurements or evidence of effectiveness by themselves.
 
-The log is primarily a **design instrument**, not an unbiased behavioral dataset. Instrumentation may affect behavior, and the developer decides when to persevere, when to open source, and what deserves annotation.
+The log is primarily a **design instrument**, not an unbiased behavioral dataset. Instrumentation may affect behavior, and the developer decides when to persevere, report inadequacy, or add an annotation.
 
 ## 7. From Observation to Finding
 
 Individual events do not automatically constitute findings.
 
-A source excursion, failed projection, awkward view, or other event should retain enough context to support later interpretation. This includes the development task and information need; the PostCode version; the repository states involved, including their Git commits or relevant working-tree states and their association with the projections; the subjects, lenses, lens parameter values, and projections involved; their composition within the presentation and view; presentation parameter values, investigation context, and relevant navigation lineage; the action taken next; and any contemporaneous subjective explanation.
+An inadequacy report, failed projection, awkward view, or other event should retain enough context to support later interpretation. This includes the development task and information need; the PostCode version; the repository states involved, including their Git commits or relevant working-tree states and their association with the projections; the subjects, lenses, lens parameter values, and projections involved; their composition within the presentation and view; presentation parameter values, investigation context, and relevant navigation lineage; the action taken next; and any contemporaneous subjective explanation.
 
 Recurring patterns can motivate design changes or research hypotheses. Interpretation should also preserve contrary instances and contextual boundaries rather than retaining only evidence that supports the current design.
 
@@ -261,9 +242,13 @@ The governing distinction is:
 
 > **Formative use can produce design findings and hypotheses; independent evaluation is required for general claims about developer behavior.**
 
+The restriction on displaying source applies to PostCode's human-facing interface, not to independent research validation. Architectural claims should be assessed separately against suitable implementation evidence, tests, runtime observations, or expert inspection. User satisfaction and the absence of inadequacy reports do not establish that an explanation is correct.
+
 ### 8.1 Formative self-study
 
-Evidence from sustained formative use, interaction logs, contemporaneous observations, source excursions, and resulting design changes can help determine what is required to make projection-based investigation viable. It supports design findings, bounded observations about the developer's experience, and hypotheses for later investigation.
+Evidence from sustained formative use, interaction logs, contemporaneous inadequacy reports, other observations, and resulting design changes can help determine what is required to support architectural investigation. It supports design findings, bounded observations about the developer's experience, and hypotheses for later investigation.
+
+Because this self-study involves a developer with extensive programming experience, using a code-independent interface does not test whether someone without programming-language proficiency could exercise comparable architectural judgment. The [unfamiliar-language challenge](ROADMAP.md#46-unfamiliar-language-challenge) offers a partial test of reliance on implementation-language knowledge, but is not a substitute for studying practitioners who have not learned conventional programming.
 
 ### 8.2 External exploratory use
 
@@ -271,7 +256,7 @@ External users can reveal assumptions caused by the author's prior knowledge, vo
 
 ### 8.3 Formal user studies
 
-User studies can support appropriately scoped claims about developer behavior, including what developers choose when both projections and source are available, and about preference, effectiveness, speed, comprehension, confidence, and trust. They should address specific mature questions and identify the relevant population, tasks, methods, outcomes, and development contexts rather than act as a single final verdict on PostCode.
+User studies can support appropriately scoped claims about developer behavior and whether architectural tasks can be completed without programming-language proficiency, including preference, effectiveness, speed, comprehension, confidence, and trust. They should address specific mature questions and identify the relevant population, tasks, methods, outcomes, and development contexts rather than act as a single final verdict on PostCode.
 
 All findings should remain scoped to their evidence. Negative and mixed findings should be treated with the same discipline as positive ones; a technique may be useful for one task, repository, language, or development context and unhelpful for another.
 
@@ -280,7 +265,7 @@ All findings should remain scoped to their evidence. Negative and mixed findings
 When related systems are assessed, distinguish the question being asked and the evidence required:
 
 - **Analysis validation and reuse:** inspect versioned implementations and exercise representative cases to establish what their results mean, which guarantees and limitations apply, and whether integration can preserve PostCode's contracts. Similar terminology or deterministic execution alone does not establish equivalent semantics. Reuse assessment also considers integration effort and support for research observation.
-- **Interface comparison:** compare identified versions on specified human tasks, with the information, source access, setup, and assistance available in each condition made explicit. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
+- **Interface comparison:** compare identified versions on specified human tasks, with the information, tools, setup, and assistance available in each condition made explicit. A capable conversational coding agent with repository tools, ad hoc diagrams and ordinary notes is a primary comparator, rather than a deliberately impoverished text-only chat. When comparing code-independent architectural practice, neither condition should expose programming-language source to the human; any differences in source exposure must instead be treated as an explicit experimental variable. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
 - **Sustained-use evidence:** observe understanding, direction, and supervision across development episodes and changing program states. Success on isolated questions or benchmark cases does not establish viability as a routine working surface.
 
 Project documentation establishes reported capabilities, not demonstrated guarantees or effectiveness. Agent-monitor benchmarks may supply useful cases for analysis or supervision, but model performance on them does not itself establish human usefulness. Comparative self-study retains the limitations described above; general claims about developer behavior still require independent evaluation. Record the assessment's version, scope, evidence, and unresolved questions so that reuse decisions and research claims can be judged separately.
