@@ -10,11 +10,13 @@ Review-basis notes identify the material checked for particular entries. An abst
 
 ### 1.1 Agentic software engineering and changing human roles
 
-**Davis, J. C., Kalu, K., Peng, H., & Patil, P. V. (2026). _Model-Based Agentic Software Engineering (MAGE)._ arXiv:2608.25174.**
+**Davis, J. C., Kalu, K. G., Peng, H., & Patil, P. V. (2026). _Model-Based Agentic Software Engineering (MAGE)._ Preprint, arXiv:2608.25174.** [Paper](https://arxiv.org/abs/2608.25174)
 
 Particularly close conceptually. MAGE argues that increased implementation capacity makes explicit abstractions, evidence and engineering obligations increasingly important, and proposes externalizing purposeful representations rather than repeatedly reconstructing consequential properties.
 
-Relevant distinction: MAGE primarily addresses governed agentic engineering and durable engineering structure; PostCode experimentally investigates the human inspection surface while initially leaving conventional code canonical.
+The overlap includes shared human–agent knowledge, retained intent, and reducing repeated reconstruction, not just human inspection. MAGE couples representations to authoritative engineering obligations; PostCode contributes qualified architectural investigation within a larger design process without making its accounts authoritative. Compare how each exposes unsettled intent, maintains evidence, and separates knowledge from decision authority.
+
+Review basis updated 5 November 2026: selected [v1 full text](https://arxiv.org/html/2608.25174v1), including framing, representation/authority distinctions, project states, and research agenda. This is a theory and research agenda with case-based grounding, not a controlled demonstration of PostCode-like account superiority or human architectural outcomes.
 
 **Hassan, A. E., et al. (2025). _Agentic Software Engineering: Foundational Pillars and a Research Roadmap._ arXiv:2509.06216.**
 
@@ -286,27 +288,27 @@ Relevant to the growing recognition that functional source generation alone is i
 
 **Klatt, F., Di Grazia, L., & Schneider, J. (2026). _A-SAW: The Agentic Software Architecture Workflow._ Preprint, arXiv:2610.13647; submitted 9 October 2026.** [Paper](https://arxiv.org/abs/2610.13647)
 
-Extends Architecture as Code with an agent that drafts documents from a versioned C4 model, typed element catalog, scoped context, and templates, followed by mandatory human review. In one large organization the study scores 45 documents, including 13 matched source-to-regeneration pairs, and interviews 13 practitioners after a task. Generated drafts were more uniform and scored higher on the study rubric, while traceability remained weakest and trust stayed conditional.
+Agents draft architectural documents from a versioned C4 model, typed catalog, context and templates under mandatory human review. In one organization, a study of 45 documents, including 13 matched regenerations, and 13 practitioner interviews reports stronger rubric scores but conditional trust.
 
-This is direct prior art for persistent shared architectural representations and for concentrating human attention where an agent must infer beyond repository evidence. It also demonstrates a quality–trust gap: structurally polished documentation does not establish that its design is sound. Compare a bounded PostCode architectural investigation with A-SAW's catalog grounding, explicit gap marking, versioned review, and treatment of intended versus implemented architecture.
+Direct prior art for retained architectural artifacts and qualified human review. Compare grounding, gap marking and revision history, while independently assessing factual fidelity and useful scope: regenerated documents can narrow their inherited scope and are scored against it. Polished documentation does not establish sound design.
 
-Review basis (26 October 2026): selected full-text sections on the workflow, evaluation design, results, boundary conditions, and threats to validity. The comparison is associational; regenerated documents had rich existing context, one non-blind rater from the generator model family scored them, and templates, catalog, context, and agent effects are confounded. The study does not test greenfield design or a source-independent human interface.
+Review basis: selected full text reviewed 26 October; [v1 sections 3.6, 4.1 and 6](https://arxiv.org/html/2610.13647v1) rechecked 5 November 2026. Rich-context regeneration, a non-blind rater from the generator's model family, and bundled template/catalog/agent changes limit causal interpretation. Neither greenfield design nor source-independent human practice was tested. No replication.
 
 **Sas, C., Mitrović, S., Barth, F., Rehm, G., & Salani, M. (2026). _The Code of Theseus: Can Agents Rebuild Software from Recovered Design Documents?_ Preprint, arXiv:2610.20068; submitted 14 October and revised 15 October 2026 (v2).** [Paper](https://arxiv.org/abs/2610.20068) · [Artifacts](https://github.com/SasCezar/code-theseus)
 
-Recovers aligned stakeholder-intent, requirements, and C4-style architecture artifacts from static dependency graphs and contextual files, releasing generated artifacts for 10,764 repositories. In a round-trip evaluation on 29 small Python libraries, adding recovered requirements and architecture did not significantly improve held-out test pass rate (33.7% to 35.8%) but did make rebuilt module sets more similar to the originals (non-contract module F1 0.54 to 0.63).
+Recovers intent, requirements and architecture artifacts. Reconstruction on 29 Python libraries found no significant held-out test improvement (33.7% to 35.8%); non-contract module F1 rose from 0.54 to 0.63 on 24 eligible libraries. Co-location of shared classes/functions did not significantly improve.
 
-The result supplies evidence that architectural artifacts can influence implementation structure while conveying something different from test-observed behavior. It also provides a candidate evaluation pattern: compare whether representations preserve behavior, structure, or both. Similarity to one recovered implementation is not evidence that the architecture is good, that a human understands it, or that the recovered stakeholder intent is historically true.
+A candidate test of what architectural accounts convey to another agent, separating structural fidelity from observed behavior. Recreating a module set does not establish better design, human understanding, or historically true stakeholder intent.
 
-Review basis (26 October 2026): metadata and selected v2 full-text sections on representation construction, artifact generation, LLM judging, agent reconstruction, results, discussion, and threats. Artifact quality was judged by a model rather than people; the round trip uses one agent and small Python libraries, and architecture has no unique reference. The artifacts and released pipeline were not run.
+Review basis: selected v2 text reviewed 26 October; [section VI-C, Table V and section VIII](https://arxiv.org/html/2610.20068v2) rechecked 5 November 2026. Artifact ratings use a model judge; the round trip uses one agent and small libraries, and architecture has no unique reference. Artifacts and pipeline not run.
 
 **Golatkar, A., Achille, A., Zabounidis, R., et al. (2026). _Skeleton Coding: Program Structure as a Specification for Agents._ Preprint, arXiv:2610.38214; submitted 28 October 2026.** [Paper](https://arxiv.org/abs/2610.38214)
 
-Argues that behavioral specifications cannot determine how many examples are sufficient until an implementation structure has been chosen. The proposed skeletons fix modules, types, interfaces, function signatures, documentation, and local contracts while leaving bodies for the agent. Across four models and three reconstruction benchmarks, the best structural specifications reduce mean test error by 48.4% relative to the best behavioral specifications and reduce query effort during iterative repair.
+Skeletons constrain modules, types, interfaces and signatures alongside behavior. Across four models and three reconstruction benchmarks, the best structural specifications reduce mean test error by 48.4% relative to the best behavioral specifications.
 
-This is close prior art for treating architectural structure as an active control surface rather than a retrospective explanation. It also sharpens PostCode's comparison: structure may help direct an agent even when its human-facing form remains code-like and language-specific. A bounded investigation should compare equivalent architectural commitments expressed through source-language skeletons, qualified PostCode representations, and ordinary chat, measuring behavioral fidelity, structural fidelity, author effort, and human understanding separately.
+Prior art for architectural structure as an active constraint. An agent-facing experiment could compare equivalent commitments supplied as skeletons, PostCode accounts or prose, controlling information and tool access. A human-practice comparison must keep both human-facing conditions source-independent; skeletons can be agent inputs, not a requirement that humans read code. Fidelity, author effort and understanding need separate measures.
 
-Review basis (2 November 2026): metadata and selected full-text sections on the control model, specification variants, benchmarks, results, related work, and appendices defining native skeletons. Skeletons are agent-facing source-language artifacts, the study evaluates reconstruction and tests rather than human architectural practice, and public-project tasks cannot fully rule out training-data contamination.
+Review basis: selected text reviewed 2 November; [v1 section 4 and Appendices A, B and D](https://arxiv.org/html/2610.38214v1) rechecked 5 November 2026. Native skeletons use source-language syntax. Reconstruction and tests do not establish human architectural practice; public-project training contamination remains possible. The proposed comparison is ours, not a tested human workflow. No replication.
 
 **Zhang, Z. (2026). _Architectural Debt Enforcement under Incomplete Observation: A Controlled Study of Ratchets and Evidence Qualification._ Preprint, arXiv:2610.41276; submitted 30 October 2026.** [Paper](https://arxiv.org/abs/2610.41276)
 
@@ -315,6 +317,24 @@ Studies an architectural-debt decision contract that separates observation quali
 The work is a concrete comparison for PostCode's epistemological status discipline. A structural constraint view should expose what was observed, what policy applies, what prior debt is tolerated, who may change the baseline, and which relations remain unknown. The result also cautions against turning one observer's agreement with a reference into a language-wide guarantee or a human semantic judgment.
 
 Review basis (2 November 2026): metadata and selected full-text sections on the decision contract, controlled scenarios, diagnostics, release provenance, human-review boundary, discussion, and threats. The reference shares TypeScript-resolution assumptions, was corrected after observing outcomes, repository sampling is not probabilistic, and the study does not establish language completeness, natural maintenance effectiveness, or human usefulness.
+
+**Jabeen, R., Ericsson, M., Duan, Y., & Wingkvist, A. (2026). _What Carries Architectural Signal? A Code-to-Architecture Mapping Study._ Preprint, arXiv:2610.41628; submitted 30 October 2026.** [Paper](https://arxiv.org/abs/2610.41628)
+
+Studies assignment to reference modules in ten Java/C/C++ systems. Directory-based prediction already performs strongly; richer graph processing does not consistently correct its errors. This motivates simple baselines and separate evaluation of architectural exceptions when testing PostCode's account quality. Matching one decomposition is not recovering unique architectural truth or design intent.
+
+Review basis (5 November 2026): metadata and selected [v1 text](https://arxiv.org/html/2610.41628v1), including problem formulation, evaluation implications and validity threats. Transductive access to the observed graph, one reference per system, and imperfect source/reference alignment limit transfer to evolving repositories. Artifacts not run. Reassessed from the 2 November screened leads because account-quality evaluation is now explicit; not a new publication alert.
+
+**Wang, W., Jin, Z., Li, J., Jin, D., Tian, H., Fang, Y., Ye, W., & Zhao, T. (2026). _ASNER: Software Architecture Recovery with Adaptive Semantic Neighborhoods and Evidence-Grounded Refinement._ Preprint, arXiv:2610.36894; submitted 27 October 2026.** [Paper](https://arxiv.org/abs/2610.36894)
+
+Four read-only architecture tools expose recovered responsibilities and evidence to LocAgent, which retains its source tools. In 24 issues from two repositories, localization improves on Dask and ties on pypdf. This is a concrete comparator for specialized investigation supplied to another agent, beyond potential analysis reuse.
+
+Review basis (5 November 2026): metadata, [v1 method overview, section 5.4 and Appendices H.6/I](https://arxiv.org/html/2610.36894v1). Reference agreement and localization do not establish human usefulness or design quality. Mandatory initial architecture retrieval changes the workflow alongside added tools; static evidence and generated responsibilities have omissions. Artifacts not run. Reassessed from the 2 November leads.
+
+**Tacheny, N., Mens, T., & Mahmoudi, S. (2026). _Mind the Intent Gap: A Methodology for Collaborative Agent-Driven Software Engineering._ Preprint, arXiv:2610.37340; submitted 27 October 2026.** [Paper](https://arxiv.org/abs/2610.37340)
+
+CAIA separates shared stated intent, implementation, validation, and reviewed knowledge-base updates. Assistant, build and knowledge-agent roles make it a conceptual comparator for PostCode's contribution within an external design process. Assess how rationale survives a change and how accepted intentions remain distinguishable from observed implementation; shared records do not themselves establish either correctness or agreement.
+
+Review basis (5 November 2026): metadata and [v1 sections 3–6](https://arxiv.org/html/2610.37340v1). Reported industrial use and subjective reception precede a planned controlled evaluation. Retained as a provisional process comparison, not efficacy evidence. Reassessed from the 2 November leads because retained knowledge and external collaboration now have explicit roles; no new empirical result is claimed.
 
 ### 1.5 LLMs and software architecture — broader background
 
@@ -384,9 +404,29 @@ These traditions predate agentic programming but may contain important prior art
 
 In particular, the **epistemological-status discipline** should eventually be compared not only with contemporary LLM systems but with older work on static-analysis guarantees, provenance, uncertainty visualization and evidence-bearing software tools. That literature may prove more relevant to this aspect of PostCode than current AI-programming work.
 
+### 1.8 Architectural descriptions, multiple perspectives, and evaluation
+
+**ISO/IEC/IEEE (2022). _42010:2022 — Software, systems and enterprise — Architecture description._ Edition 2, November 2022.** [Official record and scope](https://www.iso.org/standard/74393.html)
+
+Distinguishes an architecture from a description expressing it and specifies requirements for descriptions, viewpoints and related description mechanisms without prescribing a particular notation, process or tool. This is foundational vocabulary for comparing PostCode's accounts, not evidence that a conforming description is factually correct or useful.
+
+Review basis (5 November 2026): ISO's public scope and edition metadata only; the full standard was not reviewed. No conformance claim or detailed mapping of PostCode concepts to standard requirements is made. Newly assessed older work; detailed comparison remains open.
+
+**Nuseibeh, B., Kramer, J., & Finkelstein, A. (1994). _A Framework for Expressing the Relationships Between Multiple Views in Requirements Specification._ IEEE Transactions on Software Engineering.** [Author-hosted paper](https://finkelstein.live/papers/tse94.icse.pdf)
+
+ViewPoints retain partial specifications, their notations, development processes and histories. Explicit relationships support checks and information transfer across separately maintained perspectives, including inconsistency handling. This is direct conceptual precedent for overlapping retained accounts and cross-perspective investigation without a required global representation. PostCode's inferred correspondence and evidence qualifications still need comparison with those rule-governed relationships.
+
+Review basis (5 November 2026): selected author-version sections 1–2 and 5 on the framework and interaction rules. Tool and case-study claims were not independently assessed. The work concerns requirements specification, not contemporary coding-agent collaboration. Newly assessed older work; compare one conflicting-account example before claiming a distinctive mechanism.
+
+**Kazman, R., Klein, M., & Clements, P. (2000). _ATAM: Method for Architecture Evaluation._ CMU/SEI-2000-TR-004, August 2000.** [Official report](https://sei.cmu.edu/library/atam-method-for-architecture-evaluation/) · [Full text](https://sei.cmu.edu/documents/629/2000_005_001_13706.pdf)
+
+Uses stakeholder goals, prioritized scenarios and quality attributes to investigate architectural risks, sensitivity points and trade-offs. It supplies a methodological precedent for deciding what to investigate and how to evaluate alternatives, beyond describing structure. A bounded PostCode task could test whether qualified accounts help expose consequential trade-offs and missing evidence.
+
+Review basis (5 November 2026): report metadata, overview, method steps and conclusions. This is an evaluation method, not proof that PostCode improves decisions or that architecture can be practiced without programming experience. Its dependence on stakeholder participation, architectural expertise and adequate inputs remains material. Newly assessed older work; adapting scenarios does not require adopting the full organizational process.
+
 ## 2. Positioning Hypotheses
 
-PostCode approaches **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. Specific sources, versioned comparisons, and evidence of useful interaction remain to be added after review.
+PostCode approaches **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. The [foundational entries](#18-architectural-descriptions-multiple-perspectives-and-evaluation) begin this assessment; detailed notation comparisons and evidence of useful interaction remain open.
 
 Assessments should distinguish the [three research levels](research.md#specialized-architectural-expertise): direct human investigation, architectural-account quality, and contribution to collaborative architectural practice. PostCode may contribute specialized investigation to conversations conducted elsewhere; it need not host the collaboration.
 
@@ -444,18 +484,19 @@ PostCode does not initially make a higher-level model authoritative or generate 
 
 The following combination describes PostCode's intended research emphasis and provides dimensions for comparison with related work:
 
-- sustained human–agent architectural design and evaluation rather than one-shot comprehension;
+- direct human architectural investigation and sustained human–agent design and evaluation;
+- specialized architectural accounts available within external design processes;
 - architectural practice without presenting programming-language source to the human;
 - multiple task-dependent lenses, qualified projections, and partial retained architectural accounts;
 - automatic selection of lenses and presentations from human information needs;
 - epistemological status and provenance visible at the point of every claim;
 - explicit accommodation of incomplete and language-dependent analyses;
 - tests treated as projected evidence rather than merely pass/fail gates;
-- revision/projection comparison for agent-mediated changes;
+- qualified comparisons among implemented states, hypothetical alternatives and intended designs;
 - empirical pressure across unrelated projects and eventually languages;
 - explicit comparison with capable coding-agent chat, including diagrams and notes, and willingness to find that chat is sufficient for some work.
 
-Several of these dimensions already overlap with moldable development and the other work above. Whether any particular conjunction, mechanism, or finding is distinctive requires a specific comparison; this list does not establish an unoccupied research territory.
+Several of these dimensions already overlap with ViewPoints, architecture-description and evaluation methods, moldable development, and the other work above. Whether any particular conjunction, mechanism, or finding is distinctive requires a specific comparison; this list does not establish an unoccupied research territory.
 
 ### 2.8 Implications of recent prior art
 
