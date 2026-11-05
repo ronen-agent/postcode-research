@@ -4,7 +4,7 @@ This document describes how PostCode's broader research direction will respond t
 
 The research questions are described in [`research.md`](research.md), the conceptual product design in [`product-design.md`](product-design.md), the process by which development produces evidence in [`methodology.md`](methodology.md), and candidate development directions in [`ROADMAP.md`](ROADMAP.md).
 
-Research strategy is distinct from both methodology and roadmap. Methodology governs how observations become findings and claims. The roadmap records implementation and formative-use possibilities. Research strategy asks which possible contributions deserve further investigation, when they may be ready to communicate, and what additional people or work could strengthen them.
+Research strategy is distinct from both methodology and roadmap. Methodology governs how formative evidence becomes findings and claims. The roadmap records implementation and formative-use possibilities. Research strategy asks which possible contributions deserve further investigation, when they may be ready to communicate, and what additional people or work could strengthen them.
 
 ## 1. Strategy Stance
 
@@ -12,12 +12,14 @@ PostCode may produce several kinds of value:
 
 - a tool or interaction model useful for human architectural practice with coding agents;
 - findings about when shared architectural representations, including visual artifacts, and partial qualified knowledge contribute beyond capable agent chat;
-- design knowledge about projection-based development environments;
+- evidence-grounded design knowledge about source-independent architectural practice, specialized investigation, and partial qualified retained accounts;
 - empirical findings about how people understand, design, direct and evaluate agent-produced software;
 - concepts or mechanisms that transfer beyond PostCode;
 - negative results that narrow the plausible role of projections.
 
 These outcomes should not be collapsed into a single measure of success. Practical usefulness does not by itself establish a general research contribution, and a useful research finding need not produce a broadly successful tool.
+
+The most likely initial research contribution is the [constructive, evidence-grounded design knowledge described in the research direction](research.md#likely-contribution-model). Demonstrating general superiority or improved architectural outcomes may strengthen a later contribution but is not the required endpoint.
 
 The strategy should remain responsive to evidence. It may be useful to investigate and communicate a finding before the larger PostCode vision is complete, while avoiding work whose primary effect would be to manufacture a cleaner publication story.
 
@@ -31,11 +33,13 @@ At each checkpoint ask separately:
 
 and:
 
-> **Have we learned something general enough that other researchers should know it?**
+> **Have we learned something sufficiently well-supported, consequential, and transferable that other researchers or practitioners should know it?**
 
 Either can be true without the other. The answers may suggest different actions: continuing formative development, releasing software or demonstrations, writing up a finding, seeking collaborators, conducting a more focused evaluation, or doing none of those yet.
 
-At these checkpoints, also reassess the nearby work recorded in [`related-work.md`](related-work.md): which ideas require attribution, which specific contribution claims remain supportable, and whether an existing system offers useful analyses to reuse or an interface to compare. Reuse opportunities and comparison opportunities require separate assessments. Evidence of overlap may refine a claim or reduce implementation work without requiring a narrower research programme; new interaction or design knowledge may still be valuable when its component mechanisms are established. Distinguish published arguments and reported capabilities from inspected implementations and evidence of usefulness, and record consequential findings in the relevant research documents or roadmap.
+At these checkpoints, also reassess the nearby work recorded in [`related-work.md`](related-work.md): which ideas require attribution, which specific contribution claims remain supportable, and whether an existing system offers useful analyses to reuse or an interface to compare. Reuse opportunities and comparison opportunities require separate assessments. Evidence of overlap may refine a claim or reduce implementation work without requiring a narrower research program; new interaction or design knowledge may still be valuable when its component mechanisms are established. Distinguish published arguments and reported capabilities from inspected implementations and evidence of usefulness, and record consequential findings in the relevant research documents or roadmap.
+
+A prospective contribution becomes communicable when its problem and relationship to prior work are clear; the relevant artifact and design rationale are documented; claims remain traceable to appropriate evidence and contrary cases; mechanisms, context, interventions, and limitations are explicit; and the resulting knowledge is stated at a scope others can assess or apply. Not every contribution needs evidence at all three analytic levels.
 
 ## 3. Publication Strategy
 
@@ -58,7 +62,7 @@ For each prospective contribution, ask who could use or evaluate it, what eviden
 
 ### 3.2 Speculative Papers
 
-Speculative papers can be useful at different points in the research. Early in an investigation, drafts describing incompatible possible findings can clarify what evidence would distinguish them. The possible findings in [`research.md`](research.md#possible-findings) provide starting points: projections might substantially improve supervision, prove useful only for particular tasks, expose irreducibly language-specific concepts, or fail in consequential ways.
+Speculative papers can be useful at different points in the research. Early in an investigation, drafts describing incompatible possible findings can clarify what evidence would distinguish them. The [research-question catalog](notes/research-question-catalog.md) provides starting points, and [`paper-drafts/design-knowledge.md`](paper-drafts/design-knowledge.md) is the initial evidence-aware scaffold for the likely constructive contribution.
 
 When a particular contribution begins to emerge, drafting its anticipated paper can expose missing evidence, unsupported inferential steps, alternative explanations, and work needed to establish an appropriate claim scope. A provisional audience can help make the expected contribution and evidence concrete.
 

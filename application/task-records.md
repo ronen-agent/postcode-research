@@ -4,9 +4,9 @@ This document defines the research-project requirements for durable records of P
 
 ## Purpose
 
-Implementing PostCode may expose considerations that affect the product design, research strategy, methodology, roadmap, or other research-project documents independently of observations produced by using PostCode. Durable task records allow the research process to examine those implementation outcomes without treating the application repository's development workflow as part of the research methodology.
+Implementing PostCode may expose considerations that affect the product design, research strategy, methodology, roadmap, or other research-project documents independently of formative evidence captured while using PostCode. Durable task records allow the research process to examine those implementation outcomes without treating the application repository's development workflow as part of the research methodology.
 
-Task records are application-development artifacts. They are not, merely by existing, research observations from PostCode use.
+Task records are application-development artifacts rather than records of PostCode use. Their contents may nevertheless contribute evidence about design and implementation experience when analyzed under the research methodology.
 
 ## Required Record
 

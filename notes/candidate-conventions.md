@@ -24,6 +24,8 @@ Candidate conventions should therefore be evaluated by asking:
 - whether it compensates for a weakness in PostCode that should instead be addressed in the tool;
 - what costs or distortions it creates when the software is developed or understood outside PostCode.
 
+When a candidate convention is adopted, distinguish one that formalizes a property already observed without explicit instruction from one intended to produce a property not yet observed. Before-and-after observations and comparisons across projects, development contexts, and programming languages may help identify effects and limits, but do not by themselves establish causation or generality.
+
 ## 2. Candidate Convention Set
 
 ### 2.1 Conceptual boundaries correspond to implementation boundaries

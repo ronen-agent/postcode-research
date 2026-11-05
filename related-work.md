@@ -430,7 +430,7 @@ PostCode approaches **software design and architecture as human practices in col
 
 Assessments should distinguish the [three research levels](research.md#specialized-architectural-expertise): direct human investigation, architectural-account quality, and contribution to collaborative architectural practice. PostCode may contribute specialized investigation to conversations conducted elsewhere; it need not host the collaboration.
 
-The practical baseline includes **capable agent chat with repository access, ad hoc generated diagrams, and ordinary maintained notes**. Comparing PostCode against a deliberately limited text-only chat would not isolate its contribution.
+The practical baseline includes **capable agent chat with repository access, ordinary agent-generated diagrams, and maintained notes**. Comparing PostCode against a deliberately limited text-only chat would not isolate its contribution.
 
 These are provisional distinctions to test against the literature, not novelty claims.
 
@@ -442,7 +442,7 @@ PostCode is not primarily asking:
 
 It asks:
 
-> Can shared, qualified architectural representations support human reasoning and design in collaboration with coding agents more effectively than capable agent chat, including ad hoc diagrams and notes?
+> Can shared, qualified architectural representations support human reasoning and design in collaboration with coding agents more effectively than capable agent chat, including ordinary diagrams and notes?
 
 It also asks what systematic, qualified and retained representations contribute when capable agents can already generate and select inexpensive task-specific visualizations.
 
@@ -504,7 +504,7 @@ Recent publications and project descriptions reinforce PostCode's existing empir
 
 The central research question is stated in [`research.md`](research.md#5-research-questions):
 
-> **What would support the effective practice of software design and architecture by humans collaborating with coding agents without requiring programming-language proficiency—and what does a shared, qualified architectural working environment contribute beyond capable agent chat?**
+> **What supports the effective practice of software design and architecture by humans collaborating with coding agents without requiring programming-language proficiency—and what does a shared, qualified architectural working environment contribute beyond capable agent chat?**
 
 As [`research.md`](research.md#31-creation-continued-development-and-existing-software) emphasizes, this includes investigation of unfamiliar programs, continued development of existing software, and development from inception. In the last case, intentions, rationale, and implementation may co-evolve, rather than requiring conceptual structure to be recovered after the fact. Related spec-driven work is therefore relevant, not categorically separate.
 

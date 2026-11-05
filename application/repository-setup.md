@@ -17,9 +17,9 @@ As an initial simplification, PostCode's projections and views are read-only. Hu
 
 See [`foundation/product-design.md`](foundation/product-design.md) for the conceptual product design.
 
-## Observability
+## Research Observation Support
 
-To support the [PostCode Research Project](https://github.com/ronen/postcode-research), PostCode records and exports observations, including relevant interaction events and contemporaneous user reports, for later analysis.
+For designated use within the [PostCode Research Project](https://github.com/ronen/postcode-research), PostCode supports recording and exporting interaction history and contemporaneous reports as required by the research question. Ordinary non-research use need not produce or export research records.
 ```
 
 ## `foundation/`

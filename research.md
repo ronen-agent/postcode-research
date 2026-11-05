@@ -1,6 +1,6 @@
 # PostCode: Research Direction
 
-PostCode's conceptual product design and its terminology are described in [`product-design.md`](product-design.md).
+PostCode's conceptual product design and terminology are described in [`product-design.md`](product-design.md). A broader catalog of potentially fruitful questions is retained in [`notes/research-question-catalog.md`](notes/research-question-catalog.md); inclusion there does not make a question part of the current governing program.
 
 ## 1. Motivation
 
@@ -16,9 +16,9 @@ A practitioner would still need substantial computational and architectural know
 
 The analogy is to building architecture: architects practice a design discipline, collaborate with specialists who construct buildings, and use drawings, models, specifications, and prose as working artifacts. They still need to understand construction and its constraints. Software differs in important ways—source code is also a precise executable description, and architectural concepts often map ambiguously to implementation—but the analogy suggests that *practicing architecture* is a more useful framing than merely *supervising implementation*.
 
-The immediate research question is how to support such architectural practice in human–coding-agent collaboration, and in particular:
+The immediate research question is:
 
-> **What representations and interactions improve architectural understanding, reasoning, design, and evaluation beyond what a capable conversational coding agent already provides?**
+> **What representations and interactions support architectural understanding, reasoning, design, and evaluation beyond what a capable conversational coding agent already provides?**
 
 This deliberately sets a strong baseline. Coding agents can already inspect repositories, explain behavior, propose designs, create diagrams, and maintain written notes. PostCode must earn its usefulness against that practice, not against a weakened text-only conversational baseline.
 
@@ -38,7 +38,7 @@ Programming has traditionally served both to produce software and to develop the
 
 Imagine someone educated in software design and architecture without conventional coding proficiency. Their working interactions with coding agents might resemble those of an experienced developer using chat today. But their conceptual repertoire, practical intuition, and preferred representations might differ. Less experienced practitioners may need more concrete scenarios, opportunities to explore alternatives, and feedback from consequences; experienced practitioners may delegate more decisions. Neither implies that PostCode is primarily an educational product.
 
-PostCode does not initially investigate software-architecture education or skill acquisition as an independent empirical programme. It investigates support for **practicing** architecture, whether the practitioner's judgment is mature or developing. Such practice might itself help develop expertise, as professional practice normally does, but claims about learning would require distinct evidence.
+PostCode does not initially investigate software-architecture education or skill acquisition as an independent empirical program. It investigates support for **practicing** architecture, whether the practitioner's judgment is mature or developing. Such practice might itself help develop expertise, as professional practice normally does, but claims about learning would require distinct evidence.
 
 Research may help identify which architectural concepts and experiences are essential to effective collaboration, and where proficiency in conventional programming remains important. It should not presume that a source-independent interface automatically produces competent architects.
 
@@ -56,13 +56,31 @@ The hypothesis to investigate is that a shared, explorable architectural working
 
 PostCode deliberately specializes in evidence-grounded architectural investigation and retained understanding for direct human use and within larger human–agent design processes. That specialization is a product-design choice whether or not it eventually outperforms general-purpose agents. The product aspires to develop architectural investigative expertise—both in understanding implemented software and in investigating proposed designs—superior, along relevant dimensions, to what capable general-purpose coding or design agents ordinarily provide. Whether it achieves that superiority, and whether its expertise improves architectural practice, are research hypotheses rather than established advantages.
 
-Three questions must remain separate. First, does PostCode support useful direct human architectural investigation? Second, does its specialization produce architectural accounts that are more accurate, appropriately qualified, useful, systematic, reusable, or otherwise better than those produced through capable general-purpose investigation? Third, does incorporating PostCode's expertise improve human–agent architectural practice and its outcomes? Useful direct investigation need not establish comparative superiority; better accounts need not improve design decisions; and continuity, shared references, or disciplined comparison might improve collaboration even when individual explanations are not intrinsically superior.
+Evidence and possible claims should remain separated at three levels:
+
+1. **Direct human investigation:** whether PostCode supports useful orientation, questioning, understanding, and exploration.
+2. **Architectural-account quality:** whether its specialization produces accounts that are accurate, appropriately qualified, relevant, systematic, reusable, or otherwise valuable.
+3. **Architectural practice:** whether using those accounts changes human–agent design, direction, review, or outcomes.
+
+These are analytic levels, not three efficacy claims the project must eventually establish. Useful investigation need not establish comparative superiority; better accounts need not improve design decisions; and continuity, shared references, or disciplined comparison might improve collaboration even when individual explanations are not intrinsically superior.
 
 Architectural views should not aspire to encode every detail of a software system. PostCode may retain overlapping, partial and occasionally competing accounts; absence from an account does not imply absence from the software. An investigation of responsibility boundaries may establish enough to draw a structural view, while subsequent investigation of asynchronous behavior requires new evidence, yields a different view, and may force reconsideration of earlier claims.
 
 The value of visual representations, their appropriate level of detail, the selection of what merits the human's attention, and the value of retaining structured architectural knowledge are all empirical questions. Excellent agent chat—**including ordinary diagrams and retained notes**—is the principal practical comparison.
 
 A central epistemological discipline remains essential. Machine-readable structure and persuasive diagrams do not turn an interpretation into a verified property of the implementation. Source, tests, runtime observations, recorded design intent, and agent inference contribute different kinds of evidence and must remain distinguishable.
+
+<a id="likely-contribution-model"></a>
+
+### 2.1 Likely contribution model
+
+The most realistic primary contribution is constructive, evidence-grounded design knowledge about what is required to support architectural practice without requiring programming-language proficiency from the human: a consequential problem framing; a working artifact; the design and implementation insights required to construct it; evidence from sustained formative use; and well-scoped lessons about useful mechanisms, tensions, limitations, and unresolved questions.
+
+PostCode assumes relevant computational, design, and architectural proficiency. Whether that proficiency can be acquired without prior programming experience is a separate question outside the project's current scope.
+
+A bounded demonstration that consequential architectural work can be performed without exercising proficiency in the implementation language would itself be a substantial result.
+
+Comparative account-quality findings, evidence of changed architectural practice, or broader studies may strengthen or extend that contribution, but they are not its required endpoint. A credible contribution may instead identify requirements for source-independent practice, explain why apparently attractive mechanisms fail, characterize where qualified retained accounts help, or establish boundaries beyond which ordinary agent chat or programming-language knowledge remains necessary.
 
 ## 3. What PostCode Investigates
 
@@ -92,271 +110,68 @@ It does not initially investigate whether coding agents themselves would benefit
 
 ### 3.1 Creation, continued development, and existing software
 
-There is another distinction within the human-facing question.
+PostCode may participate from a program's inception, enter during continued development, or investigate unfamiliar existing software. These contexts exert different pressure. Development from inception may preserve intentions, rationale, and conceptual structure as they arise; continued development must interact with an existing implementation and history; unfamiliar software tests what can be recovered from evidence PostCode did not help shape.
 
-PostCode can participate in software development at different points in a program's lifecycle:
+Findings from one context must not silently generalize to the others. PostCode may work best where conceptual structure co-evolves with the tool, or existing implementations may provide firmer evidence than speculative design work. The methodological roles of these contexts are described in [`methodology.md`](methodology.md#2-formative-use).
 
-- PostCode may support architectural design and subsequent development from a program's inception;
-- PostCode may be introduced during the continued development of an existing codebase;
-- PostCode may be used to investigate and evaluate changes to an unfamiliar codebase whose development it has never participated in.
+### 3.2 Co-adaptation, conceptual clarity, and projectability
 
-These cases may behave differently.
+PostCode-mediated development may change the software or its recorded context, either through ordinary use or through explicit conventions. Some changes may improve independently useful **conceptual clarity**; others may merely make the software easier for PostCode's current analyses to project. Co-adaptation can therefore produce genuine design knowledge while also making the tool appear more successful than it would be on arbitrary software.
 
-When PostCode participates from the beginning, concepts, hypothetical alternatives, intended architectural relationships, specifications, rationale and other information may be available as part of the design process rather than reconstructed later from implementation artifacts. A structural or behavioral model produced during design may describe an alternative under consideration or a recorded intention; neither is automatically an established fact about the software that agents subsequently implement. Investigating alternatives and comparing intended and implemented architecture—perhaps from a newly chosen perspective—are distinct research opportunities.
-
-When introduced into an existing project, some such information may already exist in source, tests, documentation, version history or previous development context, while other information may need to be recovered or may simply have been lost.
-
-When applied to an unfamiliar codebase, PostCode must derive useful projections from whatever evidence the repository and its history provide.
-
-The project should investigate all three situations rather than assuming that results from one generalize to the others.
-
-It is plausible, for example, that PostCode proves awkward or limited when reconstructing conceptual structure from arbitrary existing software, while projects developed through PostCode from their inception work well because their conceptual structure and development history co-evolve with the interface.
-
-The reverse is also plausible. Existing implementations may provide concrete evidence for useful architectural projections, while directing the creation of software through conceptual representations may prove awkward, ambiguous, or less useful than ordinary collaboration with coding agents.
-
-Or the different cases may reveal different strengths.
-
-This makes the point at which PostCode enters a program's lifecycle a research dimension in its own right.
-
-### 3.2 How does PostCode-mediated development affect the software?
-
-There are two related but distinct questions. First, using PostCode may cause software and its recorded development context to evolve differently without any explicit policy requiring that result. Second, experience may suggest that agents should deliberately be asked to preserve particular language-agnostic properties of the software and its recorded development context during PostCode-mediated collaboration.
-
-#### 3.2.1 Emergent effects
-
-This raises a further question:
-
-> **Does software created or evolved through PostCode-mediated architectural collaboration differ in significant ways from software developed through ordinary coding-agent conversations?**
-
-Differences might appear in the implementation itself, in the information preserved alongside it, or in both.
-
-For example, sustained interaction at a conceptual level might create pressure for implementations whose structure corresponds more clearly to the concepts through which humans reason about the software.
-
-Such software might exhibit greater **conceptual clarity**: architectural boundaries, responsibilities, effects, invariants, behavior, tests or other implementation properties might correspond more clearly to the conceptual structure through which the human reasons about and directs development.
-
-That could be an independently useful property of the software.
-
-But another possibility is merely **tool-relative projectability**: software developed with PostCode becomes unusually easy for PostCode's particular analyses and projections to interpret without becoming clearer or better according to any independently useful criterion.
-
-This distinction matters.
-
-PostCode and PostCode-native software could co-adapt in ways that make the environment appear highly successful while reducing its ability to generalize to arbitrary software. Conversely, pressure toward projectability might turn out to encourage properties—such as clearer conceptual structure—that remain valuable even outside PostCode.
-
-Whether either effect occurs is an open question.
-
-#### 3.2.2 Deliberate conventions for PostCode-mediated development
-
-PostCode-mediated development may also benefit from explicitly stated conventions for how coding agents implement and document changes. Such conventions would not prescribe the source-language realization in detail. They would instead encourage language-agnostic properties of the software and its recorded development context that help a human understand, design, direct and evaluate the software without requiring programming-language proficiency.
-
-Possible candidates might concern correspondence between conceptual and implementation boundaries, the discoverability of effects and invariants, the expression of behavior through tests, or the preservation of links among human requests, implementation changes, rationale and verification. These are hypotheses to investigate rather than conventions PostCode currently endorses.
-
-Deliberate conventions raise the same distinction between independently useful conceptual clarity and tool-relative projectability described above. They might also conceal limitations in PostCode by adapting the software to the tool rather than improving the tool's ability to work with arbitrary software.
-
-The project should therefore distinguish effects that arise through ordinary PostCode-mediated development from effects produced by explicit instructions to coding agents. Experience should determine which conventions prove useful, how far they generalize across projects and languages, and whether they should remain project choices, become PostCode recommendations, or eventually be represented or checked by PostCode itself.
+Formative analysis should distinguish emergent effects from deliberate interventions and independently useful clarity from **tool-relative projectability**. Candidate conventions and their evaluation questions are retained in [`notes/candidate-conventions.md`](notes/candidate-conventions.md).
 
 ## 4. Why Agent-Mediated Development Changes the Problem
 
-Software architecture, visualization, program-comprehension tools, and higher-level program representations long predate coding agents. [Merino, Ghafari, and Nierstrasz (2026)](https://arxiv.org/abs/2608.22151) discuss how generative AI reduces the cost of contextual visualizations, while [moldable development](https://arxiv.org/abs/2409.18811) and [Glamorous Toolkit](https://gtoolkit.com/) already demonstrate the importance of contextual tools. Relevant precedents and their overlap with PostCode are discussed in [`related-work.md`](related-work.md).
-
 In conventional development, humans acquire and refresh much of their understanding of a program through the work of reading, writing, debugging, and changing its source. When coding agents take on more implementation work, that incidental source-level familiarity may diminish even though humans still need to make architectural decisions and evaluate what was built.
 
-At the same time, capable agents make source-free architectural conversations practical: they can inspect a repository, explain how it works, explore design alternatives, generate diagrams, and maintain notes. Generative AI makes such representations cheap **for ordinary chat as well as for PostCode**. Cheap generation and automatic selection therefore help explain why this style of collaboration is possible now, but do not by themselves justify a dedicated projection environment.
+At the same time, capable agents make source-independent architectural conversations practical: they can inspect a repository, explain how it works, explore alternatives, generate diagrams, and maintain notes. Cheap generation and automatic selection help explain why this style of collaboration is possible now, but do not by themselves justify a dedicated environment.
 
 The remaining question is what **systematic, qualified, retained and navigable architectural information** contributes beyond those conversational capabilities, both to direct human investigation and to collaboration: for example, by helping people revisit a design through different perspectives, inspect evidence for architectural claims, recognize incomplete understanding, or compare intended architecture with the subsequent implementation. The importance of particular representations and the right amount of retained structure are questions for use and evaluation, not assumed advantages.
 
-Some architectural questions may remain inadequately supported even after further investigation, while capable chat with diagrams and notes may suffice for others. These limitations should remain explicit rather than be treated as resolved by presenting implementation source to the human. The research seeks the circumstances in which additional architectural representations and interactions materially help.
+Some questions may remain inadequately supported even after further investigation, while capable chat may suffice for others. Relevant precedents and their overlap with PostCode are discussed in [`related-work.md`](related-work.md).
 
 ## 5. Research Questions
 
 The central investigation is:
 
-> **What would support the effective practice of software design and architecture by humans collaborating with coding agents without requiring programming-language proficiency—and what does a shared, qualified architectural working environment contribute beyond capable agent chat?**
+> **What supports the effective practice of software design and architecture by humans collaborating with coding agents without requiring programming-language proficiency—and what does a shared, qualified architectural working environment contribute beyond capable agent chat?**
 
-PostCode investigates this through several related sets of questions.
+The current program is organized by these questions:
 
-**Architectural practice and attention**
+- What knowledge and judgment does architectural practice require, and which aspects—if any—depend on conventional programming-language proficiency?
+- What does PostCode contribute to direct human investigation when no external design or implementation agent participates in the task?
+- Which architectural concerns, concepts, and levels of detail matter during genuine tasks, and how should PostCode help participants discover what deserves attention?
+- When do partial, qualified, retained accounts support reasoning across perspectives, and when do they become fragmented, misleading, or unnecessarily burdensome?
+- Which architectural claims can analysis establish, which require interpretation, and how should scope, evidence, limitations, and uncertainty be conveyed?
+- Can humans and agents share stable conceptual referents without presuming permanent semantic identities, authoritative accounts, or source-level names?
+- Can implemented states, hypothetical alternatives, and intended designs be investigated and compared without disguising their different evidentiary bases?
+- What helps humans notice consequential architectural changes, deviations, and unresolved questions after agents implement software?
+- When and how do persistent textual, structured, or visual representations help people notice relationships, reason about consequences, or identify gaps beyond conversation, ordinary agent-generated diagrams, and retained notes?
+- Which capabilities add value beyond capable agent chat with repository tools, diagrams, and retained notes, and which merely reproduce that practice with additional machinery?
+- How do findings vary across new software, continued development, unfamiliar repositories, architectural styles, programming languages, and practitioner experience?
 
-- What knowledge and judgment does a human need to understand, design, direct, and evaluate software? Which aspects require conventional programming-language proficiency, if any?
-- What does PostCode contribute to direct human understanding and investigation when no external design or implementation agent is participating in the task?
-- Which architectural concerns and levels of detail matter to the human at different stages of a task? Can agents and representations help people discover what deserves investigation, rather than merely answer questions already asked?
-- When is delegation appropriate, and when does meaningful human architectural participation benefit from direct exploration, alternative designs, or concrete scenarios?
-- Can a human reason about consequences and discover overlooked questions using shared representations more effectively than through conversation alone?
+These questions guide the current program; they are not a requirement to answer everything before the work can contribute. The broader [research-question catalog](notes/research-question-catalog.md) preserves secondary and longer-term questions that may become important as evidence or opportunities arise.
 
-**Concepts, representations, and interaction**
+<a id="8-research-and-impact-goal"></a>
+<a id="contribution-and-claim-scope"></a>
 
-- Which established architectural concepts—responsibilities, boundaries, interfaces, state, ownership, interactions, concurrency, failure, contracts, and others—provide useful starting points? Which require revision or remain language-specific in application?
-- Which established visual notations, or combinations of notations, are useful working artifacts in architectural discussions? When are prose and ordinary agent-generated diagrams sufficient?
-- Can partial, qualified and potentially overlapping retained accounts support navigation and reasoning across multiple architectural perspectives without implying a complete program model? Does a coherent working understanding require some stable core, or can it remain largely task-specific?
-- Can architectural concepts and investigative capabilities apply usefully across implemented, hypothetical, and intended accounts while preserving their different meanings and evidentiary bases?
-- Does investigating asynchronous behavior after understanding a responsibility boundary, for example, reveal gaps or change earlier interpretations? What structure or grounding does such reuse need?
-- Can the human and agent share stable conceptual referents as an investigation evolves, without assuming permanent semantic identities or source-level names?
+## 6. Contribution and Claim Scope
 
-**Design, implementation, and change**
+PostCode has no predefined experimental endpoint at which the project as a whole succeeds or fails. Construction and use may contribute:
 
-- Can PostCode help architectural participants investigate hypothetical alternatives and their consequences without treating proposals as accepted, feasible, or implemented?
-- Can implemented states, hypothetical alternatives, and intended designs be compared using related concepts while preserving qualifications and unresolved correspondence?
-- How do alternative perspectives change the evaluation of a proposed or intended design and its realization? What helps humans notice important architectural deviations or consequences after an agent implements a change?
-- What representations help evaluate revisions at the level of responsibilities, behavior, constraints and other architectural concerns rather than relying on agent-generated patch summaries?
-- Does PostCode-mediated practice change the resulting software or its recorded development context? If it becomes more projectable, is that independent architectural clarity or adaptation to PostCode? Can deliberate language-agnostic conventions help without imposing tool-specific structure?
+- design requirements, mechanisms, patterns, and failure modes for source-independent architectural practice;
+- a documented artifact and the implementation knowledge needed to realize its conceptual design;
+- conditional findings about when specialized investigation and retained accounts help or hinder;
+- independently checked findings about the quality and limits of particular architectural accounts;
+- concepts or mechanisms that transfer beyond PostCode;
+- negative or mixed findings that narrow the plausible role of projections;
+- practical tools, demonstrations, or workflows whose value is distinct from a general research claim.
 
-**Epistemology, applicability, and evaluation**
+The primary aim is not to prove that PostCode globally outperforms conversation or improves architectural outcomes. Claims should follow the available evidence. Formative self-study can support design findings, bounded observations about the developer's experience, and hypotheses. Independent checks can support claims about particular account contents or guarantees. General claims about developer behavior, architectural competence without programming experience, or comparative outcomes require evidence from appropriate participants and tasks that the initial program may never undertake.
 
-- Which architectural claims can analysis establish, which require interpretation, and how can presentations convey appropriate scope, evidence, limitations and uncertainty?
-- What can architectural representations convey about test intent, observed behavior, and the limits of verification without depending on source-language syntax?
-- Does PostCode's specialization produce architectural accounts that are more accurate, appropriately qualified, useful, systematic, or reusable than capable general-purpose agents ordinarily produce?
-- Does incorporating PostCode's architectural expertise improve human–agent design and review, independently of whether its individual accounts are intrinsically superior?
-- How does usefulness differ across new software, continued development, and unfamiliar repositories; across architectural styles and programming languages; and across experience levels?
-- How does a shared architectural working environment compare with capable agent chat equipped with repository tools, diagrams and ordinary notes? Which benefits, if any, require PostCode-specific infrastructure?
-- How does design-agent access to implementation source, PostCode, or both affect architectural reasoning and design quality?
-- Which architectural questions cannot be answered adequately through available representations, and what should the environment report when it cannot support a decision?
+Transferability comes from explaining the problem, context, mechanism, design rationale, evidence, contrary cases, interventions, and limits—not from presenting one developer's sustained use as representative. Negative, conditional, and unresolved results are first-class contributions when they are traceable and consequential. The broader question catalog preserves possible findings and limiting cases as questions rather than governing commitments.
 
-These are research directions, not a requirement to answer all questions or to implement a comprehensive architecture model. Questions about how architectural competence is formally taught remain motivating rather than part of the initial empirical remit. Research should be free to discover that an established tool, a modest augmentation of chat, or no new interface is the best answer for some tasks.
-
-<a id="possible-findings"></a>
-## 6. What Might We Learn?
-
-PostCode does not have a predefined experimental endpoint at which the project as a whole succeeds or fails.
-
-It is intended as an ongoing development and research programme in which building and use produce a stream of findings—positive, negative, mixed and unexpected—that influence what is investigated and built next.
-
-Some possible findings include the following.
-
-### Architectural representations become a routine working surface
-
-Humans use qualified architectural representations directly for understanding and investigation, and humans and agents use them together as ongoing working artifacts for design and evaluation, rather than merely as occasional summaries or illustrations.
-
-### Specialized investigation improves architectural accounts—or does not
-
-PostCode's defined analyses, retained understanding, provenance and explicit qualifications produce architectural accounts that are more accurate, useful, systematic or reusable than capable general-purpose agents ordinarily produce—or the specialization adds cost and structure without improving the accounts that matter.
-
-### Better accounts improve architectural practice—or do not
-
-PostCode's architectural expertise helps humans and agents explore alternatives, make decisions, review implementations or revisit earlier understanding more effectively. Alternatively, improved accounts do not materially improve outcomes, or collaboration benefits mainly from continuity and shared references rather than superior individual explanations.
-
-### Capable chat makes PostCode unnecessary for some tasks
-
-A capable conversational coding agent, with ordinary diagrams and notes, may offer equivalent architectural collaboration without PostCode-specific machinery.
-
-This would be an important finding rather than a failure of the research.
-
-### Greenfield and existing-code use differ
-
-PostCode proves substantially more useful when it participates in development from a project's inception than when reconstructing conceptual structure from arbitrary existing code—or the reverse.
-
-The circumstances under which PostCode enters the development lifecycle may turn out to matter as much as the particular projections it provides.
-
-### PostCode changes the resulting software
-
-Software developed through PostCode-mediated architectural collaboration develops measurably or observably different characteristics from software developed through ordinary coding-agent conversations.
-
-Those differences might be beneficial, harmful, neutral, or merely adaptations to PostCode itself.
-
-### Projection diffs become particularly useful
-
-Comparing projections across revisions proves useful for evaluating agent-generated changes even where chat suffices for ordinary comprehension.
-
-### Trust becomes particularly important
-
-The most valuable contribution turns out to be explicit epistemological guarantees about what program views do and do not establish, rather than any particular representation.
-
-### Established architectural vocabulary transfers—or does not
-
-Starting with established architectural concepts and notations proves useful across implementation languages, perhaps after important qualification or extension. Alternatively, familiar architectural labels prove misleading without language-specific interpretation.
-
-### Provenance becomes particularly important
-
-A useful complement to ordinary agent explanations turns out to be an environment that allows derived facts, recorded rationale, behavioral evidence and interpretation to be investigated together without collapsing their distinctions.
-
-### Tests become a bridge
-
-Behavioral test intent can often be separated usefully from source-language realization, while cases that resist abstraction expose important boundaries between language-independent behavior and implementation-specific properties.
-
-### Representation selection becomes particularly important
-
-The important capability turns out not to be any particular visualization or projection, but selecting which architectural concerns deserve attention, when, and at what level of detail.
-
-### Visual artifacts support architectural reasoning
-
-Shared structural and behavioral views help people develop and challenge architectural judgments, rather than merely restating an agent's explanations. Alternatively, the views contribute no significant benefit beyond ordinary conversational diagrams.
-
-### Partial knowledge supports cross-perspective investigation
-
-Qualified, revisable, overlapping accounts support coherent investigation across concerns without constructing a complete software model—or fragmentation and disputed correspondence make this approach too awkward.
-
-### Comparative architectural investigation supports design and review
-
-Using related architectural concepts to compare implemented states, hypothetical alternatives and intended designs helps expose consequences, evaluate alternatives, supervise architectural change and uncover consequential deviations, even when correspondence remains interpretive. Alternatively, the accounts prove too difficult to align, or ordinary plans, code review and chat provide enough support.
-
-These are examples of discoveries the research could plausibly make, not outcomes PostCode is required to produce.
-
-Different parts of the work may support different or even apparently conflicting findings. A projection may be useful for one class of investigation and actively unhelpful for another. A technique that works well in one language or codebase may fail to generalize. A workflow that works for PostCode-native software may work poorly for unfamiliar software, or vice versa.
-
-Such boundaries are themselves part of what the project is intended to discover.
-
-## 7. Negative and Limiting Findings
-
-Negative evidence is not necessarily evidence that PostCode as a whole has failed.
-
-A finding may instead establish the limits of a particular projection, technique, interaction model, abstraction or research hypothesis. Such findings should be treated as first-class results and allowed to redirect subsequent work.
-
-Potential negative or limiting findings include:
-
-- for broad classes of questions or development activities, PostCode's projections prove less useful than capable agent chat—for example by requiring more effort, taking longer, or obscuring the important relationships;
-- useful analyses cannot provide adequate guarantees;
-- qualification necessary for trust makes projections cumbersome or difficult to interpret;
-- automatic projection or presentation selection frequently chooses badly;
-- developers must understand the available projection vocabulary well enough that automatic selection adds little;
-- recorded rationale is too stale or unreliable to contribute usefully;
-- test intent cannot be represented adequately in architectural terms without losing consequential detail;
-- cross-language abstractions prove shallow or misleading;
-- important implementation facts routinely escape projection;
-- some consequential architectural questions or decisions cannot be addressed reliably without implementation-language proficiency, even with agent assistance and qualified representations;
-- projection comparisons often fail to provide useful information beyond ordinary agent-generated explanations of changes;
-- PostCode works well only on projects whose development it has influenced;
-- pressure toward projectability produces implementations optimized for PostCode's analyses without improving—and perhaps while degrading—other desirable software properties;
-- conceptual-level interaction proves useful for understanding software but too awkward or underspecified for directing its creation;
-- conceptual-level interaction works well for creating software but cannot reliably recover enough information from arbitrary existing code;
-- capable agent chat with repository access, ordinary diagrams, and retained notes already provides most of the useful architectural workflow, leaving little role for a dedicated projection environment;
-- architectural drawings offer convincing but misleading coherence, especially when composed from partial or conflicting evidence;
-- known architectural notations fit poorly with the concepts that arise during real investigation, or cannot convey qualification without becoming unwieldy;
-- partial retained accounts are too disconnected or difficult to reconcile across perspectives to support dependable architectural reasoning;
-- intended architectural representations do not correspond sufficiently to implementations to support useful evaluation, even with explicit uncertainty.
-
-Other negative findings will almost certainly arise from things that have not yet been anticipated.
-
-Mixed results may be especially interesting.
-
-The goal is not to prove that visual architectural models outperform conversation, or that conventional programming-language source should disappear as an implementation artifact.
-
-It is to keep asking:
-
-> **What helps humans practice software architecture as a discipline in collaboration with coding agents—and what, if anything, warrants a dedicated environment beyond chat?**
-
-## 8. Research and Impact Goal
-
-If the work proves worthwhile, it should make a meaningful contribution to understanding how programming evolves in an agent-mediated world.
-
-Possible contributions may concern:
-
-- specialized architectural investigative expertise within human–agent design processes;
-- architectural representations as working artifacts for human–agent software design and investigation;
-- explicit comparisons with capable conversational agents and ordinary visual explanations;
-- partial, qualified architectural knowledge supporting multiple perspectives;
-- qualified comparison among implemented states, hypothetical alternatives and intended designs;
-- architectural change supervision when humans do not inspect programming-language source;
-- conceptual interfaces for directing agent-mediated software development;
-- epistemological contracts for program views;
-- automatic projection and representation selection;
-- combining derived facts, recorded assertions, observations and interpretation;
-- tests as projected behavioral evidence;
-- projection diffs for supervising agent changes;
-- persistence of human attention without semantic identity;
-- the usefulness and limits of established language-independent architectural concepts and notations;
-- conceptual clarity and projectability as properties of software;
-- differences between PostCode-native, continued-development and unfamiliar-codebase use;
-- limits of architectural work conducted without presenting programming-language source.
-
-The strategy for recognizing, communicating, and strengthening these contributions is described in [`research-strategy.md`](research-strategy.md).
+The process for turning formative evidence into such findings is described in [`methodology.md`](methodology.md). The strategy for recognizing, communicating, and strengthening prospective contributions is described in [`research-strategy.md`](research-strategy.md).
 
 The long-term question remains open:
 

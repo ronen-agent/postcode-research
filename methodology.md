@@ -12,7 +12,7 @@ Building the system is necessary because many of the relevant questions cannot b
 
 The initial method is therefore sustained use, observation, and revision rather than a fixed efficacy experiment.
 
-To preserve evidence from that use, PostCode is designed to export a stream of relevant interaction events and contemporaneous user reports to a designated research destination for subsequent analysis. The contents and limitations of that evidence are described in [Formative Logging](#6-formative-logging).
+To preserve evidence from that use, designated formative episodes should capture enough interaction history and contemporaneous reporting to reconstruct what happened and support later interpretation. This is formative evidence, not a comprehensive behavioral dataset. The minimum requirements and limitations are described in [Formative Evidence Capture](#formative-evidence-capture).
 
 The central formative question is:
 
@@ -38,9 +38,9 @@ The process is directed by what the evidence supports. Positive, negative, limit
 
 ## 2. Formative Use
 
-PostCode should be exercised across substantially different projects, tasks, architectures, domains, and programming languages. No single development context is representative; variation helps expose context-specific assumptions and reduces the risk of optimizing PostCode for any one of them.
+Formative use should deliberately seek variation across projects, tasks, architectures, domains, and programming languages as suitable opportunities arise. No single context is representative; contrasting cases help expose context-specific assumptions and reduce the risk of optimizing PostCode for one setting. The method does not require comprehensive coverage of every dimension.
 
-Each formative research episode—a bounded period of use analyzed as a unit—should use an identified version of PostCode held stable for its duration and direct its observation records to a designated research destination.
+Each formative research episode—a bounded period of use analyzed as a unit—should identify the PostCode version and investigated repository states. When the episode produces research records, it should keep the relevant version stable for the episode and deliver those records to a designated research destination.
 
 Formative use should include both inspection-only investigations and development tasks. Inspection-only use isolates PostCode's support for understanding software; development tasks additionally exercise direction, change supervision, and interaction with coding agents.
 
@@ -114,29 +114,25 @@ Not every small capability needs a separately formalized hypothesis. When a capa
 
 Evaluate architectural representations in genuine design or investigation tasks, using established structural or behavioral notations where useful. Compare against capable coding- or design-agent chat with repository access, ordinary diagrams, and retained notes.
 
-Evaluate capabilities at the three distinct levels identified in the [research direction](research.md#specialized-architectural-expertise): usefulness for direct human investigation, quality of architectural accounts, and contribution to collaborative architectural practice. Evidence at one level does not establish success at another.
+Interpret evidence using the three analytic levels identified in the [research direction](research.md#specialized-architectural-expertise): usefulness for direct human investigation, quality of architectural accounts, and contribution to collaborative architectural practice. Evidence at one level does not establish the others, and an episode or contribution need not address all three.
 
 When investigation compares architectural accounts, preserve what each account concerns—such as an implemented state, a hypothetical alternative or an intended design—together with its provenance and qualifications. Preserve observations as separately scoped evidence rather than treating them as another account modality. Assess the comparison's claims and usefulness separately from the quality or feasibility of the designs being compared.
 
 Relevant observations include:
 
-- the information need the capability was intended to serve;
-- how the resulting view or information entered the investigation relative to human intent: explicitly requested, automatically selected within an expressed information need, constructed after a suggestion was accepted, or introduced without prior request or acceptance;
-- whether additional system-initiated investigation contributed and, if so, whether it was request-scoped or autonomous;
-- whether the result was a synthesized qualified projection, a coordination of independently qualified projections, or a mixture, when that construction could affect trust or usefulness;
+- the task, information need, and contribution the capability was intended to make;
+- how the result entered the investigation relative to human intent and whether system-initiated investigation contributed;
+- how the result was constructed, including relevant evidence, qualifications, provenance, and composition;
 - whether it satisfied the information need or supported a useful next step;
-- whether visual working artifacts helped the human notice architectural relationships, reason about consequences, generate questions, or identify gaps beyond what comparable conversation provided;
-- whether partial retained knowledge was reused or revised when examining a different perspective;
-- whether implemented states, hypothetical alternatives and intended designs could be compared without disguising their different evidentiary bases;
-- whether comparison exposed consequential differences, contradictions, constraints, unresolved assumptions or useful further questions;
+- whether the representation's textual, structured, or visual form helped expose relationships, consequences, or gaps beyond comparable conversation, ordinary agent-generated diagrams, and retained notes;
+- whether retained knowledge was reused, revised, compared, or challenged without disguising its evidentiary basis;
 - whether architectural change review distinguished what changed from whether the implementation realized the intended design;
-- which further views, lenses, or subjects the human pursued;
-- when the human requested more detail, reported inadequacy, pursued another representation, or abandoned the investigation;
+- what the human pursued next, including requests for more detail, alternative representations, reported inadequacy, or abandonment;
 - which information was useful, missing, misleading, or unnecessarily prominent;
-- whether the qualifications and limitations were understood and trusted;
-- how the result varied across subjects, tasks, projects, architectures, domains, and programming languages.
+- whether qualifications and limitations were understood and trusted; and
+- which contextual differences appear consequential.
 
-These observations should combine interaction logs with contemporaneous annotations or other direct user reports, as described in [Formative Logging](#6-formative-logging). Findings may support retaining, revising, replacing, or removing a capability and may motivate changes to the application, roadmap, research questions, or conceptual design.
+These observations should combine reconstructable interaction evidence with contemporaneous annotations or other direct reports, as described in [Formative Evidence Capture](#formative-evidence-capture). More detailed candidate observations are retained in [`notes/formative-evidence-candidates.md`](notes/formative-evidence-candidates.md). Findings may support retaining, revising, replacing, or removing a capability and may motivate changes to the application, roadmap, research questions, or conceptual design.
 
 ## 4. Interpreting Formative Use
 
@@ -161,85 +157,63 @@ Possible interpretations include:
 
 Formative use should also help determine which textual results belong in transient conversation, which should become retained views, and which should contribute to longer-lived retained architectural understanding.
 
-### 4.1 Reported Limitations as Development Feedback
+### 4.1 Reported Limitations and Inadequacy
 
 When reported uncertainty or a limitation in a projection influences development, formative observation should preserve what was reported and any stated cause, how it was used, and what effects followed. The development response—including any change to the program or available evidence, or a decision to continue without change—is itself part of the evidence. If the program was changed to enable stronger projection guarantees, analysis should not assume that the change was beneficial or harmful. If the finding instead motivates a change to PostCode, that change is a methodological intervention: the original observation should be preserved, and subsequent observations interpreted in relation to the revised PostCode version.
 
+Reports that a view or explanation is inadequate should require neither a diagnosis nor a written justification. Record such feedback with the information need, view, qualifications, captured basis, and relevant surrounding activity where available. Feedback indicates a perceived shortcoming, not necessarily an incorrect claim; absence of feedback does not establish adequacy.
+
+Activity outside PostCode cannot reliably be observed. Voluntary contemporaneous accounts can add context, but recorded activity cannot establish every unmet need or action taken when PostCode was insufficient.
+
 ### 4.2 Evaluating Conventions
 
-In addition to individual prompts, coding agents commonly receive standing project instructions in the form of conventions to follow. Formative use of PostCode will therefore take place alongside such conventions, and the investigation should observe how those conventions affect PostCode-mediated supervision.
+Conventions and other deliberate changes to the development setting are methodological interventions as well as possible engineering choices. Record their rationale, timing, and intended role where possible. Interpretation should distinguish independently useful conceptual clarity from tool-relative projectability, and effects of an intervention from properties that already existed.
 
-When evaluating a convention in relation to PostCode, its rationale and whether it was already in force or adopted during formative use should be recorded where possible. Its intended role may be a project-specific engineering choice, a deliberate formative intervention, or both; that role is not a conclusion about the convention's effects or generality.
+Local adoption creates an opportunity for observation; it does not establish benefit, necessity, causation, or transferability. Candidate conventions and more detailed evaluation questions are retained in [`notes/candidate-conventions.md`](notes/candidate-conventions.md).
 
-Evidence about the convention's effects can be gathered from interaction logs and contemporaneous observations of whether projections become clearer, more complete or easier to trust; whether users report fewer inadequacies or need fewer remedial explanations; whether agents can implement conceptual requests with less clarification; whether the convention creates friction, artificial structure or other costs; and whether the resulting software remains clear outside PostCode. Before-and-after observations and comparison among PostCode-on-PostCode, existing-project development, ab initio development, unfamiliar software and different languages can provide further evidence.
+<a id="6-formative-logging"></a>
+<a id="formative-evidence-capture"></a>
 
-Interpretation should distinguish:
+## 5. Formative Evidence Capture
 
-- a convention that formalizes a property already observed without explicit instruction from one intended to produce a property not yet observed;
-- a response to a missing PostCode capability from a property genuinely needed for effective architectural practice with coding agents;
-- an independently useful improvement in conceptual clarity from adaptation that merely makes the software easier for PostCode to project;
-- a convention that generalizes across projects or languages from one that depends on a particular implementation, analysis, project or language.
+Formative evidence should combine reconstructable interaction history with contemporaneous subjective observations. The conceptual product capability is described in [Research Observation Support](product-design.md#research-observation-support).
 
-Local adoption creates an opportunity for observation; it does not by itself establish benefit, necessity, causation or generalizability.
+At minimum, a research episode should preserve or reference:
 
-## 5. Reporting Inadequacy
+- the task and information need;
+- the PostCode version and investigated repository states;
+- consequential requests, views, projections, captured bases, qualifications, and limitations;
+- relevant choices, navigation, comparisons, and agent-context interactions;
+- explicit inadequacy reports or contemporaneous annotations; and
+- what happened next, where that is available and material to interpretation.
 
-PostCode should provide a simple way for the human to report that a view or explanation is inadequate. The report should require neither a diagnosis of the problem nor a written justification; optional detail can distinguish missing information, an unhelpful representation, insufficient support for a claim, or another difficulty.
+Automatic capture is preferable where retrospective reconstruction would be unreliable, but it need not be exhaustive and may be supplemented by task records, external conversations, or manual notes. Additional fields should be driven by the research question; [`notes/formative-evidence-candidates.md`](notes/formative-evidence-candidates.md) retains a broader candidate inventory.
 
-Record such feedback with the information need, view, qualifications, captured basis, and relevant surrounding activity where available. Subsequent questions, additional investigations, and abandonment can help interpret the report. Feedback indicates a perceived shortcoming, not necessarily an incorrect claim; absence of feedback does not establish adequacy.
+The resulting record is primarily a **design instrument**, not an unbiased behavioral dataset. Instrumentation may affect behavior, subjective reports are not standardized effectiveness measures, and the investigator decides when to persevere, report inadequacy, or revise the system.
 
-Activity outside PostCode cannot reliably be observed. Voluntary contemporaneous accounts can add context, but the observation stream cannot establish every unmet need or action the person took when PostCode was insufficient. When recurring patterns emerge, lightweight selectable feedback options may make common reports easier to submit and compare; their categories need not be specified in advance.
+## 6. From Formative Evidence to Design Knowledge
 
-## 6. Formative Logging
+Individual events do not automatically constitute findings. A design finding should remain traceable through a chain such as:
 
-Formative evidence should combine automatically recorded interaction events with contemporaneous subjective observations. The conceptual requirement for this support is stated in [Research Observation Support](product-design.md#research-observation-support); the relevant recorded context and events are listed below.
+```text
+consequential problem or information need
+  → design conjecture and implemented response
+  → formative episode or implementation experience
+  → recorded evidence and contrary cases
+  → bounded interpretation
+  → transferable design knowledge or revised question
+```
 
-Relevant recorded context and events include:
+Analysis should distinguish artifact behavior, architectural-account quality, design knowledge, bounded experience, and claims about developer behavior. It should triangulate interaction records, contemporaneous reports, development artifacts, repository history, and independent checks where appropriate rather than treating any single source as decisive.
 
-- the current operational task and information need, where formalized;
-- prompts and prose requests submitted to PostCode;
-- prompts sent to coding agents, when available, and references to external tasks or conversations;
-- whether an investigation was directly initiated by a human, an external agent, or PostCode; for PostCode-initiated investigation, whether it was request-scoped or autonomous and its parent request or autonomous trigger;
-- explicit and automatically selected lenses, lens parameter values, projections and their composition within views, presentations, presentation parameter values, and resulting views;
-- entities and relationships discovered or opened;
-- projections produced;
-- views opened, closed, or revisited;
-- relationships among views, including derivation, navigation lineage, and changes in captured basis;
-- test projections inspected;
-- revisions and branches inspected;
-- projection and architectural-account comparisons, including the modality, provenance and captured bases where applicable;
-- reports that a view or explanation was inadequate, including available context and optional clarification;
-- unavailable, refused, or failed projection requests;
-- analysis applicability and availability, execution state, and result materialization;
-- analysis-cost estimates, resource budgets or thresholds, user choices, and actual resource use where available;
-- interactions with coding-agent context.
+Findings should identify the mechanism believed to matter, the context in which it appeared, relevant interventions and alternative explanations, contrary or failed cases, and the boundary of the supported claim. The investigator's simultaneous roles as designer, implementer, user, and analyst should remain explicit.
 
-Subjective observations may record that the user:
+Transferability comes from sufficiently detailed problem framing, design rationale, mechanism, evidence, context, and limitations so that others can judge applicability—not from treating the formative cases as a representative sample. Findings may revise the product design, application, roadmap, methodology, research questions, or prospective contribution.
 
-- wanted different information;
-- wanted a different presentation of existing information;
-- distrusted the projection;
-- considered the available explanation or presentation inadequate;
-- lost orientation or a coherent sense of the program;
-- could not express the intended change to the coding agent using the available context.
+<a id="8-evidence-and-claim-scope"></a>
+<a id="evidence-and-claim-scope"></a>
 
-The goal is not exhaustive annotation. It is to avoid losing useful observations because they were not recorded when they occurred.
-
-Immediate reactions provide context for later interpretation; they are not standardized satisfaction measurements or evidence of effectiveness by themselves.
-
-The log is primarily a **design instrument**, not an unbiased behavioral dataset. Instrumentation may affect behavior, and the developer decides when to persevere, report inadequacy, or add an annotation.
-
-## 7. From Observation to Finding
-
-Individual events do not automatically constitute findings.
-
-An inadequacy report, failed projection, awkward view, or other event should retain enough context to support later interpretation. This includes the development task and information need; the PostCode version; the repository states involved, including their Git commits or relevant working-tree states and their association with the projections; the subjects, lenses, lens parameter values, and projections involved; their composition within the presentation and view; presentation parameter values and relevant navigation lineage; the action taken next; and any contemporaneous subjective explanation.
-
-Recurring patterns can motivate design changes or research hypotheses. Interpretation should also preserve contrary instances and contextual boundaries rather than retaining only evidence that supports the current design.
-
-Findings may revise the design hypothesis, the set and behavior of lenses, the interaction model, the roadmap, or the research questions themselves.
-
-## 8. Evidence and Claim Scope
+## 7. Evidence and Claim Scope
 
 The methodology distinguishes forms of evidence by the claims they can support.
 
@@ -249,40 +223,46 @@ The governing distinction is:
 
 The restriction on displaying source applies to PostCode's human-facing interface, not to independent research validation. Architectural claims should be assessed separately against suitable implementation evidence, tests, runtime observations, or expert inspection. User satisfaction and the absence of inadequacy reports do not establish that an explanation is correct.
 
-### 8.1 Formative self-study
+### 7.1 Formative self-study
 
-Evidence from sustained formative use, interaction logs, contemporaneous inadequacy reports, other observations, and resulting design changes can help determine what is required to support architectural investigation. It supports design findings, bounded observations about the developer's experience, and hypotheses for later investigation.
+Evidence from sustained formative use, reconstructable episodes, contemporaneous inadequacy reports, other observations, and resulting design changes can help determine what is required to support architectural investigation. It supports design findings, bounded observations about the developer's experience, and hypotheses for later investigation.
 
 Because this self-study involves a developer with extensive programming experience, using a code-independent interface does not test whether someone without programming-language proficiency could exercise comparable architectural judgment. The [unfamiliar-language challenge](ROADMAP.md#46-unfamiliar-language-challenge) offers a partial test of reliance on implementation-language knowledge, but is not a substitute for studying practitioners who have not learned conventional programming.
 
-### 8.2 External exploratory use
+### 7.2 External exploratory use
 
 External users can reveal assumptions caused by the author's prior knowledge, vocabulary, workflow, and willingness to tolerate friction. Exploratory use can refine tasks, instrumentation, and hypotheses without yet supporting broad comparative claims.
 
-### 8.3 Formal user studies
+### 7.3 Formal user studies
 
-User studies can support appropriately scoped claims about developer behavior and whether architectural tasks can be completed without programming-language proficiency, including preference, effectiveness, speed, comprehension, confidence, and trust. They should address specific mature questions and identify the relevant population, tasks, methods, outcomes, and development contexts rather than act as a single final verdict on PostCode.
+If a specific mature claim warrants them, user studies can support appropriately scoped findings about developer behavior and whether architectural tasks can be completed without programming-language proficiency, including preference, effectiveness, speed, comprehension, confidence, and trust. They are an optional extension rather than the expected endpoint of the initial program, and should identify the relevant population, tasks, methods, outcomes, and development contexts rather than act as a single final verdict on PostCode.
 
 All findings should remain scoped to their evidence. Negative and mixed findings should be treated with the same discipline as positive ones; a technique may be useful for one task, repository, language, or development context and unhelpful for another.
 
-### 8.4 Comparisons and reuse assessments
+<a id="84-comparisons-and-reuse-assessments"></a>
+
+### 7.4 Comparisons and reuse assessments
 
 Comparative evaluation should preserve the three levels distinguished in [Evaluating Projection Capabilities](#3-evaluating-projection-capabilities). Consequential factual claims and design outcomes require assessment independent of participants' satisfaction with the investigation.
 
 When related systems are assessed, distinguish the question being asked and the evidence required:
 
-- **Analysis validation and reuse:** inspect versioned implementations and exercise representative cases to establish what their results mean, which guarantees and limitations apply, and whether integration can preserve PostCode's contracts. Similar terminology or deterministic execution alone does not establish equivalent semantics. Reuse assessment also considers integration effort and support for research observation.
+- **Analysis validation and reuse:** inspect versioned implementations and exercise representative cases to establish what their results mean, which guarantees and limitations apply, and whether integration can preserve PostCode's contracts. Similar terminology or deterministic execution alone does not establish equivalent semantics. Reuse assessment also considers integration effort and support for formative evidence capture.
 - **Interface comparison:** compare identified versions on specified human tasks, with the information, tools, setup, and assistance available in each condition made explicit. A capable conversational coding or design agent with repository tools, ordinary diagrams and retained notes is a primary comparator, rather than a deliberately impoverished text-only chat. When comparing code-independent architectural practice, neither condition should expose programming-language source to the human; differences in design agents' source access must be treated as an explicit experimental variable. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
 - **Sustained-use evidence:** observe understanding, direction, and supervision across development episodes and changing program states. Success on isolated questions or benchmark cases does not establish viability as a routine working surface.
 
 Project documentation establishes reported capabilities, not demonstrated guarantees or effectiveness. Agent-monitor benchmarks may supply useful cases for analysis or supervision, but model performance on them does not itself establish human usefulness. Comparative self-study retains the limitations described above; general claims about developer behavior still require independent evaluation. Record the assessment's version, scope, evidence, and unresolved questions so that reuse decisions and research claims can be judged separately.
 
-## 9. Relationship to Development Workflows
+<a id="9-relationship-to-development-workflows"></a>
 
-This methodology overlays software-development workflows. Its observation process does not prescribe how the projects in which PostCode is used plan and implement their work or require access to particular planning, task, or outcome mechanisms.
+## 8. Relationship to Development Workflows
 
-### 9.1 Development of PostCode Itself
+This methodology overlays software-development workflows. Its evidence-capture process does not prescribe how the projects in which PostCode is used plan and implement their work or require access to particular planning, task, or outcome mechanisms.
+
+<a id="91-development-of-postcode-itself"></a>
+
+### 8.1 Development of PostCode Itself
 
 PostCode's own application development is a special case. Implementing lenses, projections, presentations, and supporting infrastructure may expose considerations that affect the project-level design, research strategy, methodology, roadmap, or other overview documents, independently of any observations produced by using PostCode.
 
-To keep those considerations from being lost, the [task-record requirements](application/task-records.md) require the application repository to preserve durable records of substantive implementation tasks. The application repository owns the operative protocol that produces those records. They are application-development artifacts rather than observations from using PostCode. In addition to examining events and observations recorded during PostCode-on-PostCode use, the research process should examine concluded application-task outcomes for possible implications.
+To keep those considerations from being lost, the [task-record requirements](application/task-records.md) require the application repository to preserve durable records of substantive implementation tasks. The application repository owns the operative protocol that produces those records. They are application-development artifacts rather than observations from using PostCode. In addition to examining formative evidence captured during PostCode-on-PostCode use, the research process should examine concluded application-task outcomes for possible implications.
