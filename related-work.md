@@ -174,7 +174,9 @@ Revisits actionable visualization in light of generative AI, discussing the shar
 
 Exceptionally close conceptual prior art for PostCode's rationale. The overlap extends beyond visualization economics and automatic selection to continuous, question-driven exploration and navigable views embedded in agent-mediated development. The paper explicitly points to Glamorous Toolkit and moldable development as existing work in this direction. Sustained conceptual interaction therefore cannot be assumed to distinguish PostCode on its own. PostCode should investigate particular interaction choices, epistemological contracts, and conditions of usefulness against this prior work. Read alongside the authors' 2018 paper and [`research.md`](research.md#4-why-agent-mediated-development-changes-the-problem).
 
-Review basis: full author-version text and official conference program. This is a vision and research-agenda paper; its arguments about changed economics are not themselves evidence that PostCode's workflow is effective.
+Design implication: the proposed division between AI-assisted question formulation and established rendering machinery, together with checkable mappings and navigable evidence, supplies design rationale to compare—not just a prediction of cheaper visualization. For PostCode, a useful question is which parts of an investigation need interpretation and which can preserve a directly checkable connection to evidence. Deterministic rendering alone does not establish the architectural meaning of its input.
+
+Review basis: full author-version text and official conference program in the earlier review; [v1 sections III–IV](https://arxiv.org/html/2608.22151v1) rechecked for design rationale on 5 November 2026. This is a vision and research-agenda paper; its arguments about changed economics are not themselves evidence that PostCode's workflow is effective.
 
 **Nierstrasz, O., & Gîrba, T. (2024). _Moldable Development Patterns._ arXiv:2409.18811; Glamorous Toolkit, an ongoing software project.** [Paper](https://arxiv.org/abs/2409.18811) · [Project](https://gtoolkit.com/) · [Method](https://book.gtoolkit.com/moldable-development-ejn67l5cdqh83kegi9umt1mdd)
 
@@ -182,7 +184,9 @@ Moldable development makes contextual analysis and interaction tools inexpensive
 
 Close prior art for task-specific representations, conceptual investigation, and tools that evolve with the software and the questions asked of it. It is relevant to PostCode's questions about sustained use, development from inception, and the distinction between independently useful conceptual clarity and tool-relative projectability. A comparison should examine who constructs and selects tools, how qualifications reach users, how views remain grounded as inputs change, and whether architectural work requires implementation-language proficiency. These are comparison questions, not established advantages for PostCode. Glamorous Toolkit merits assessment as a possible interaction comparator alongside systems focused on analysis infrastructure.
 
-Review basis: paper abstract and project/method documentation; the full patterns paper, implementation, and reported experience have not been independently assessed here.
+Design precedent: the patterns organize experience into problems, competing considerations, solutions, examples, and consequences. Simple View and Throwaway Analysis Tool prioritize the immediate information need before richer presentation or reuse; Project Diary connects investigation with retained working material. For PostCode, these suggest examining when retention earns its cost and when a temporary view suffices. They also provide a model for articulating design knowledge beyond a feature inventory.
+
+Review basis: earlier abstract and project/method documentation review; extended on 5 November 2026 to selected [v1 text](https://arxiv.org/html/2409.18811v1): introduction, Moldable Tool and Custom View, the process patterns, and conclusion. The patterns are grounded in authors' reported experience and GT examples; implementations and underlying experience were not independently validated. Their live-programming setting does not establish source-independent architectural practice or general effectiveness.
 
 **Hansen, M., Issa, K., & Hasselbring, W. (2026). _A Chat Assistant for Software Exploration in a 3D Software Visualization._ VISSOFT 2026 research-track program; author version arXiv:2610.09901, submitted 7 October 2026.** [Paper](https://arxiv.org/abs/2610.09901) · [Program](https://vissoft.io/2026/program.html) · [Artifacts](https://doi.org/10.5281/zenodo.20729543)
 
@@ -292,7 +296,9 @@ Agents draft architectural documents from a versioned C4 model, typed catalog, c
 
 Direct prior art for retained architectural artifacts and qualified human review. Compare grounding, gap marking and revision history, while independently assessing factual fidelity and useful scope: regenerated documents can narrow their inherited scope and are scored against it. Polished documentation does not establish sound design.
 
-Review basis: selected full text reviewed 26 October; [v1 sections 3.6, 4.1 and 6](https://arxiv.org/html/2610.13647v1) rechecked 5 November 2026. Rich-context regeneration, a non-blind rater from the generator's model family, and bundled template/catalog/agent changes limit causal interpretation. Neither greenfield design nor source-independent human practice was tested. No replication.
+Design contribution: section 5.2 separates principles the authors derive from their study—typed naming contracts and directing review toward inference—from literature-supported but untested principles. It presents their composition as the contribution. This gives PostCode a concrete precedent for stating a mechanism's evidence separately from the rationale for combining mechanisms; the study's confounds still limit causal attribution.
+
+Review basis: selected full text reviewed 26 October; [v1 sections 3.6, 4.1 and 6](https://arxiv.org/html/2610.13647v1) rechecked 5 November 2026. Rich-context regeneration, a non-blind rater from the generator's model family, and bundled template/catalog/agent changes limit causal interpretation. Neither greenfield design nor source-independent human practice was tested. Sections 3.1–3.2 and 5.2–5.3 additionally inspected on 5 November for design rationale, principle provenance, and boundary conditions. No replication.
 
 **Sas, C., Mitrović, S., Barth, F., Rehm, G., & Salani, M. (2026). _The Code of Theseus: Can Agents Rebuild Software from Recovered Design Documents?_ Preprint, arXiv:2610.20068; submitted 14 October and revised 15 October 2026 (v2).** [Paper](https://arxiv.org/abs/2610.20068) · [Artifacts](https://github.com/SasCezar/code-theseus)
 
@@ -334,7 +340,9 @@ Review basis (5 November 2026): metadata, [v1 method overview, section 5.4 and A
 
 CAIA separates shared stated intent, implementation, validation, and reviewed knowledge-base updates. Assistant, build and knowledge-agent roles make it a conceptual comparator for PostCode's contribution within an external design process. Assess how rationale survives a change and how accepted intentions remain distinguishable from observed implementation; shared records do not themselves establish either correctness or agreement.
 
-Review basis (5 November 2026): metadata and [v1 sections 3–6](https://arxiv.org/html/2610.37340v1). Reported industrial use and subjective reception precede a planned controlled evaluation. Retained as a provisional process comparison, not efficacy evidence. Reassessed from the 2 November leads because retained knowledge and external collaboration now have explicit roles; no new empirical result is claimed.
+Design proposal: consolidation is an explicit, reviewed part of a change, including decisions made during implementation. This provides a candidate mechanism for preventing retained intent from lagging behind development. For PostCode, inspect one change where implementation revises an assumption: what should be retained, who endorses it, and how does it remain distinct from implementation evidence? This is a proposed comparison, not an observed benefit.
+
+Review basis (5 November 2026): metadata and [v1 sections 3–6](https://arxiv.org/html/2610.37340v1); sections 5–6 reread during the design-knowledge reassessment. Reported industrial use and subjective reception precede a planned controlled evaluation. Retained as a provisional process comparison, not efficacy evidence. Reassessed from the 2 November leads because retained knowledge and external collaboration now have explicit roles; no new empirical result is claimed.
 
 ### 1.5 LLMs and software architecture — broader background
 
@@ -416,7 +424,9 @@ Review basis (5 November 2026): ISO's public scope and edition metadata only; th
 
 ViewPoints retain partial specifications, their notations, development processes and histories. Explicit relationships support checks and information transfer across separately maintained perspectives, including inconsistency handling. This is direct conceptual precedent for overlapping retained accounts and cross-perspective investigation without a required global representation. PostCode's inferred correspondence and evidence qualifications still need comparison with those rule-governed relationships.
 
-Review basis (5 November 2026): selected author-version sections 1–2 and 5 on the framework and interaction rules. Tool and case-study claims were not independently assessed. The work concerns requirements specification, not contemporary coding-agent collaboration. Newly assessed older work; compare one conflicting-account example before claiming a distinctive mechanism.
+Design precedent: detecting inconsistency need not force its immediate removal; premature consistency can discard useful information. Section 6.1 also describes deriving general interaction rules from implemented, hard-coded checks, while acknowledging that the general integration extension remained unimplemented. This is a concrete construction-to-concept example. For PostCode, compare how a conflicting pair of retained accounts can remain usable while its disagreement and resolution status stay visible.
+
+Review basis (5 November 2026): selected author-version sections 1–2 and 5 on the framework and interaction rules; extended to sections 5.3–5.4 and 6.1–6.2 during the design-knowledge reassessment. Tool and case-study claims were not independently assessed. The work concerns requirements specification, not contemporary coding-agent collaboration. Newly assessed older work; compare one conflicting-account example before claiming a distinctive mechanism.
 
 **Kazman, R., Klein, M., & Clements, P. (2000). _ATAM: Method for Architecture Evaluation._ CMU/SEI-2000-TR-004, August 2000.** [Official report](https://sei.cmu.edu/library/atam-method-for-architecture-evaluation/) · [Full text](https://sei.cmu.edu/documents/629/2000_005_001_13706.pdf)
 
@@ -428,7 +438,7 @@ Review basis (5 November 2026): report metadata, overview, method steps and conc
 
 PostCode approaches **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. The [foundational entries](#18-architectural-descriptions-multiple-perspectives-and-evaluation) begin this assessment; detailed notation comparisons and evidence of useful interaction remain open.
 
-Assessments should distinguish the [three research levels](research.md#specialized-architectural-expertise): direct human investigation, architectural-account quality, and contribution to collaborative architectural practice. PostCode may contribute specialized investigation to conversations conducted elsewhere; it need not host the collaboration.
+Assessments should distinguish the [three analytic levels](research.md#specialized-architectural-expertise): direct human investigation, architectural-account quality, and contribution to collaborative architectural practice. These are not mandatory efficacy endpoints; the [likely contribution model](research.md#likely-contribution-model) also guides comparison of design requirements, mechanisms, implementation insights, and bounded lessons. PostCode may contribute specialized investigation to conversations conducted elsewhere; it need not host the collaboration.
 
 The practical baseline includes **capable agent chat with repository access, ordinary agent-generated diagrams, and maintained notes**. Comparing PostCode against a deliberately limited text-only chat would not isolate its contribution.
 
@@ -442,7 +452,7 @@ PostCode is not primarily asking:
 
 It asks:
 
-> Can shared, qualified architectural representations support human reasoning and design in collaboration with coding agents more effectively than capable agent chat, including ordinary diagrams and notes?
+> What is required for shared, qualified architectural representations to support human reasoning and design with coding agents, and what do they contribute beyond capable agent chat, including ordinary diagrams and notes?
 
 It also asks what systematic, qualified and retained representations contribute when capable agents can already generate and select inexpensive task-specific visualizations.
 
@@ -452,9 +462,9 @@ This describes PostCode's emphasis, not a boundary of software-visualization res
 
 Capable coding agents can already inspect repositories, answer questions, explain behavior, propose designs, generate diagrams, and maintain ordinary architectural notes. These capabilities are not unique to PostCode, nor is generating a structured description sufficient to establish a contribution.
 
-PostCode asks whether incorporating such explanations into a **qualified, navigable projection system** improves human architectural reasoning and collaboration. Candidate contributions include preserving the captured program basis of an account, distinguishing mechanical analysis from recorded intent and interpretation, retaining supporting evidence and limitations, enabling follow-up investigations through stable referents, recording corrections, and comparing architectural perspectives and revisions.
+PostCode investigates what is required to incorporate such explanations into a **qualified, navigable projection system**, and when doing so helps or hinders human architectural reasoning and collaboration. Candidate mechanisms include preserving the captured program basis of an account, distinguishing mechanical analysis from recorded intent and interpretation, retaining supporting evidence and limitations, enabling follow-up investigations through stable referents, recording corrections, and comparing architectural perspectives and revisions.
 
-Some or all of these practices may be reproduced through careful prompting, ordinary documents, and existing agent tools. Their usefulness must be assessed through actual architectural tasks against that strong conversational baseline, not inferred from the existence of a separate interface or a machine-readable model.
+Some or all of these practices may be reproduced through careful prompting, ordinary documents, and existing agent tools. Actual architectural tasks and that strong conversational baseline should inform claims about usefulness. Construction and bounded use may also reveal requirements, implementation constraints, or failures without establishing comparative superiority; a separate interface or machine-readable model does not itself establish a contribution.
 
 ### 2.3 Versus AI code review
 
@@ -482,7 +492,7 @@ PostCode does not initially make a higher-level model authoritative or generate 
 
 ### 2.7 Potential distinctive conjunction
 
-The following combination describes PostCode's intended research emphasis and provides dimensions for comparison with related work:
+The following dimensions describe PostCode's intended research emphasis and support comparison with related work. They are not a checklist that every contribution must demonstrate:
 
 - direct human architectural investigation and sustained human–agent design and evaluation;
 - specialized architectural accounts available within external design processes;
@@ -493,14 +503,14 @@ The following combination describes PostCode's intended research emphasis and pr
 - explicit accommodation of incomplete and language-dependent analyses;
 - tests treated as projected evidence rather than merely pass/fail gates;
 - qualified comparisons among implemented states, hypothetical alternatives and intended designs;
-- empirical pressure across unrelated projects and eventually languages;
+- contrasting formative contexts across projects and, as opportunities arise, languages;
 - explicit comparison with capable coding-agent chat, including diagrams and notes, and willingness to find that chat is sufficient for some work.
 
 Several of these dimensions already overlap with ViewPoints, architecture-description and evaluation methods, moldable development, and the other work above. Whether any particular conjunction, mechanism, or finding is distinctive requires a specific comparison; this list does not establish an unoccupied research territory.
 
 ### 2.8 Implications of recent prior art
 
-Recent publications and project descriptions reinforce PostCode's existing empirical focus and require precise attribution of overlapping ideas. Repository representations, provenance categories, task-specific views, evidence graphs, semantic change representations, and test-to-code evidence have precedents. Their broad existence should not be presented as a PostCode invention. The entries above distinguish what was checked from what remains to be established about implementations, guarantees, and usefulness.
+Recent publications and project descriptions inform PostCode's constructive research and require precise attribution of overlapping ideas and design lessons. Repository representations, provenance categories, task-specific views, evidence graphs, semantic change representations, and test-to-code evidence have precedents. Their broad existence should not be presented as a PostCode invention. The entries above distinguish what was checked from what remains to be established about implementations, guarantees, and usefulness.
 
 The central research question is stated in [`research.md`](research.md#5-research-questions):
 
@@ -508,7 +518,7 @@ The central research question is stated in [`research.md`](research.md#5-researc
 
 As [`research.md`](research.md#31-creation-continued-development-and-existing-software) emphasizes, this includes investigation of unfamiliar programs, continued development of existing software, and development from inception. In the last case, intentions, rationale, and implementation may co-evolve, rather than requiring conceptual structure to be recovered after the fact. Related spec-driven work is therefore relevant, not categorically separate.
 
-This question overlaps with existing research agendas; it is not a residual territory established as novel by this bibliography. Possible contributions remain those described in [`research.md`](research.md#8-research-and-impact-goal) and [`research-strategy.md`](research-strategy.md#1-strategy-stance). They may include particular guarantees, compositions, interaction designs, and evidence about conditions of usefulness, even where the broad mechanisms have precedents. Each contribution needs comparison at the level of the actual claim. Negative, mixed, and conditional findings remain valid outcomes.
+This question overlaps with existing research agendas; it is not a residual territory established as novel by this bibliography. Possible contributions remain those described in [`research.md`](research.md#8-research-and-impact-goal) and [`research-strategy.md`](research-strategy.md#1-strategy-stance). The [constructive contribution model](research.md#likely-contribution-model) includes design and implementation knowledge, particular guarantees, compositions, interaction designs, and evidence about conditions of usefulness, even where the broad mechanisms have precedents. Each contribution needs comparison at the level of the actual claim. Negative, mixed, and conditional findings remain valid outcomes.
 
 Assessing reuse and assessing a comparison interface are separate opportunities. Archbird is a candidate for both; Whiteboard and Glamorous Toolkit are also candidates for interaction comparisons. A bounded assessment could establish which capabilities are implemented, which guarantees hold, what integration would require, and which human tasks permit a meaningful comparison. These are candidates for the [roadmap](ROADMAP.md#37-assessing-related-systems), not implementation commitments or decisions to replace existing PostCode machinery. The [methodology](methodology.md#84-comparisons-and-reuse-assessments) distinguishes the evidence each assessment can supply.
 
