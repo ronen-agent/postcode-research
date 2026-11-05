@@ -356,9 +356,9 @@ Relevant to PostCode's distinction between recorded assertions and observations:
 
 Review basis (12 October 2026): arXiv metadata, abstract, and selected full-text sections on reported metrics and validity threats; no independent replication.
 
-### 1.7 Potentially relevant but more peripheral
+### 1.7 Established traditions requiring further assessment
 
-Relevant traditions include:
+These traditions contain potential conceptual precedents, methods, and comparators. Their relevance depends on the particular research question, rather than on whether they address coding agents:
 
 - explainable AI and uncertainty/provenance visualization;
 - information provenance;
@@ -387,6 +387,8 @@ In particular, the **epistemological-status discipline** should eventually be co
 ## 2. Positioning Hypotheses
 
 PostCode approaches **software design and architecture as human practices in collaboration with coding agents**, without requiring proficiency in conventional programming-language source. A leading hypothesis concerns shared architectural representations and partial, qualified retained accounts; visual artifacts are one candidate form. Investigating that form calls for closer assessment of established architectural viewpoints and notations (including C4, UML behavioral views, and ISO/IEC/IEEE 42010), architecture description, model-driven approaches, and visual programming systems. These are established lines of work, not PostCode novelty claims. Specific sources, versioned comparisons, and evidence of useful interaction remain to be added after review.
+
+Assessments should distinguish the [three research levels](research.md#specialized-architectural-expertise): direct human investigation, architectural-account quality, and contribution to collaborative architectural practice. PostCode may contribute specialized investigation to conversations conducted elsewhere; it need not host the collaboration.
 
 The practical baseline includes **capable agent chat with repository access, ad hoc generated diagrams, and ordinary maintained notes**. Comparing PostCode against a deliberately limited text-only chat would not isolate its contribution.
 
@@ -428,11 +430,11 @@ These questions overlap in practice. Whiteboard's conceptual explanations and de
 
 ### 2.4 Versus architecture recovery
 
-PostCode does not assume that one recovered architecture is the privileged higher-level representation. Different questions may require different lenses and projections.
+Architecture recovery can supply methods, candidate accounts, and account-quality comparators for PostCode. PostCode does not assume that one recovered architecture is the privileged higher-level representation: different questions may require different lenses and projections, including accounts of proposed and intended designs. Agreement with a reference decomposition, usefulness for direct investigation, and effects on architectural decisions are separate evaluation questions; multiple perspectives alone do not establish novelty.
 
 ### 2.5 Versus agent knowledge representations
 
-PostCode does not initially attempt to improve the representation consumed by coding agents. It investigates the representation presented to humans.
+PostCode studies human architectural practice, including shared accounts that design and implementation agents can consume within that practice. It does not pursue optimal agent representations as an independent objective. Agent-facing work may nevertheless inform account quality, investigative methods, and collaborative outcomes; its relevance should be judged at those levels rather than excluded by who consumes the representation.
 
 ### 2.6 Versus model-driven development
 
