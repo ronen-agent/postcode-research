@@ -2,15 +2,15 @@
 
 > *Humans should be able to practice the discipline of software design and architecture in collaboration with agents that implement the software, without needing to be programmers themselves.*
 
-The PostCode Research Project investigates how best to support that practice. Capable coding-agent conversations can already support substantial software-design work without reading source code, at least for experienced developers. The research asks what further representations, interactions, and tools—if any—can improve that collaboration, including for people who have not learned to read or write programming-language source.
+The PostCode Research Project asks how to facilitate that practice: what representations, interactions, tools, and forms of collaboration help humans understand, design, direct, and evaluate software without requiring programming-language proficiency?
 
-One leading hypothesis is that shared architectural representations, grounded in partial, qualified, retained understanding, can help people reason about designs, examine implementations, and revisit architectural questions from different perspectives. These may take textual, structured, or visual forms, drawing where useful on established software-architecture concepts and notations without assuming a complete or authoritative account of the software.
+Today's capable general-purpose agents already provide substantial help, at least for experienced developers, by inspecting repositories, explaining software, and discussing design alternatives without requiring the human to read source. The follow-up question is what specialized capabilities, if any, can improve on that starting point.
 
-The project explores these questions by building the [PostCode application](https://github.com/ronen/postcode), which presents task-appropriate views of program structure, behavior, history, rationale, and other evidence while preserving the provenance, epistemological status, and limitations of their content.
+The project investigates these questions by building the [PostCode application](https://github.com/ronen/postcode), designed to provide specialized, evidence-grounded architectural investigation and retained understanding for humans working alone or in collaboration with agents to understand, design, and evaluate software. Humans and agents may conduct their conversations elsewhere while using PostCode's partial, qualified accounts as shared working resources. Those accounts may be textual, structured, or visual. They draw on established architectural concepts without claiming to form a complete or authoritative model of the software.
 
-The research proceeds by studying PostCode during real software development. The application is intended to record and export observations, including relevant interaction events and contemporaneous user reports. This evidence stream will support later analysis of how PostCode is used, where it succeeds or fails, and how the design should evolve.
+The research distinguishes three questions: whether PostCode supports useful direct human investigation; whether its specialization produces better architectural accounts than capable general-purpose agents; and whether using those accounts improves human–agent architectural practice and its outcomes. PostCode may support understanding implemented software, examining hypothetical alternatives, recording intentions, reviewing implementations, and revisiting architecture from different perspectives. Comparisons among implemented states, hypothetical alternatives, and intended designs must preserve their different meanings and evidentiary bases.
 
-The application is developed in a separate repository so that it can stand alone as a software project. Once minimally functional, it will be used to help understand, design, and evaluate changes during its own continued development.
+The research proceeds by studying PostCode during real software development. The application is designed to record and export relevant interaction events and contemporaneous user reports for later analysis of its use, limitations, successes, and design evolution. It is developed in a separate repository so that it can stand alone as a software project; using it during its own continued development provides one important formative context.
 
 ## Status
 
@@ -31,6 +31,7 @@ The [`notes/`](notes/) directory holds not-yet-adopted ideas, background materia
 
 - [Candidate conventions for PostCode-mediated development](notes/candidate-conventions.md), retained for consideration rather than as endorsed practices.
 - [Cross-paradigm stress tests for architectural representations](notes/cross-paradigm-architectural-concepts.md), an exploratory proposal for testing conceptual portability across language paradigms, not scheduled work or an application-language commitment.
+- [Architectural expertise and comparative investigation directions](notes/architectural-expertise-directions.md), illustrative roles, experiments, applications, and scope boundaries arising from the governing research direction.
 
 ## License
 

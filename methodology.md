@@ -56,7 +56,7 @@ It is especially useful for discovering:
 
 - missing lenses and projection capabilities;
 - unsuitable presentation choices;
-- awkward navigation and investigation-context behavior;
+- awkward navigation and failures to preserve relevant views, their lineage, or retained architectural understanding;
 - failures in agent-context exchange;
 - distinctions the current design vocabulary does not capture;
 - ways in which PostCode and the software developed through it co-adapt.
@@ -112,7 +112,11 @@ Every lens, projection capability, recurring view construction, or representatio
 
 Not every small capability needs a separately formalized hypothesis. When a capability has a consequential or recurring role, however, its intended information need and expected contribution should be clear enough to compare with what happens in use.
 
-Evaluate architectural representations in genuine design or investigation tasks, using established structural or behavioral notations where useful. Compare against capable coding-agent chat with repository access, ad hoc diagrams, and retained notes.
+Evaluate architectural representations in genuine design or investigation tasks, using established structural or behavioral notations where useful. Compare against capable coding- or design-agent chat with repository access, ordinary diagrams, and retained notes.
+
+Evaluate capabilities at the three distinct levels identified in the [research direction](research.md#specialized-architectural-expertise): usefulness for direct human investigation, quality of architectural accounts, and contribution to collaborative architectural practice. Evidence at one level does not establish success at another.
+
+When investigation compares architectural accounts, preserve what each account concerns—such as an implemented state, a hypothetical alternative or an intended design—together with its provenance and qualifications. Preserve observations as separately scoped evidence rather than treating them as another account modality. Assess the comparison's claims and usefulness separately from the quality or feasibility of the designs being compared.
 
 Relevant observations include:
 
@@ -123,7 +127,9 @@ Relevant observations include:
 - whether it satisfied the information need or supported a useful next step;
 - whether visual working artifacts helped the human notice architectural relationships, reason about consequences, generate questions, or identify gaps beyond what comparable conversation provided;
 - whether partial retained knowledge was reused or revised when examining a different perspective;
-- whether intentions and observed or inferred implementation behavior could be compared without disguising uncertainty;
+- whether implemented states, hypothetical alternatives and intended designs could be compared without disguising their different evidentiary bases;
+- whether comparison exposed consequential differences, contradictions, constraints, unresolved assumptions or useful further questions;
+- whether architectural change review distinguished what changed from whether the implementation realized the intended design;
 - which further views, lenses, or subjects the human pursued;
 - when the human requested more detail, reported inadequacy, pursued another representation, or abandoned the investigation;
 - which information was useful, missing, misleading, or unnecessarily prominent;
@@ -153,7 +159,7 @@ Possible interpretations include:
 - a capable conversational agent with ordinary diagrams and notes provides the same help without a dedicated PostCode capability;
 - the projection-based approach is poorly suited to the activity.
 
-Formative use should also help determine which textual results belong in transient conversation, which should become retained views, and which should contribute to longer-lived investigation context.
+Formative use should also help determine which textual results belong in transient conversation, which should become retained views, and which should contribute to longer-lived retained architectural understanding.
 
 ### 4.1 Reported Limitations as Development Feedback
 
@@ -180,7 +186,7 @@ Local adoption creates an opportunity for observation; it does not by itself est
 
 PostCode should provide a simple way for the human to report that a view or explanation is inadequate. The report should require neither a diagnosis of the problem nor a written justification; optional detail can distinguish missing information, an unhelpful representation, insufficient support for a claim, or another difficulty.
 
-Record such feedback with the information need, view, qualifications, captured basis, and investigation context where available. Subsequent questions, additional investigations, and abandonment can help interpret the report. Feedback indicates a perceived shortcoming, not necessarily an incorrect claim; absence of feedback does not establish adequacy.
+Record such feedback with the information need, view, qualifications, captured basis, and relevant surrounding activity where available. Subsequent questions, additional investigations, and abandonment can help interpret the report. Feedback indicates a perceived shortcoming, not necessarily an incorrect claim; absence of feedback does not establish adequacy.
 
 Activity outside PostCode cannot reliably be observed. Voluntary contemporaneous accounts can add context, but the observation stream cannot establish every unmet need or action the person took when PostCode was insufficient. When recurring patterns emerge, lightweight selectable feedback options may make common reports easier to submit and compare; their categories need not be specified in advance.
 
@@ -201,12 +207,11 @@ Relevant recorded context and events include:
 - relationships among views, including derivation, navigation lineage, and changes in captured basis;
 - test projections inspected;
 - revisions and branches inspected;
-- projection comparisons;
+- projection and architectural-account comparisons, including the modality, provenance and captured bases where applicable;
 - reports that a view or explanation was inadequate, including available context and optional clarification;
 - unavailable, refused, or failed projection requests;
 - analysis applicability and availability, execution state, and result materialization;
 - analysis-cost estimates, resource budgets or thresholds, user choices, and actual resource use where available;
-- changes in investigation context;
 - interactions with coding-agent context.
 
 Subjective observations may record that the user:
@@ -228,7 +233,7 @@ The log is primarily a **design instrument**, not an unbiased behavioral dataset
 
 Individual events do not automatically constitute findings.
 
-An inadequacy report, failed projection, awkward view, or other event should retain enough context to support later interpretation. This includes the development task and information need; the PostCode version; the repository states involved, including their Git commits or relevant working-tree states and their association with the projections; the subjects, lenses, lens parameter values, and projections involved; their composition within the presentation and view; presentation parameter values, investigation context, and relevant navigation lineage; the action taken next; and any contemporaneous subjective explanation.
+An inadequacy report, failed projection, awkward view, or other event should retain enough context to support later interpretation. This includes the development task and information need; the PostCode version; the repository states involved, including their Git commits or relevant working-tree states and their association with the projections; the subjects, lenses, lens parameter values, and projections involved; their composition within the presentation and view; presentation parameter values and relevant navigation lineage; the action taken next; and any contemporaneous subjective explanation.
 
 Recurring patterns can motivate design changes or research hypotheses. Interpretation should also preserve contrary instances and contextual boundaries rather than retaining only evidence that supports the current design.
 
@@ -262,10 +267,12 @@ All findings should remain scoped to their evidence. Negative and mixed findings
 
 ### 8.4 Comparisons and reuse assessments
 
+Comparative evaluation should preserve the three levels distinguished in [Evaluating Projection Capabilities](#3-evaluating-projection-capabilities). Consequential factual claims and design outcomes require assessment independent of participants' satisfaction with the investigation.
+
 When related systems are assessed, distinguish the question being asked and the evidence required:
 
 - **Analysis validation and reuse:** inspect versioned implementations and exercise representative cases to establish what their results mean, which guarantees and limitations apply, and whether integration can preserve PostCode's contracts. Similar terminology or deterministic execution alone does not establish equivalent semantics. Reuse assessment also considers integration effort and support for research observation.
-- **Interface comparison:** compare identified versions on specified human tasks, with the information, tools, setup, and assistance available in each condition made explicit. A capable conversational coding agent with repository tools, ad hoc diagrams and ordinary notes is a primary comparator, rather than a deliberately impoverished text-only chat. When comparing code-independent architectural practice, neither condition should expose programming-language source to the human; any differences in source exposure must instead be treated as an explicit experimental variable. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
+- **Interface comparison:** compare identified versions on specified human tasks, with the information, tools, setup, and assistance available in each condition made explicit. A capable conversational coding or design agent with repository tools, ordinary diagrams and retained notes is a primary comparator, rather than a deliberately impoverished text-only chat. When comparing code-independent architectural practice, neither condition should expose programming-language source to the human; differences in design agents' source access must be treated as an explicit experimental variable. Select comparators for the question under study; an analysis provider need not be a suitable interface comparator, and a useful interface need not supply reusable analyses.
 - **Sustained-use evidence:** observe understanding, direction, and supervision across development episodes and changing program states. Success on isolated questions or benchmark cases does not establish viability as a routine working surface.
 
 Project documentation establishes reported capabilities, not demonstrated guarantees or effectiveness. Agent-monitor benchmarks may supply useful cases for analysis or supervision, but model performance on them does not itself establish human usefulness. Comparative self-study retains the limitations described above; general claims about developer behavior still require independent evaluation. Record the assessment's version, scope, evidence, and unresolved questions so that reuse decisions and research claims can be judged separately.

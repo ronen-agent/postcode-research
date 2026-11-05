@@ -71,9 +71,9 @@ Support continued investigation as coding agents change a repository, without al
 
 Allow prose information needs to produce useful qualified views without requiring the human to know PostCode's full lens and presentation vocabulary. This becomes important when explicit selection makes investigation awkward or forces the human to translate conceptual questions into PostCode mechanics.
 
-### 3.3 Shared coding-agent context
+### 3.3 Shared agent context and investigation
 
-Provide the shared machine-readable context described in [`product-design.md`](product-design.md#shared-machine-readable-context), allowing instructions to coding agents to refer directly to focused views, projected relationships, and the current investigation. Agent-supplied context can later complete the exchange.
+Provide the shared machine-readable context described in [`product-design.md`](product-design.md#shared-machine-readable-context), allowing instructions to implementation agents to refer directly to focused views, projected relationships, and the current investigation. Extend the exchange so humans and external agents can supply qualified architectural material, and agents can request projections, consult retained accounts, and suggest further investigation, as described in [Agent Integration](product-design.md#agent-integration).
 
 Its timing should depend on when repeatedly translating PostCode concepts back into source-level terms becomes a material obstacle to formative use.
 
